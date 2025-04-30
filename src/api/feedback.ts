@@ -25,8 +25,6 @@ export async function getChatGPTFeedback(
     "accuracy": number (0-1),
     "clarity": number (0-1),
     "comprehensiveness": number (0-1),
-    "empathy": number (0-1),
-    "technicalAccuracy": number (0-1),
     "overall": number (0-1)
   },
   "strengths": [string],
@@ -54,6 +52,9 @@ export async function getChatGPTFeedback(
   });
 
   const data = await res.json();
+
+  const content = data.choices?.[0]?.message?.content || "{}";
+  console.log("Raw message content to parse:", content);
 
   try {
     const parsed = JSON.parse(data.choices?.[0]?.message?.content || "{}");

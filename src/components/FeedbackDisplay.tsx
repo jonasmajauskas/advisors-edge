@@ -38,8 +38,8 @@ const FeedbackDisplay: React.FC<FeedbackProps> = ({
   };
   return <div className="border rounded-lg overflow-hidden">
       <div className="bg-primary text-primary-foreground p-4">
-        <h3 className="text-xl font-bold">Your Feedback: {topic}</h3>
-        <p className="text-primary-foreground/80">
+        {/* <h3 className="text-xl font-bold">Your Feedback: {topic}</h3> */}
+        <p className="text-xl font-bold">
           Overall Grade: {getLetterGrade(scores.overall)} (
           {formatPercent(scores.overall)})
         </p>
