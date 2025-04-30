@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { financialTopics } from '../utils/topics';
 import SpeechInput from './SpeechInput';
 import FeedbackDisplay from './FeedbackDisplay';
-import { getChatGPTFeedback } from '../api/feedback';
+import { getChatGPTFeedback } from '../api/feedback'; 
 
 interface FlashCardModeProps {
   onBack: () => void;
