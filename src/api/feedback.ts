@@ -55,6 +55,9 @@ export async function getChatGPTFeedback(
 
   const data = await res.json();
 
+  const content = data.choices?.[0]?.message?.content || "{}";
+  console.log("Raw message content to parse:", content);
+
   try {
     const parsed = JSON.parse(data.choices?.[0]?.message?.content || "{}");
     return parsed as FeedbackData;

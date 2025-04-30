@@ -223,18 +223,35 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
             <FeedbackDisplay feedback={feedback} topic={currentQuestion.topicTitle} />
           )}
 
-          <div className="flex justify-end gap-4 mt-6">
-            <button
-              onClick={() => {
-                setCurrentAnswer('');
-                setFeedback(null);
-                setIsSubmitted(false);
-              }}
-              className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md hover:bg-muted"
-            >
-              Retry
-            </button>
-          </div>
+<div className="flex justify-end gap-4 mt-6">
+  <button
+    onClick={() => {
+      setCurrentAnswer('');
+      setFeedback(null);
+      setIsSubmitted(false);
+    }}
+    className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md hover:bg-muted"
+  >
+    Retry
+  </button>
+
+  {currentQuestionIndex < questions.length - 1 ? (
+    <button
+      onClick={handleNext}
+      className="bg-primary text-primary-foreground py-2 px-6 rounded-md"
+    >
+      Next Question
+    </button>
+  ) : (
+    <button
+      onClick={handleReset}
+      className="bg-primary text-muted-foreground py-2 px-6 rounded-md"
+    >
+      Start Over
+    </button>
+  )}
+</div>
+
         </div>
       ) : (
         <div className="text-center py-8">
