@@ -25,8 +25,6 @@ export async function getChatGPTFeedback(
     "accuracy": number (0-1),
     "clarity": number (0-1),
     "comprehensiveness": number (0-1),
-    "empathy": number (0-1),
-    "technicalAccuracy": number (0-1),
     "overall": number (0-1)
   },
   "strengths": [string],

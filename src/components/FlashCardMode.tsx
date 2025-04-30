@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { financialTopics } from '../utils/topics';
 import SpeechInput from './SpeechInput';
 import FeedbackDisplay from './FeedbackDisplay';
@@ -13,8 +13,6 @@ interface FeedbackData {
     accuracy?: number;
     clarity: number;
     comprehensiveness?: number;
-    empathy?: number;
-    technicalAccuracy?: number;
     overall: number;
   };
   strengths: string[];
@@ -28,6 +26,14 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const allQuestions = financialTopics.flatMap(topic =>
     topic.flashcardQuestions?.map(q => ({
@@ -109,39 +115,55 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
 
       <div className="mb-6">
         <h3 className="text-lg font-medium mb-2">Select Topic</h3>
-        <div className="flex flex-wrap gap-2">
-          <button
-            className={`px-4 py-2 rounded-md ${selectedTopic === 'all'
-              ? 'bg-primary text-primary-foreground'
-              : 'bg-secondary text-secondary-foreground'}`}
-            onClick={() => {
-              setSelectedTopic('all');
+
+        {isMobile ? (
+          <select
+            value={selectedTopic}
+            onChange={(e) => {
+              setSelectedTopic(e.target.value);
               setCurrentQuestionIndex(0);
               setCurrentAnswer('');
               setFeedback(null);
               setIsSubmitted(false);
             }}
+            className="w-full border rounded-md p-2 text-sm"
           >
-            All Topics
-          </button>
-          {financialTopics.map(topic => (
+            <option value="all">All Topics</option>
+            {financialTopics.map(topic => (
+              <option key={topic.id} value={topic.id}>
+                {topic.title} ({topic.flashcardQuestions?.length || 0})
+              </option>
+            ))}
+          </select>
+        ) : (
+          <div className="flex flex-wrap gap-2">
             <button
-              key={topic.id}
-              className={`px-4 py-2 rounded-md ${selectedTopic === topic.id
+              className={`px-4 py-2 rounded-md ${selectedTopic === 'all'
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-secondary text-secondary-foreground'}`}
+              onClick={() => {
+                setSelectedTopic('all');
+                handleReset();
+              }}
+            >
+              All Topics
+            </button>
+            {financialTopics.map(topic => (
+              <button
+                key={topic.id}
+                className={`px-4 py-2 rounded-md ${selectedTopic === topic.id
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-secondary text-secondary-foreground'}`}
                 onClick={() => {
                   setSelectedTopic(topic.id);
-                  setCurrentQuestionIndex(0);
-                  setCurrentAnswer('');
-                  setFeedback(null);
-                  setIsSubmitted(false);
-                }}                
-            >
-              {topic.title} ({topic.flashcardQuestions?.length || 0})
-            </button>
-          ))}
-        </div>
+                  handleReset();
+                }}
+              >
+                {topic.title} ({topic.flashcardQuestions?.length || 0})
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       {questions.length > 0 ? !isSubmitted ? (
