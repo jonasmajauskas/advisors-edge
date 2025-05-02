@@ -13,13 +13,15 @@ export interface FeedbackData {
 
 export async function getChatGPTFeedback(
   question: string,
-  userAnswer: string
+  userAnswer: string,
+  correctAnswer: string
 ): Promise<FeedbackData | null> {
   const messages = [
     {
       role: "system",
       content:
-        "You're a helpful teaching assistant. You will provide JSON feedback only, matching this shape:\n\n" +
+        "You're a helpful teaching assistant. Grade the user's response based on how well it matches the expected answer's key ideas and concepts, not grammar or spelling. " +
+        "Return only valid JSON in this exact shape:\n\n" +
         `{
   "scores": {
     "accuracy": number (0-1),
@@ -30,11 +32,11 @@ export async function getChatGPTFeedback(
   "strengths": [string],
   "improvements": [string]
 }\n\n` +
-        "No explanation. Only return valid JSON.",
+        "No additional explanation or text. Just return JSON.",
     },
     {
       role: "user",
-      content: `Question: ${question}\nUser Answer: ${userAnswer}\nGive structured feedback.`,
+      content: `Question: ${question}\nCorrect Answer: ${correctAnswer}\nUser Answer: ${userAnswer}\n\nProvide structured feedback.`,
     },
   ];
 
@@ -47,18 +49,15 @@ export async function getChatGPTFeedback(
     body: JSON.stringify({
       model: "gpt-4",
       messages,
-      temperature: 0.7,
+      temperature: 0.5,
     }),
   });
 
-  const data = await res.json();
-
+  const data = await res.json(); // <-- this is necessary
   const content = data.choices?.[0]?.message?.content || "{}";
-  console.log("Raw message content to parse:", content);
 
   try {
-    const parsed = JSON.parse(data.choices?.[0]?.message?.content || "{}");
-    return parsed as FeedbackData;
+    return JSON.parse(content) as FeedbackData;
   } catch (e) {
     console.error("Failed to parse ChatGPT JSON:", e);
     return null;

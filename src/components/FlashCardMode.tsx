@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { financialTopics } from '../utils/topics';
 import SpeechInput from './SpeechInput';
 import FeedbackDisplay from './FeedbackDisplay';
-import { getChatGPTFeedback } from '../api/feedback'; 
+import { getChatGPTFeedback } from '../api/feedback';
 
 interface FlashCardModeProps {
   onBack: () => void;
@@ -27,6 +27,7 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -40,6 +41,7 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
       ...q,
       topicId: topic.id,
       topicTitle: topic.title,
+      correctAnswer: q.answer || '',
     })) || []
   );
 
@@ -59,7 +61,7 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
     setIsSubmitted(true);
 
     try {
-      const feedbackData = await getChatGPTFeedback(currentQuestion.question, currentAnswer);
+      const feedbackData = await getChatGPTFeedback(currentQuestion.question, currentAnswer, currentQuestion.correctAnswer);;
       if (feedbackData && feedbackData.scores) {
         setFeedback(feedbackData);
       } else {
@@ -87,6 +89,7 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
       setCurrentAnswer('');
       setFeedback(null);
       setIsSubmitted(false);
+      setShowCorrectAnswer(false);
     }
   };
 
@@ -96,6 +99,7 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
       setCurrentAnswer('');
       setFeedback(null);
       setIsSubmitted(false);
+      setShowCorrectAnswer(false);
     }
   };
 
@@ -104,6 +108,7 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
     setCurrentAnswer('');
     setFeedback(null);
     setIsSubmitted(false);
+    setShowCorrectAnswer(false);
   };
 
   return (
@@ -125,6 +130,7 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
               setCurrentAnswer('');
               setFeedback(null);
               setIsSubmitted(false);
+              setShowCorrectAnswer(false);
             }}
             className="w-full border rounded-md p-2 text-sm"
           >
@@ -179,14 +185,28 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
               Topic: {currentQuestion.topicTitle}
             </p>
             <div className="mb-6">
-              <SpeechInput
-                value={currentAnswer}
-                onTranscriptChange={setCurrentAnswer}
-                isTextArea={true}
-                placeholder="Speak or type your answer here..."
-              />
+              {showCorrectAnswer ? (
+                <div className="border rounded-md bg-muted p-4 text-sm text-muted-foreground">
+                  <strong>Correct Answer:</strong> <br />
+                  {currentQuestion.correctAnswer || 'No answer provided.'}
+                </div>
+              ) : (
+                <SpeechInput
+                  value={currentAnswer}
+                  onTranscriptChange={setCurrentAnswer}
+                  isTextArea={true}
+                  placeholder="Speak or type your answer here..."
+                />
+              )}
             </div>
             <div className="flex flex-wrap gap-4 mt-6">
+              <button
+                onClick={() => setShowCorrectAnswer(prev => !prev)}
+                className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md"
+              >
+                {showCorrectAnswer ? 'Hide Answer' : 'View Answer'}
+              </button>
+
               <button
                 onClick={handleSubmit}
                 className="bg-primary text-primary-foreground py-2 px-6 rounded-md"
@@ -219,8 +239,6 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
                 </button>
               )}
             </div>
-
-
           </div>
         </div>
       ) : (
@@ -232,8 +250,15 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
             </div>
 
             <h3 className="text-lg font-medium mb-2">Your Answer</h3>
-            <div className="border rounded-lg p-4 bg-card">
+            <div className="border rounded-lg p-4 bg-card mb-4">
               <p className="whitespace-pre-wrap">{currentAnswer}</p>
+            </div>
+
+            <h3 className="text-lg font-medium mb-2">Correct Answer</h3>
+            <div className="border rounded-lg p-4 bg-muted text-muted-foreground mb-6">
+              <p className="whitespace-pre-wrap">
+                {currentQuestion.correctAnswer || 'No correct answer provided.'}
+              </p>
             </div>
           </div>
 
@@ -245,35 +270,35 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
             <FeedbackDisplay feedback={feedback} topic={currentQuestion.topicTitle} />
           )}
 
-<div className="flex justify-end gap-4 mt-6">
-  <button
-    onClick={() => {
-      setCurrentAnswer('');
-      setFeedback(null);
-      setIsSubmitted(false);
-    }}
-    className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md hover:bg-muted"
-  >
-    Retry
-  </button>
+          <div className="flex justify-end gap-4 mt-6">
+            <button
+              onClick={() => {
+                setCurrentAnswer('');
+                setFeedback(null);
+                setIsSubmitted(false);
+                setShowCorrectAnswer(false);
+              }}
+              className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md hover:bg-muted"
+            >
+              Retry
+            </button>
 
-  {currentQuestionIndex < questions.length - 1 ? (
-    <button
-      onClick={handleNext}
-      className="bg-primary text-primary-foreground py-2 px-6 rounded-md"
-    >
-      Next Question
-    </button>
-  ) : (
-    <button
-      onClick={handleReset}
-      className="bg-primary text-muted-foreground py-2 px-6 rounded-md"
-    >
-      Start Over
-    </button>
-  )}
-</div>
-
+            {currentQuestionIndex < questions.length - 1 ? (
+              <button
+                onClick={handleNext}
+                className="bg-primary text-primary-foreground py-2 px-6 rounded-md"
+              >
+                Next Question
+              </button>
+            ) : (
+              <button
+                onClick={handleReset}
+                className="bg-primary text-muted-foreground py-2 px-6 rounded-md"
+              >
+                Start Over
+              </button>
+            )}
+          </div>
         </div>
       ) : (
         <div className="text-center py-8">
