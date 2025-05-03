@@ -1,4 +1,3 @@
-import React from 'react';
 export const financialTopics = [
   {
     "id": "insurance",
@@ -15,6 +14,28 @@ export const financialTopics = [
       {
         "question": "What is the exclusion ratio for annuities?",
         "answer": "Tax-free principal, Taxable earnings"
+      },
+      {
+        "question": "What is the 1035 exchange?",
+        "answer": "Tax-free rollover, Like-kind annuity exchange"
+      }
+    ]
+  },
+  {
+    "id": "formulas",
+    "title": "Formulas",
+    "flashcardQuestions": [
+      {
+        "question": "What is the formula to calculate issued stock?",
+        "answer": "Issued stock = outstanding stock + treasury stock"
+      },
+      {
+        "question": "What is the formula to calculate outstanding stock?",
+        "answer": "Outstanding stock = issued stock - treasury stock"
+      },
+      {
+        "question": "What is the formula to calculate market capitalization?",
+        "answer": "Market cap = outstanding stock x stock price"
       },
       {
         "question": "What is the 1035 exchange?",
@@ -45,6 +66,34 @@ export const financialTopics = [
       {
         "question": "Explain the FINRA maintenance margin requirement.",
         "answer": "The FINRA maintenance margin requirement is the minimum amount of equity an investor must maintain in a margin account after purchasing securities. FINRA rules typically require investors to maintain at least 25% of the total market value of the securities in the account. If the account equity falls below this threshold due to market declines, a margin call may be issued, requiring the investor to deposit additional funds or sell securities to restore the required level."
+      },
+      {
+        "question": "For joint accounts, what are the two types of joint ownership structures? Explain each one.",
+        "answer": "The two main types are **Joint Tenants with Right of Survivorship (JTWROS)** and **Tenants in Common (TIC)**. In a JTWROS account, if one owner dies, their share passes automatically to the surviving owner(s). All parties have equal ownership and rights to the account. In a TIC account, each owner has a defined percentage of ownership, and their share passes to their estate upon death—not to the other account holders."
+      },
+      {
+        "question": "Explain the two types of custodian minor accounts.",
+        "answer": "The two types of minor accounts are **Uniform Gifts to Minors Act (UGMA)** and **Uniform Transfers to Minors Act (UTMA)** accounts. Both are custodial accounts established for the benefit of a minor, where an adult acts as custodian. UGMA accounts allow only financial assets like cash, stocks, and bonds, while UTMA accounts can include a wider range of assets, such as real estate and patents. Assets in both types of accounts are irrevocably gifted to the minor and are transferred to them when they reach the age of majority as defined by state law."
+      },
+      {
+        "question": "What is a 529 plan?",
+        "answer": "Tax-advantaged education savings, State-sponsored"
+      },
+      {
+        "question": "What are the two types of 529 plans?",
+        "answer": "Prepaid tuition, College savings"
+      },
+      {
+        "question": "When should you choose college savings plan and when should you choose a prepaid tuition plan?",
+        "answer": "Savings = flexibility, Prepaid = in-state tuition lock"
+      },
+      {
+        "question": "What is ABLE?",
+        "answer": "Tax-advantaged disability account, One per person, Created under ABLE Act 2014"
+      },
+      {
+        "question": "How does ABLE help with Suplemental Security Income (SSI) and Medicaid?",
+        "answer": "Assets \u2264 $100k excluded, SSI suspended\u2014not terminated"
       },
     ]
   },
@@ -103,8 +152,8 @@ export const financialTopics = [
     ]
   },
   {
-    "id": "investing-fundamentals",
-    "title": "Investing Fundamentals",
+    "id": "bonds",
+    "title": "Bonds",
     "description": "Investing Fundamentals related questions and strategies.",
     "flashcardQuestions": [
       {
@@ -138,34 +187,6 @@ export const financialTopics = [
       {
         "question": "What is the hierarchy of bond volatility risk?",
         "answer": "Zero-coupon, Long-term, High-yield, Callable, Investment grade, Short-term"
-      },
-      {
-        "question": "Explain the time value of an options contract",
-        "answer": "Expiration influence, Subjective market forces"
-      },
-      {
-        "question": "Explain the intrinsic value of call options (in, at, out of the money)",
-        "answer": "In the money if stock > strike"
-      },
-      {
-        "question": "Explain the intrinsic value of put options (in, at, out of the money)",
-        "answer": "In the money if strike > stock"
-      },
-      {
-        "question": "What is the formula to calculate the IV for a call option?",
-        "answer": "IV = Stock price - Strike price"
-      },
-      {
-        "question": "What is the formula to calculate the IV for a put option?",
-        "answer": "IV = Strike price - Stock price"
-      },
-      {
-        "question": "How do European and American exercise rules differ?",
-        "answer": "European: only at expiration, American: anytime"
-      },
-      {
-        "question": "How does S&P and Moody's Rating Differ?",
-        "answer": "S&P: AAA, Moody's: Aaa"
       },
       {
         "question": "What bonds are considered investment grade from a rating perspective?",
@@ -202,34 +223,78 @@ export const financialTopics = [
       {
         "question": "What makes up the expense ratio costs?",
         "answer": "Manager fee, Admin fees, 12b-1 (marketing)"
+      },
+      {
+        "question": "Explain the tax payments for zero-coupon bonds",
+        "answer": "Taxed on imputed interest, Income tax not capital gains"
+      },
+      {
+        "question": "What are the types of corporate bonds (7)?",
+        "answer": "Debenture, Subordinated, Income, Convertible, High-Yield, Zero, Collateral"
       }
     ]
   },
   {
-    "id": "securities-&-equity-instruments",
-    "title": "Securities & Equity Instruments",
-    "description": "Securities & Equity Instruments related questions and strategies.",
-    "subtopics": [
-      "ADR Creation",
-      "Acquisitions",
-      "Buybacks",
-      "Common Stock",
-      "Control Person",
-      "Depository Banks",
-      "Foreign Markets",
-      "Holding Period",
-      "Mergers",
-      "Preferred Stock",
-      "Shareholder Rights",
-      "Stock Rights",
-      "Stock Splits",
-      "Stock Warrants",
-      "Volume Limits"
-    ],
+    "id": "options",
+    "title": "Options",
+    "flashcardQuestions": [
+      {
+        "question": "Explain the time value of an options contract",
+        "answer": "Expiration influence, Subjective market forces"
+      },
+      {
+        "question": "Explain the intrinsic value of call options (in, at, out of the money)",
+        "answer": "In the money if stock > strike"
+      },
+      {
+        "question": "Explain the intrinsic value of put options (in, at, out of the money)",
+        "answer": "In the money if strike > stock"
+      },
+      {
+        "question": "What is the formula to calculate the IV for a call option?",
+        "answer": "IV = Stock price - Strike price"
+      },
+      {
+        "question": "What is the formula to calculate the IV for a put option?",
+        "answer": "IV = Strike price - Stock price"
+      },
+      {
+        "question": "How do European and American exercise rules differ?",
+        "answer": "European: only at expiration, American: anytime"
+      },
+      {
+        "question": "What are the components of an options contract?",
+        "answer": "Strike, Premium, Expiration, Type"
+      },
+      {
+        "question": "What is the formula for calculating an option's premium?",
+        "answer": "Intrinsic value, Time value"
+      },
+      {
+        "question": "Explain the intrinsic value of an options contract",
+        "answer": "Call: Stock - Strike, Put: Strike - Stock"
+      },
+      {
+        "question": "What is the Breakeven (BE) for call and put options?",
+        "answer": "Call = XP + premium, Put = XP - premium"
+      },
+    ]
+  },
+  {
+    "id": "equity",
+    "title": "Equity Instruments",
     "flashcardQuestions": [
       {
         "question": "Define 'security'",
         "answer": "Non-tangible, Transferable, Tradable asset"
+      },
+      {
+        "question": "Explain what a penny stock is.",
+        "answer": "Unlisted securities which trade <$5 per stock."
+      },
+      {
+        "question": "For solicited penny stock transactions, what two documents are required?",
+        "answer": "1. Suitability statement which states that the investor is financially sound and can incur the risk of penny stocks. 2. Disclosure document which discloses the details of the investment."
       },
       {
         "question": "What are the 4 classifications of common stock?",
@@ -252,28 +317,12 @@ export const financialTopics = [
         "answer": "Straight, Cumulative, Callable, Convertible, Adjusted-Rate, Participating"
       },
       {
-        "question": "What are stock splits?",
-        "answer": "Increases shares, Adjusts price, No value change"
-      },
-      {
-        "question": "What are forward splits?",
-        "answer": "More shares, Lower price"
-      },
-      {
-        "question": "What are reverse splits?",
-        "answer": "Fewer shares, Higher price"
-      },
-      {
         "question": "Explain what ADRs are, why they are important, and how are they created.",
         "answer": "American Depository Receipts. ADRs are important because they allow U.S. investors to easily invest in foreign companies without dealing with the complexities of international markets. To create an ADR, first, a US depository bank purchases common shares in a foreign company in a foreign company's home market. Second, the purchased shares are deposited in a foreign branch of the bank. Third, the deposits have a receipt issued. Fourth, each ADR represents one or more shares of the foreign company's shares held on deposit."
       },
       {
         "question": "Explain what stock rights are and how they work.",
         "answer": "Stock warrants are long-term instruments that give investors the right to purchase a company’s stock at a fixed price (known as the exercise or strike price) before the warrant expires. Unlike stock options, warrants are issued directly by the company and result in new shares when exercised. Key features of warrants include their typically longer time to expiration (often several years), their leverage potential, and their dilutive effect when exercised. Companies use warrants to attract investors, especially in conjunction with bond or preferred stock offerings, as they act as a 'sweetener' to make the deal more appealing. Warrants can also be used in mergers or to raise capital without immediately issuing new equity."
-      },
-      {
-        "question": "What are the 5 primary actions a company can take?",
-        "answer": "Mergers, Acquisitions, Spinoff, Buyback, Tender offer"
       },
       {
         "question": "What two areas are covered by the Rule 144 of the Securities Act of 1933?",
@@ -290,38 +339,29 @@ export const financialTopics = [
       {
         "question": "What volume limitations apply to control stock as part of Rule 144 of the Securities Act of 1933?",
         "answer": "Greater of 1% or 4-week average volume"
-      }
+      },
+      {
+        "question": "What is DERP in terms of dividends?",
+        "answer": "Declaration date, Ex-dividend date, Record date, Payment date"
+      },
+      {
+        "question": "Explain how cash and stock dividends work, their distribution cycle, taxation, advantages, and disadvantages.",
+        "answer": "Cash vs stock, Tax implications, Distribution timeline"
+      },
+      {
+        "question": "Explain 'proxy voting'",
+        "answer": "Limited power of attorney, Voting rights delegation"
+      },
+      {
+        "question": "Explain 'proxy solicitation'",
+        "answer": "Proxy collection, Shareholder engagement"
+      },
     ]
   },
   {
-    "id": "tax,-estate-&-trusts",
-    "title": "Tax, Estate & Trusts",
-    "description": "Tax, Estate & Trusts related questions and strategies.",
-    "subtopics": [
-      "Asset Protection",
-      "Capital Gains",
-      "College Savings",
-      "Depreciation",
-      "ETFs",
-      "Estate Planning",
-      "Losses",
-      "Mutual Funds",
-      "One Account Limit",
-      "Pass-through",
-      "Passive Income",
-      "Prepaid Tuition",
-      "Qualified Expenses",
-      "REITs",
-      "SSI Protection",
-      "Tax-free Growth",
-      "Taxation",
-      "Zero Coupon"
-    ],
+    "id": "annuities",
+    "title": "Annuities",
     "flashcardQuestions": [
-      {
-        "question": "Explain the tax payments for zero-coupon bonds",
-        "answer": "Taxed on imputed interest, Income tax not capital gains"
-      },
       {
         "question": "What is the exclusion ratio for annuities?",
         "answer": "Excludes return of principal from tax"
@@ -329,43 +369,13 @@ export const financialTopics = [
       {
         "question": "How are lump sum and partial withdrawals of annuities taxed?",
         "answer": "Lump sum = growth taxed, Partial = LIFO"
-      },
-      {
-        "question": "What are requirements for the pass-through status?",
-        "answer": "90% income distributed, Qualify under Chapter M"
-      },
-      {
-        "question": "How do DPPs pass through losses?",
-        "answer": "Offset passive income, Depreciation/depletion deductions"
-      },
-      {
-        "question": "Why are losses from early DPP years useful?",
-        "answer": "Offset passive income, Tax deferral"
-      },
-      {
-        "question": "What is a 529 plan?",
-        "answer": "Tax-advantaged education savings, State-sponsored"
-      },
-      {
-        "question": "What are the two types of 529 plans?",
-        "answer": "Prepaid tuition, College savings"
-      },
-      {
-        "question": "When should you choose college savings plan and when should you choose a prepaid tuition plan?",
-        "answer": "Savings = flexibility, Prepaid = in-state tuition lock"
-      },
-      {
-        "question": "What is ABLE?",
-        "answer": "Tax-advantaged disability account, One per person, Created under ABLE Act 2014"
-      },
-      {
-        "question": "How does ABLE help with Suplemental Security Income (SSI) and Medicaid?",
-        "answer": "Assets \u2264 $100k excluded, SSI suspended\u2014not terminated"
-      },
-      {
-        "question": "What is the conduit theory?",
-        "answer": "Pass-through income, Avoid double taxation"
-      },
+      }
+    ]
+  },
+  {
+    "id": "estate-trusts",
+    "title": "Estates & Trusts",
+    "flashcardQuestions": [
       {
         "question": "Define revocable trust, explain how it works and common uses",
         "answer": "Grantor control, Avoid probate, Includable in estate"
@@ -377,48 +387,9 @@ export const financialTopics = [
     ]
   },
   {
-    "id": "business-structures-&-accounts",
-    "title": "Business Structures & Accounts",
-    "description": "Business Structures & Accounts related questions and strategies.",
-    "subtopics": [
-      "Bankers' Acceptances",
-      "C-Corp",
-      "CDs",
-      "CP",
-      "Custodial",
-      "JTWROS",
-      "Joint Accounts",
-      "LLC",
-      "Liquidity",
-      "Low Risk",
-      "Minor Accounts",
-      "Partnership",
-      "Repos",
-      "S-Corp",
-      "Short Maturity",
-      "TIC"
-    ],
+    "id": "business-structures",
+    "title": "Business Structures & Actions",
     "flashcardQuestions": [
-      {
-        "question": "What are the 3 points that define a money market security?",
-        "answer": "<1 year, High quality, Liquid"
-      },
-      {
-        "question": "How are money market securities issued?",
-        "answer": "At discount, Mature at par"
-      },
-      {
-        "question": "For joint accounts, what are the two types of joint ownership structures?",
-        "answer": "TIC, JTWROS"
-      },
-      {
-        "question": "What are the two types of minor accounts?",
-        "answer": "Custodial, Education IRA"
-      },
-      {
-        "question": "What are the 7 types of money market securities?",
-        "answer": "T-bills, Commercial paper, Negotiable CDs, BA, Repo, Fed Funds, Eurodollars"
-      },
       {
         "question": "What is a partnership?",
         "answer": "Two or more owners, Shared profits/losses"
@@ -448,36 +419,51 @@ export const financialTopics = [
         "answer": "Unlimited shareholders, VC eligible, QSBS benefit"
       },
       {
-        "question": "For join accounts, what are the two types of join ownership structures can they choose from?",
-        "answer": "TIC, JTWROS"
+        "question": "What are the 5 primary actions a company can take?",
+        "answer": "Mergers, Acquisitions, Spinoff, Buyback, Tender offer"
       },
       {
-        "question": "What are the two types of minor accounts?",
-        "answer": "Custodial (UTMA), Coverdell ESA"
-      }
+        "question": "What are stock splits?",
+        "answer": "Increases shares, Adjusts price, No value change"
+      },
+      {
+        "question": "What are forward splits?",
+        "answer": "More shares, Lower price"
+      },
+      {
+        "question": "What are reverse splits?",
+        "answer": "Fewer shares, Higher price"
+      },
+      {
+        "question": "How do DPPs pass through losses?",
+        "answer": "Offset passive income, Depreciation/depletion deductions"
+      },
+      {
+        "question": "Why are losses from early DPP years useful?",
+        "answer": "Offset passive income, Tax deferral"
+      },
+      {
+        "question": "What is the conduit theory?",
+        "answer": "Pass-through income, Avoid double taxation"
+      },
     ]
   },
   {
     "id": "market-operations",
-    "title": "Market Operations",
-    "description": "Market Operations related questions and strategies.",
-    "subtopics": [
-      "AON",
-      "Agent vs Principal",
-      "Cash Settlement",
-      "Clearing Agencies",
-      "FOK",
-      "GTC",
-      "IOC",
-      "Limit Orders",
-      "Market Makers",
-      "Market Orders",
-      "Registrars",
-      "Regular Way",
-      "Stop Orders",
-      "Transfer Agents"
-    ],
+    "title": "Market Operations & Regulations",
     "flashcardQuestions": [
+      {
+        "question": "What the Securities Act of 1933?",
+        "answer": "Regulates IPOs, Disclosure requirement"
+      },
+      {
+        "question": "What is the Securities Exchange Act of 1934?",
+        "answer": "Secondary market, SEC authority"
+      },
+      {
+        "question": "What is the Investment Company Act of 1940?",
+        "answer": "Regulates funds, Governance rules"
+      },
       {
         "question": "Who are the participants in the secondary market?",
         "answer": "Retail, Institutional, Advisors"
@@ -513,32 +499,7 @@ export const financialTopics = [
       {
         "question": "What are the 3 fill restrictions for placing orders?",
         "answer": "Fill or Kill, Immediate or Cancel, All or None"
-      }
-    ]
-  },
-  {
-    "id": "offerings-&-regulations",
-    "title": "Offerings & Regulations",
-    "description": "Offerings & Regulations related questions and strategies.",
-    "subtopics": [
-      "Best Efforts",
-      "Control Person",
-      "Firm Commitment",
-      "Holding Period",
-      "NAV",
-      "POP",
-      "Prospectus",
-      "Reg A",
-      "Reg D",
-      "Reg S",
-      "Rule 147",
-      "Sales Charges",
-      "Selling Group",
-      "Syndicate",
-      "Syndicate Risk",
-      "Volume Limits"
-    ],
-    "flashcardQuestions": [
+      },
       {
         "question": "What transaction-based exemptions fall under the Securities Act of 1933?",
         "answer": "Reg D, Rule 144, Reg A, 147A, Reg S"
@@ -576,6 +537,76 @@ export const financialTopics = [
         "answer": "Greater of 1% or 4-week average volume"
       },
       {
+        "question": "What are selling groups?",
+        "answer": "No risk, Help distribute IPOs, Work under lead underwriters"
+      },
+      {
+        "question": "What is the difference between regular way and cash settlement?",
+        "answer": "T+2, Same day"
+      },
+      {
+        "question": "Explain how Fully Disclosed Firms, Carrying Firms, and Prime Brokers work",
+        "answer": "Client handling, Custody, Institutional support"
+      },
+      {
+        "question": "Explain clearing agencies, registrars, and transfer agents and their role in the secondary markets",
+        "answer": "Settle trades, Record ownership, Prevent over-issuance"
+      },
+      {
+        "question": "Describe the IPO filing process",
+        "answer": "S-1 filing, Cooling-off, Final prospectus"
+      },
+      {
+        "question": "How does S&P and Moody's Rating Differ?",
+        "answer": "S&P: AAA, Moody's: Aaa"
+      },
+      {
+        "question": "What are requirements for the pass-through status?",
+        "answer": "90% income distributed, Qualify under Chapter M"
+      },
+      {
+        "question": "What is the distribution order for liquidation and bankruptcy?",
+        "answer": "1. Secured creditors, 2. Admin claim holders, 3. Senior unsecured creditors, 4. Junior unsecured creditors, 5. Income bonds, 6. Preferred stock, 7. Common stock"
+      }
+    ]
+  },
+  {
+    "id": "investment-companies",
+    "title": "Investment Companies",
+    "flashcardQuestions": [
+      {
+        "question": "How are Investment Companies defined by the Investment Company Act of 1940?",
+        "answer": "Pools investor money, Invests in securities"
+      },
+      {
+        "question": "What are unit investment trusts (UITs)?",
+        "answer": "Fixed portfolio, No active management, Defined maturity"
+      },
+      {
+        "question": "What are management investment companies?",
+        "answer": "Actively managed, Defined objective"
+      },
+      {
+        "question": "Explain the difference between Mutual Funds and ETFs",
+        "answer": "ETFs trade on exchanges, Mutual funds redeem at NAV"
+      },
+      {
+        "question": "Explain how breakpoints work",
+        "answer": "Sales charge discount, Volume-based"
+      },
+      {
+        "question": "What is calculated as part of the expense ratio?",
+        "answer": "Manager fee, 12b-1 fees, Admin fees"
+      },
+      {
+        "question": "Explain what forward pricing is",
+        "answer": "Next NAV pricing, Mutual fund order rule"
+      },
+      {
+        "question": "What is the conduit theory?",
+        "answer": "Pass-through income, Avoid double tax"
+      },
+      {
         "question": "What is the formula for a public offering price of mutual funds?",
         "answer": "POP = NAV + sales charge"
       },
@@ -584,32 +615,14 @@ export const financialTopics = [
         "answer": "POP basis, Not NAV basis"
       },
       {
-        "question": "What are selling groups?",
-        "answer": "No risk, Help distribute IPOs, Work under lead underwriters"
+        "question": "Explain how letters of intent, right of accumulation, combination privilege, and exchange privilege can reduce the sales charge",
+        "answer": "LOI: future discount, ROA: past+present counts, Exchange: move within family, Combo: across funds"
       }
     ]
   },
   {
     "id": "government-securities",
     "title": "Government Securities",
-    "description": "Government Securities related questions and strategies.",
-    "subtopics": [
-      "Bills",
-      "Bonds",
-      "Fannie Mae",
-      "Farmer Mac",
-      "Freddie Mac",
-      "GO Bonds",
-      "GSEs",
-      "Ginnie Mae",
-      "Muni Notes",
-      "Notes",
-      "Revenue Bonds",
-      "STRIPS",
-      "Sallie Mae",
-      "TIPS",
-      "Treasury Receipts"
-    ],
     "flashcardQuestions": [
       {
         "question": "What are Treasury Receipts?",
@@ -654,205 +667,21 @@ export const financialTopics = [
     ]
   },
   {
-    "id": "debt-management",
-    "title": "Debt Management",
-    "description": "Debt Management related questions and strategies.",
-    "subtopics": [
-      "Convertible",
-      "Debenture",
-      "High Yield",
-      "Income Bonds",
-      "Preferred vs Common",
-      "Senior Debt",
-      "Unsecured Creditors"
-    ],
+    "id": "money-market",
+    "title": "Money Markets",
     "flashcardQuestions": [
       {
-        "question": "What is the distribution order for liquidation and bankruptcy?",
-        "answer": "1. Secured creditors, 2. Admin claim holders, 3. Senior unsecured creditors, 4. Junior unsecured creditors, 5. Income bonds, 6. Preferred stock, 7. Common stock"
+        "question": "What are the 3 points that define a money market security?",
+        "answer": "<1 year, High quality, Liquid"
       },
       {
-        "question": "What are the types of corporate bonds (7)?",
-        "answer": "Debenture, Subordinated, Income, Convertible, High-Yield, Zero, Collateral"
-      }
-    ]
-  },
-  {
-    "id": "miscellaneous",
-    "title": "Miscellaneous & Overflow",
-    "description": "Topics not covered in the main categories.",
-    "subtopics": [
-      "529",
-      "ABLE",
-      "BE Calculations",
-      "Broker Roles",
-      "C-Corp",
-      "Call/Put",
-      "Cash vs Stock Dividends",
-      "Clearing",
-      "Combo Privilege",
-      "DERP",
-      "Exchange Privilege",
-      "Expense Ratio",
-      "Fund Types",
-      "Intrinsic Value",
-      "Investment Company Act 1940",
-      "Irrevocable",
-      "LOI",
-      "Partnerships",
-      "Premium",
-      "Pricing",
-      "Proxy Voting",
-      "ROA",
-      "Revocable",
-      "S-Corp",
-      "SSI impact",
-      "Securities Act 1933",
-      "Securities Exchange Act 1934",
-      "Transfer Agents",
-      "Uses"
-    ],
-    "flashcardQuestions": [
-      {
-        "question": "What is DERP in terms of dividends?",
-        "answer": "Declaration date, Ex-dividend date, Record date, Payment date"
+        "question": "How are money market securities issued?",
+        "answer": "At discount, Mature at par"
       },
       {
-        "question": "Explain how cash and stock dividends work, their distribution cycle, taxation, advantages, and disadvantages.",
-        "answer": "Cash vs stock, Tax implications, Distribution timeline"
+        "question": "What are the 7 types of money market securities?",
+        "answer": "T-bills, Commercial paper, Negotiable CDs, BA, Repo, Fed Funds, Eurodollars"
       },
-      {
-        "question": "Explain 'proxy voting'",
-        "answer": "Limited power of attorney, Voting rights delegation"
-      },
-      {
-        "question": "Explain 'proxy solicitation'",
-        "answer": "Proxy collection, Shareholder engagement"
-      },
-      {
-        "question": "What are the components of an options contract?",
-        "answer": "Strike, Premium, Expiration, Type"
-      },
-      {
-        "question": "What is the formula for calculating an option's premium?",
-        "answer": "Intrinsic value, Time value"
-      },
-      {
-        "question": "Explain the intrinsic value of an options contract",
-        "answer": "Call: Stock - Strike, Put: Strike - Stock"
-      },
-      {
-        "question": "What is the Breakeven (BE) for call and put options?",
-        "answer": "Call = XP + premium, Put = XP - premium"
-      },
-      {
-        "question": "How are Investment Companies defined by the Investment Company Act of 1940?",
-        "answer": "Pools investor money, Invests in securities"
-      },
-      {
-        "question": "What are unit investment trusts (UITs)?",
-        "answer": "Fixed portfolio, No active management, Defined maturity"
-      },
-      {
-        "question": "What are management investment companies?",
-        "answer": "Actively managed, Defined objective"
-      },
-      {
-        "question": "Explain the difference between Mutual Funds and ETFs",
-        "answer": "ETFs trade on exchanges, Mutual funds redeem at NAV"
-      },
-      {
-        "question": "Explain how breakpoints work",
-        "answer": "Sales charge discount, Volume-based"
-      },
-      {
-        "question": "What is calculated as part of the expense ratio?",
-        "answer": "Manager fee, 12b-1 fees, Admin fees"
-      },
-      {
-        "question": "Explain what forward pricing is",
-        "answer": "Next NAV pricing, Mutual fund order rule"
-      },
-      {
-        "question": "What is the conduit theory?",
-        "answer": "Pass-through income, Avoid double tax"
-      },
-      {
-        "question": "Define revocable trust, explain how it works and common uses",
-        "answer": "Grantor control, No asset protection, Avoid probate"
-      },
-      {
-        "question": "Define irrevocable trust, explain how it works and common uses",
-        "answer": "No grantor control, Asset protection, Estate reduction"
-      },
-      {
-        "question": "What the Securities Act of 1933?",
-        "answer": "Regulates IPOs, Disclosure requirement"
-      },
-      {
-        "question": "What is the Securities Exchange Act of 1934?",
-        "answer": "Secondary market, SEC authority"
-      },
-      {
-        "question": "What is the Investment Company Act of 1940?",
-        "answer": "Regulates funds, Governance rules"
-      },
-      {
-        "question": "What are selling groups?",
-        "answer": "Helps distribute IPO, No risk for unsold shares"
-      },
-      {
-        "question": "Describe the IPO filing process",
-        "answer": "S-1 filing, Cooling-off, Final prospectus"
-      },
-      {
-        "question": "What is a 529 plan?",
-        "answer": "Tax-advantaged, Education expenses"
-      },
-      {
-        "question": "What are the two types of 529 plans?",
-        "answer": "Prepaid tuition, College savings"
-      },
-      {
-        "question": "What is ABLE?",
-        "answer": "Disabled beneficiaries, Tax-free growth"
-      },
-      {
-        "question": "How does ABLE help with Supplemental Security Income (SSI) and Medicaid?",
-        "answer": "Exempt savings, Up to $100k allowed"
-      },
-      {
-        "question": "What is a partnership?",
-        "answer": "Shared ownership, Split profits/losses"
-      },
-      {
-        "question": "Explain the tax treatment of partnerships",
-        "answer": "Pass-through income, No entity tax"
-      },
-      {
-        "question": "Why do professional practices use partnerships?",
-        "answer": "Licensing restrictions, Profit flexibility"
-      },
-      {
-        "question": "Why choose a C-corp vs an S-corp?",
-        "answer": "Unlimited shareholders, Preferred for VC"
-      },
-      {
-        "question": "What is the difference between regular way and cash settlement?",
-        "answer": "T+2, Same day"
-      },
-      {
-        "question": "Explain how Fully Disclosed Firms, Carrying Firms, and Prime Brokers work",
-        "answer": "Client handling, Custody, Institutional support"
-      },
-      {
-        "question": "Explain clearing agencies, registrars, and transfer agents and their role in the secondary markets",
-        "answer": "Settle trades, Record ownership, Prevent over-issuance"
-      },
-      {
-        "question": "Explain how letters of intent, right of accumulation, combination privilege, and exchange privilege can reduce the sales charge",
-        "answer": "LOI: future discount, ROA: past+present counts, Exchange: move within family, Combo: across funds"
-      }
     ]
   }
 ]
