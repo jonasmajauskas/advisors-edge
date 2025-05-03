@@ -22,9 +22,9 @@ export function App() {
         {/* ✅ Conditionally show top nav */}
         {!isMobile && (
           <header className="mb-8">
-            <h1 className="text-3xl font-bold text-primary">FAA Trainer</h1>
+            <h1 className="text-3xl font-bold text-primary">AdvisorsEdge</h1>
             <p className="text-muted-foreground">
-              Improve your financial communication skills
+              Train smarter. Advise better.
             </p>
           </header>
         )}
