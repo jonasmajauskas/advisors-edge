@@ -20,7 +20,7 @@ export function App() {
     <div className="min-h-screen bg-background w-full">
       <div className="container py-8 px-4 max-w-6xl mx-auto">
         {/* ✅ Conditionally show top nav */}
-        {!isMobile && (
+        {(!isMobile || (isMobile && currentMode === 'home')) && (
           <header className="mb-8">
             <h1 className="text-3xl font-bold text-primary">AdvisorsEdge</h1>
             <p className="text-muted-foreground">
