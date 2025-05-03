@@ -13,7 +13,7 @@ const Home: React.FC<HomeProps> = ({
         clients. Choose a mode to begin practicing and receive personalized
         feedback.
       </p>
-    </div>
+    </div> 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
       <div onClick={() => onSelectMode('flashcard')} className="bg-card border rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
         <h3 className="text-xl font-semibold mb-2">General Assessment</h3>
