@@ -7,7 +7,7 @@ const Home: React.FC<HomeProps> = ({
 }) => {
   return <div className="flex flex-col items-center justify-center">
     <div className="max-w-2xl text-center mb-12">
-      <h2 className="text-2xl font-bold mb-4">Welcome to FAA Trainer</h2>
+      <h2 className="text-3xl font-bold mb-4">Welcome to AdvisorsEdge</h2>
       <p className="mb-6 text-muted-foreground">
         Enhance your ability to explain financial concepts and interact with
         clients. Choose a mode to begin practicing and receive personalized
@@ -18,8 +18,7 @@ const Home: React.FC<HomeProps> = ({
       <div onClick={() => onSelectMode('flashcard')} className="bg-card border rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
         <h3 className="text-xl font-semibold mb-2">General Assessment</h3>
         <p className="text-muted-foreground mb-4 flex-grow">
-          Test your knowledge with topic-specific flash cards and quick
-          assessments. Practice answering common client questions.
+          Test your knowledge with topic-specific Q&As. Practice answering financial questions accurately and thoroughly.
         </p>
         <button className="bg-primary text-primary-foreground py-2 px-4 rounded-md mt-auto">
           Start Assessment
