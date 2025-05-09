@@ -116,7 +116,7 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
       <button onClick={onBack} className="mb-6 flex items-center text-muted-foreground hover:text-foreground">
         ← Back to Home
       </button>
-      <h2 className="text-2xl font-bold mb-6">General Assessment</h2>
+      <h2 className="text-2xl font-bold mb-6">SIE Prep</h2>
 
       <div className="mb-6">
         <h3 className="text-lg font-medium mb-2">Select Topic</h3>

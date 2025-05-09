@@ -16,9 +16,9 @@ const Home: React.FC<HomeProps> = ({
     </div> 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
       <div onClick={() => onSelectMode('flashcard')} className="bg-card border rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
-        <h3 className="text-xl font-semibold mb-2">General Assessment</h3>
+        <h3 className="text-xl font-semibold mb-2">SIE Prep</h3>
         <p className="text-muted-foreground mb-4 flex-grow">
-          Test your knowledge with topic-specific Q&As. Practice answering financial questions accurately and thoroughly.
+          Test your knowledge with SIE-specific topics. Practice answering financial questions accurately and thoroughly.
         </p>
         <button className="bg-primary text-primary-foreground py-2 px-4 rounded-md mt-auto">
           Start Assessment
