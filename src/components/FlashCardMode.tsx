@@ -117,13 +117,13 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
         <div className="flex items-center justify-between mb-6 flex-row-reverse">
           <h2 className="text-2xl font-bold">SIE Prep</h2>
           <button onClick={onBack} className="text-muted-foreground hover:text-foreground">
-            ← Back to Home
+            ← Home
           </button>
         </div>
       ) : (
         <>
           <button onClick={onBack} className="mb-6 flex items-center text-muted-foreground hover:text-foreground">
-            ← Back to Home
+            ← Home
           </button>
           <h2 className="text-2xl font-bold mb-6">SIE Prep</h2>
         </>

@@ -10,8 +10,10 @@
     "preview": "npx vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
     "axios": "^1.9.0",
     "clsx": "latest",
+    "lucide-react": "^0.509.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "latest"
