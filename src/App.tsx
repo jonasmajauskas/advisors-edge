@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Home from './components/Home';
 import ExplanationMode from './components/ExplanationMode';
 import ClientSimulator from './components/ClientSimulator';
