@@ -113,10 +113,21 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
 
   return (
     <div>
-      <button onClick={onBack} className="mb-6 flex items-center text-muted-foreground hover:text-foreground">
-        ← Back to Home
-      </button>
-      <h2 className="text-2xl font-bold mb-6">SIE Prep</h2>
+      {isMobile ? (
+        <div className="flex items-center justify-between mb-6 flex-row-reverse">
+          <h2 className="text-2xl font-bold">SIE Prep</h2>
+          <button onClick={onBack} className="text-muted-foreground hover:text-foreground">
+            ← Back to Home
+          </button>
+        </div>
+      ) : (
+        <>
+          <button onClick={onBack} className="mb-6 flex items-center text-muted-foreground hover:text-foreground">
+            ← Back to Home
+          </button>
+          <h2 className="text-2xl font-bold mb-6">SIE Prep</h2>
+        </>
+      )}
 
       <div className="mb-6">
         <h3 className="text-lg font-medium mb-2">Select Topic</h3>
@@ -199,46 +210,93 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
                 />
               )}
             </div>
-            <div className="flex flex-wrap gap-4 mt-6">
-              <button
-                onClick={() => setShowCorrectAnswer(prev => !prev)}
-                className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md"
-              >
-                {showCorrectAnswer ? 'Hide Answer' : 'View Answer'}
-              </button>
+            {isMobile ? (
+              <>
+                <div className="flex justify-between gap-4 mt-6">
+                  <button
+                    onClick={() => setShowCorrectAnswer(prev => !prev)}
+                    className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md flex-1"
+                  >
+                    {showCorrectAnswer ? 'Hide' : 'View'}
+                  </button>
 
-              <button
-                onClick={handleSubmit}
-                className="bg-primary text-primary-foreground py-2 px-6 rounded-md"
-              >
-                Submit Answer
-              </button>
+                  <button
+                    onClick={handleSubmit}
+                    className="bg-primary text-primary-foreground py-2 px-6 rounded-md flex-1"
+                  >
+                    Submit
+                  </button>
+                </div>
 
-              {currentQuestionIndex > 0 && (
-                <button
-                  onClick={handlePrevious}
-                  className="bg-muted text-muted-foreground py-2 px-6 rounded-md"
-                >
-                  Previous
-                </button>
-              )}
+                <div className="flex justify-between gap-4 mt-4">
+                  {currentQuestionIndex > 0 && (
+                    <button
+                      onClick={handlePrevious}
+                      className="bg-muted text-muted-foreground py-2 px-6 rounded-md flex-1"
+                    >
+                      Previous
+                    </button>
+                  )}
 
-              {currentQuestionIndex < questions.length - 1 ? (
+                  {currentQuestionIndex < questions.length - 1 ? (
+                    <button
+                      onClick={handleNext}
+                      className="bg-muted text-muted-foreground py-2 px-6 rounded-md flex-1"
+                    >
+                      Skip
+                    </button>
+                  ) : (
+                    <button
+                      onClick={handleReset}
+                      className="bg-muted text-muted-foreground py-2 px-6 rounded-md flex-1"
+                    >
+                      Start Over
+                    </button>
+                  )}
+                </div>
+              </>
+            ) : (
+              <div className="flex flex-wrap gap-4 mt-6">
                 <button
-                  onClick={handleNext}
-                  className="bg-muted text-muted-foreground py-2 px-6 rounded-md"
+                  onClick={() => setShowCorrectAnswer(prev => !prev)}
+                  className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md"
                 >
-                  Skip Question
+                  {showCorrectAnswer ? 'Hide Answer' : 'View Answer'}
                 </button>
-              ) : (
+
                 <button
-                  onClick={handleReset}
-                  className="bg-muted text-muted-foreground py-2 px-6 rounded-md"
+                  onClick={handleSubmit}
+                  className="bg-primary text-primary-foreground py-2 px-6 rounded-md"
                 >
-                  Start Over
+                  Submit Answer
                 </button>
-              )}
-            </div>
+
+                {currentQuestionIndex > 0 && (
+                  <button
+                    onClick={handlePrevious}
+                    className="bg-muted text-muted-foreground py-2 px-6 rounded-md"
+                  >
+                    Previous
+                  </button>
+                )}
+
+                {currentQuestionIndex < questions.length - 1 ? (
+                  <button
+                    onClick={handleNext}
+                    className="bg-muted text-muted-foreground py-2 px-6 rounded-md"
+                  >
+                    Skip Question
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleReset}
+                    className="bg-muted text-muted-foreground py-2 px-6 rounded-md"
+                  >
+                    Start Over
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         </div>
       ) : (
@@ -263,8 +321,11 @@ const FlashCardMode: React.FC<FlashCardModeProps> = ({ onBack }) => {
           </div>
 
           {isLoading ? (
-            <div className="flex items-center justify-center py-10 text-muted-foreground">
-              <span className="animate-pulse">Analyzing answer...</span>
+            <div className="flex items-center justify-center py-10 text-muted-foreground text-lg font-medium">
+              Analyzing your answer
+              <span className="animate-bounce mx-1">.</span>
+              <span className="animate-bounce mx-1 delay-200">.</span>
+              <span className="animate-bounce mx-1 delay-400">.</span>
             </div>
           ) : (
             <FeedbackDisplay feedback={feedback} topic={currentQuestion.topicTitle} />
