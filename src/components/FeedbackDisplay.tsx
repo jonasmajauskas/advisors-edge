@@ -34,7 +34,7 @@ const FeedbackDisplay: React.FC<FeedbackProps> = ({ feedback, topic }) => {
   const overallGrade = getLetterGrade(scores.overall);
 
   return (
-    <div className="border rounded-lg overflow-hidden">
+    <div className="border rounded-lg overflow-hidden mb-4">
       <div className="bg-primary text-primary-foreground p-4 text-center">
         <p className="text-xl font-bold">
           Overall Grade: {overallGrade} ({formatPercent(scores.overall)})
