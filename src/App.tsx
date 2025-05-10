@@ -16,9 +16,14 @@ function AppHeader({ isMobile }: { isMobile: boolean }) {
 
   return shouldShowHeader ? (
     <header className="mb-8 flex items-center justify-between">
-      <h1 className="text-3xl font-bold text-primary">
-        <Link to="/home">AdvisorsEdge</Link>
-      </h1>
+      <div>
+        <h1 className="text-3xl font-bold text-primary">
+          <Link to="/home">AdvisorsEdge</Link>
+        </h1>
+        <p className="text-muted-foreground">
+          Train smarter. Advise better.
+        </p>
+      </div>
       <button
         onClick={() => (user ? logout() : setShowLoginModal(true))}
         className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
@@ -60,6 +65,10 @@ function AppContent() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
 
   return (
     <Router>

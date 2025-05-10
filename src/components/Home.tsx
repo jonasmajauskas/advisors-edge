@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">

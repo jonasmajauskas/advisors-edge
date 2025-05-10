@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import GoogleLoginButton from './GoogleLoginButton'
 
 interface LoginModalProps {
   onClose: () => void;
@@ -30,6 +31,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose, onLogin, onSignUp, onL
         await onLogin(email, password);
         resetForm();
         onClose();
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // ✅ Scroll to top after login
       }
     } catch (error: any) {
       setErrorMessage(error?.message || 'Authentication failed. Please try again.');
@@ -59,12 +61,27 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose, onLogin, onSignUp, onL
             onClick={() => {
               onClose();
               resetForm();
+              window.scrollTo({ top: 0, behavior: 'smooth' }); // ✅ Scroll to top after signup confirmation close
             }}
-            className="text-muted-foreground hover:text-foreground"
+            className="text-muted-foreground hover:text-foreground text-l"
           >
             ✕
           </button>
         </div>
+
+        <div className="mb-6">
+            <GoogleLoginButton/>
+            <div className="relative my-6">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t"></div>
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="bg-card px-2 text-muted-foreground">
+                  or continue with
+                </span>
+              </div>
+            </div>
+          </div>
 
         {showConfirmationMessage ? (
           <div className="text-center space-y-6">
@@ -79,19 +96,6 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose, onLogin, onSignUp, onL
               className="w-full bg-primary text-primary-foreground py-2 px-4 rounded-md hover:bg-primary/90 transition-colors"
             >
               Close
-            </button>
-          </div>
-        ) : user ? (
-          <div className="text-center space-y-6">
-            <p className="text-muted-foreground">You are already logged in.</p>
-            <button
-              onClick={() => {
-                onLogout();
-                resetForm();
-              }}
-              className="w-full bg-destructive text-destructive-foreground py-2 px-4 rounded-md hover:bg-destructive/90 transition-colors"
-            >
-              Logout
             </button>
           </div>
         ) : (
