@@ -5,6 +5,7 @@ import SiePrep from './components/SiePrep';
 import LoginModal from './components/LoginModal';
 import { UserRoundCheck, User } from 'lucide-react';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { Navigate } from 'react-router-dom';
 
 function AppHeader({ isMobile }: { isMobile: boolean }) {
   const { pathname } = useLocation();
@@ -67,6 +68,7 @@ function AppContent() {
           <AppHeader isMobile={isMobile} />
 
           <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
             <Route path="/sie-prep" element={<SiePrep />} />
           </Routes>
