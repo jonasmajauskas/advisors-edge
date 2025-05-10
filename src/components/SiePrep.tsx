@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { financialTopics } from '../utils/topics';
 import SpeechInput from './SpeechInput';
 import FeedbackDisplay from './FeedbackDisplay';
 import { getChatGPTFeedback } from '../api/feedback';
+import { useAuth } from '../contexts/AuthContext';
+import { CircleCheck } from 'lucide-react';
+import { supabase } from '../lib/supabaseClient';
 
 interface FeedbackData {
   scores: {
@@ -24,6 +27,28 @@ const SiePrep: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
+
+
+  const { user } = useAuth();
+
+  const completedIds = (user?.['sie-prep-questions-completed'] || '')
+    .split(',')
+    .map((id: string) => id.trim())
+    .filter(Boolean);
+
+  // Auto-navigate to first uncompleted question on initial load or topic change
+  useEffect(() => {
+    const firstUncompletedIndex = questions.findIndex(
+      (q) => !completedIds.includes(String(q.id))
+    );
+
+    if (firstUncompletedIndex !== -1) {
+      setCurrentQuestionIndex(firstUncompletedIndex);
+    } else {
+      setCurrentQuestionIndex(0); // All completed, start from beginning
+    }
+  }, [selectedTopic, user]); // Re-run when topic changes or user data updates
+
 
   const resetState = () => {
     setCurrentAnswer('');
@@ -47,6 +72,8 @@ const SiePrep: React.FC = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  const isCurrentQuestionCompleted = completedIds.includes(String(currentQuestion?.id));
+
   const handleSubmit = async () => {
     if (currentAnswer.trim().length < 10) {
       alert('Please provide a more detailed answer (at least 10 characters).');
@@ -67,6 +94,29 @@ const SiePrep: React.FC = () => {
         strengths: ['AI could not fully parse your answer.'],
         improvements: ['Try being clearer or more complete.'],
       });
+
+      // ✅ Append Question ID to Completed List in Supabase
+      if (user) {
+        const userId = user.userId || user.id; // Adjust based on your schema
+        const existingCompleted = (user['sie-prep-questions-completed'] || '').split(',').map((id: string) => id.trim()).filter(Boolean);
+
+        if (!existingCompleted.includes(String(currentQuestion.id))) {
+          const updatedCompleted = [...existingCompleted, currentQuestion.id].join(',');
+
+          const { error } = await supabase
+            .from('users')
+            .update({ 'sie-prep-questions-completed': updatedCompleted })
+            .eq('userId', userId);
+
+          if (error) {
+            console.error('Error updating completed questions:', error.message);
+          } else {
+            // ✅ Update local user object directly to trigger re-render
+            user['sie-prep-questions-completed'] = updatedCompleted;
+          }
+        }
+      }
+
     } catch (error) {
       console.error('Error fetching feedback:', error);
       setFeedback({
@@ -103,14 +153,14 @@ const SiePrep: React.FC = () => {
       <button
         onClick={() => setShowCorrectAnswer(prev => !prev)}
         className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md flex-1"
-        >
+      >
         {showCorrectAnswer ? 'Hide' : 'View'}
       </button>
 
       <button
         onClick={handleSubmit}
         className="bg-primary text-primary-foreground py-2 px-6 rounded-md flex-1"
-        >
+      >
         Submit
       </button>
 
@@ -118,7 +168,7 @@ const SiePrep: React.FC = () => {
         <button
           onClick={handlePrevious}
           className="bg-muted text-muted-foreground py-2 px-6 rounded-md flex-1"
-          >
+        >
           Previous
         </button>
       )}
@@ -127,14 +177,14 @@ const SiePrep: React.FC = () => {
         <button
           onClick={handleNext}
           className="bg-muted text-muted-foreground py-2 px-6 rounded-md flex-1"
-          >
+        >
           Skip
         </button>
       ) : (
         <button
           onClick={handleReset}
           className="bg-muted text-muted-foreground py-2 px-6 rounded-md flex-1"
-          >
+        >
           Start Over
         </button>
       )}
@@ -144,14 +194,19 @@ const SiePrep: React.FC = () => {
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-2xl font-bold">SIE® Prep</h2>
         <Link to="/home" className="text-muted-foreground hover:text-foreground">
           ← Home
         </Link>
+        <h2 className="text-2xl font-bold">SIE® Prep</h2>
       </div>
 
       <div className="mb-6">
-        <h3 className="text-lg font-medium mb-2">Select Topic</h3>
+        <div className="mb-4 flex items-center justify-between">
+        <h3 className="text-lg font-medium">Select Topic</h3>
+        <span className="text-sm text-muted-foreground">
+          {completedIds.length} / {allQuestions.length} Completed
+        </span>
+        </div>
         <select
           value={selectedTopic}
           onChange={(e) => {
@@ -160,7 +215,7 @@ const SiePrep: React.FC = () => {
           }}
           className="w-full border rounded-md p-2 text-sm"
         >
-          <option value="all">All Topics</option>
+          <option value="all">All Topics ({allQuestions.length})</option>
           {financialTopics.map(topic => (
             <option key={topic.id} value={topic.id}>
               {topic.title} ({topic.flashcardQuestions?.length || 0})
@@ -171,8 +226,11 @@ const SiePrep: React.FC = () => {
 
       {questions.length > 0 ? !isSubmitted ? (
         <div className="bg-card border rounded-lg p-6 mb-6">
-          <p className="text-sm text-muted-foreground mb-2">
+          <p className="text-sm text-muted-foreground mb-2 flex items-center gap-2">
             Question {currentQuestionIndex + 1} of {questions.length}
+            {isCurrentQuestionCompleted && (
+              <CircleCheck className="text-green-500 w-5 h-5" />
+            )}
           </p>
           <h3 className="text-lg font-medium mb-2">{currentQuestion.question}</h3>
           <p className="text-sm text-muted-foreground mb-4">
