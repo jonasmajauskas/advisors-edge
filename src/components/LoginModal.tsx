@@ -63,7 +63,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose, onLogin, onSignUp, onL
               resetForm();
               window.scrollTo({ top: 0, behavior: 'smooth' }); // ✅ Scroll to top after signup confirmation close
             }}
-            className="text-muted-foreground hover:text-foreground text-l"
+            className="text-muted-foreground hover:text-foreground text-xl"
           >
             ✕
           </button>
