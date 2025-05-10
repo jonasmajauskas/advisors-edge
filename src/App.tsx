@@ -6,6 +6,7 @@ import LoginModal from './components/LoginModal';
 import { UserRoundCheck, User } from 'lucide-react';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { Navigate } from 'react-router-dom';
+import { analytics, logEvent } from './lib/firebaseClient';
 
 function AppHeader({ isMobile }: { isMobile: boolean }) {
   const { pathname } = useLocation();
@@ -66,26 +67,39 @@ function AppContent() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [location.pathname]);
-
   return (
     <Router>
-      <div className="min-h-screen bg-background w-full">
-        <div className="container py-6 px-4 max-w-6xl mx-auto">
-          <AppHeader isMobile={isMobile} />
-
-          <Routes>
-            <Route path="/" element={<Navigate to="/home" replace />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/sie-prep" element={<SiePrep />} />
-          </Routes>
-        </div>
-      </div>
+      <AppRoutes isMobile={isMobile} />
     </Router>
   );
 }
+
+function AppRoutes({ isMobile }: { isMobile: boolean }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (analytics) {
+      logEvent(analytics, 'page_view', { page_path: location.pathname });
+      console.log('analytics page_path', location.pathname)
+    }
+  }, [location.pathname]);
+
+  return (
+    <div className="min-h-screen bg-background w-full">
+      <div className="container py-6 px-4 max-w-6xl mx-auto">
+        <AppHeader isMobile={isMobile} />
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/sie-prep" element={<SiePrep />} />
+        </Routes>
+      </div>
+    </div>
+  );
+}
+
+
 
 export function App() {
   return (
