@@ -7,17 +7,17 @@ export const financialTopics = [
         "id": 1,
         "question": "Explain the two phases of annuities?",
         "answer": "The two phases of annuities are the accumulation phase and the annuitization phase. In the accumulation phase, the investor makes contributions to the annuity, and earnings grow tax-deferred. In the annuitization phase, the accumulated value is converted into a series of income payments to the annuitant, typically for life or a specified period."
-      },      
+      },
       {
         "id": 2,
         "question": "How are annuities taxed?",
         "answer": "Annuities grow tax-deferred, meaning earnings within the annuity are not taxed until they are withdrawn. When distributions occur, they are taxed on a Last-In, First-Out (LIFO) basis—meaning earnings are considered withdrawn first and are taxed as ordinary income. If withdrawals are made before age 59½, they may also be subject to a 10% early withdrawal penalty."
-      },      
+      },
       {
         "id": 3,
         "question": "What is the exclusion ratio for annuities?",
         "answer": "The exclusion ratio is used to determine the portion of each annuity payment that is considered a tax-free return of the original investment (cost basis) and the portion that is taxable earnings. It applies to non-qualified annuities and spreads the tax liability over the expected payout period. Once the entire investment has been recovered, future payments are fully taxable as ordinary income."
-      },      
+      },
       {
         "id": 4,
         "question": "What is the 1035 exchange?",
@@ -29,7 +29,7 @@ export const financialTopics = [
         "answer": "VA is for retirement income, not more immediate purposes (education funding). VA is a supplement to retirement income. VA is not a preservation of capital. VA should not be used inside another tax-advantaged account like IRA or 401k."
       }
     ]
-  },  
+  },
   {
     "id": "formulas",
     "title": "Formulas",
@@ -50,7 +50,7 @@ export const financialTopics = [
         "answer": "Market cap = outstanding stock x stock price"
       }
     ]
-  },  
+  },
   {
     "id": "accounts",
     "title": "Accounts & Rules",
@@ -93,7 +93,7 @@ export const financialTopics = [
       {
         "id": 16,
         "question": "What is a 529 plan?",
-        "answer": "A 529 plan is a tax-advantaged savings plan designed to encourage saving for future education expenses. Contributions are made with after-tax dollars, grow tax-deferred, and can be withdrawn tax-free when used for qualified education expenses such as tuition, fees, books, and room and board."
+        "answer": "A 529 plan is a tax-advantaged savings plan designed to encourage saving for future education expenses. Contributions are made with after-tax dollars, grow tax-deferred, and can be withdrawn tax-free when used for qualified education expenses such as tuition, fees, books, and room and board. In some states, contributions may be eligible for a state tax deduction."
       },
       {
         "id": 17,
@@ -116,7 +116,7 @@ export const financialTopics = [
         "answer": "ABLE accounts help individuals with disabilities maintain eligibility for Supplemental Security Income (SSI) and Medicaid by allowing them to save up to $100,000 without the funds counting toward the SSI asset limit. If the account balance exceeds $100,000, SSI benefits are suspended but not terminated, and Medicaid eligibility remains unaffected regardless of the account balance. This allows disabled individuals to save for disability-related expenses while preserving vital government assistance."
       }
     ]
-  },  
+  },
   {
     "id": "retirement",
     "title": "Retirement",
@@ -206,14 +206,19 @@ export const financialTopics = [
       { "id": 48, "question": "Explain how bonds with higher convexity are affected by rate increases and decreases.", "answer": "Bonds with higher convexity lose less value when rates rise and gain more value when rates fall compared to bonds with lower convexity. This makes them more attractive in volatile rate environments." },
       { "id": 49, "question": "Describe the different mutual fund classes including their sales charges, expense ratios, what they're best for and any notes.", "answer": "Class A: Front-end sales load, lower expense ratios, best for long-term investors using breakpoint discounts.\nClass B: Back-end sales load, higher expense ratios, convert to Class A over time, suitable for long-term investors without large upfront investments.\nClass C: No front-end load, small back-end load if sold early, higher expense ratios, good for short- to medium-term investors.\nClass I: No sales loads, lowest expense ratios, available to institutions and high-net-worth individuals.\nClass R: Offered through retirement plans, no sales charges, varying expense ratios.\nNo-Load: No sales charges, lower expense ratios, ideal for self-directed, cost-conscious investors." },
       { "id": 50, "question": "What is calculated as part of the expense ratio?", "answer": "The expense ratio includes the manager’s fee, administrative fees, and 12b-1 marketing/distribution fees. It does not include front-end or back-end sales charges." },
-      { "id": 51, "question": "Define 'zero-coupon bonds'.", "answer": "Zero-coupon bonds do not pay periodic interest. They are issued at a deep discount and mature at face value. The difference between the purchase price and par value represents the investor’s return." },
+      { "id": 51, "question": "Define 'zero-coupon bonds'.", "answer": "Zero-coupon bonds are issued at a deep discount and mature at face value. They do not pay periodic interest—the difference between the purchase price and par value represents the investor’s return. They have the highest exposure to interest rate risk because they have the longest duration, with all of their value tied up in a single future payment. They also face significant inflation risk, particularly if long-term, since their lump-sum payment may lose purchasing power over time." },
       { "id": 52, "question": "Explain the tax payments for zero-coupon bonds.", "answer": "Even though zero-coupon bonds don’t pay periodic interest, investors must pay income tax each year on the imputed interest (phantom income) as it accrues. This income is taxed as ordinary income, not capital gains." },
       { "id": 53, "question": "What are the types of corporate bonds (7)?", "answer": "Debenture, Subordinated, Income, Convertible, High-Yield (Junk), Zero-Coupon, Collateralized bonds." },
       { "id": 54, "question": "Explain puttable bonds, including who has the option, investor and issuer benefits, typical yield, market sensitivity, and when they are exercised.", "answer": "Puttable bonds give investors the right to sell the bond back to the issuer before maturity at a set price. This benefits investors by providing downside protection if interest rates rise or the issuer’s credit weakens. Issuers can offer lower coupon rates due to this feature. These bonds generally have lower yields and are less sensitive to rising rates since investors can exit early. Investors exercise the option when rates rise or the issuer's financial condition deteriorates." },
       { "id": 55, "question": "Explain callable bonds, including who has the option, investor and issuer benefits, typical yield, market sensitivity, and when they are exercised.", "answer": "Callable bonds give the issuer the right to redeem the bond before maturity at a specified price. The issuer benefits by refinancing at lower rates if interest rates fall. Investors receive higher yields to compensate for this risk. These bonds have higher sensitivity to falling rates but limited price appreciation since they may be called when rates decline. They are usually called when interest rates drop significantly." },
-      { "id": 56, "question": "What are key factors in the volatility of bonds?", "answer": "Bond volatility is driven by maturity (longer maturity means higher volatility), coupon rate (lower coupon increases volatility), and credit quality (lower credit quality increases volatility). Additionally, bonds with embedded options (callable or puttable) also experience volatility based on the likelihood of the option being exercised." }
+      { "id": 56, "question": "What are key factors in the volatility of bonds?", "answer": "Bond volatility is driven by maturity (longer maturity means higher volatility), coupon rate (lower coupon increases volatility), and credit quality (lower credit quality increases volatility). Additionally, bonds with embedded options (callable or puttable) also experience volatility based on the likelihood of the option being exercised." },
+      {
+        "id": 203,
+        "question": "Why are asset-backed securities traded according to their average life rather than their stated maturity dates?",
+        "answer": "Asset-backed securities (ABS) are traded based on their average life rather than their stated maturity dates because the underlying loans can be paid off earlier than expected, creating prepayment risk. This makes the actual timing of cash flows uncertain. Average life provides a more realistic measure of when investors are likely to receive principal repayments, helping them better assess cash flow timing and interest rate risk."
+      }
     ]
-  },  
+  },
   {
     "id": "options",
     "title": "Options",
@@ -267,6 +272,16 @@ export const financialTopics = [
         "id": 65,
         "question": "What are the components of an options contract?",
         "answer": "The key components of an options contract include:\n- **Buyer (Holder)**: Pays the premium and has the right to exercise the option.\n- **Seller (Writer)**: Receives the premium and has the obligation if the option is exercised.\n- **Contract Size**: Typically 100 shares per contract unless specified otherwise.\n- **Underlying Security**: The stock or asset the option is based on.\n- **Expiration Date**: The date the option expires.\n- **Strike Price**: The agreed price at which the asset can be bought or sold.\n- **Option Type**: Call or Put.\n- **Premium**: The price paid for the option."
+      },
+      {
+        "id": 206,
+        "question": "Index optons are settled by which delivery method?",
+        "answer": "Cash."
+      },
+      {
+        "id": 208,
+        "question": "Explain what a closing purchase means.",
+        "answer": "A closing purchase is a transaction in the options market where an investor buys an option to close out or offset an existing short options position. This action effectively exits the position and realizes any profit or loss. For example, if an investor initially sold (wrote) a call option, they can later perform a closing purchase by buying back the same call option to close the position. This is done to limit potential losses, lock in profits, or exit before expiration."
       }
     ]
   },
@@ -325,9 +340,14 @@ export const financialTopics = [
         "answer": "Rule 144 governs the sale of:\n1. **Restricted Stock**: Shares acquired through private placements that cannot be sold publicly until specific conditions are met.\n2. **Control Stock**: Shares held by affiliates or insiders, typically officers, directors, or major shareholders, subject to volume limitations on public sales."
       },
       {
+        "id": 203,
+        "question": "What are the differences between Rule 144 and Rule 144A?",
+        "answer": "Rule 144 and Rule 144A both relate to the resale of restricted and control securities but apply in different contexts and to different investors. \n\n- **Rule 144**: Governs the public resale of restricted and control securities, typically acquired through private placements or by company insiders. It sets holding periods (6 months to 1 year), volume limits, and disclosure requirements. Sellers must often file a Form 144 if the sale exceeds specified thresholds. This rule ensures the orderly resale of securities without disrupting markets.\n\n- **Rule 144A**: Facilitates the resale of restricted securities specifically to Qualified Institutional Buyers (QIBs) without requiring SEC registration. It is used primarily in private placements to allow faster capital raising for issuers and provides liquidity for institutional investors. Securities sold under 144A are typically not available to the general public.\n\nIn summary, Rule 144 applies to public resales by individuals and company insiders, while Rule 144A is for private resales to large institutional investors."
+      },
+      {
         "id": 76,
         "question": "Explain 'restricted stock' as part of Rule 144 of the Securities Act of 1933.",
-        "answer": "Restricted stock refers to securities acquired through private offerings or employee stock benefit plans. These shares cannot be sold in the public market until they have been held for at least six months and certain disclosure and filing requirements are met under Rule 144."
+        "answer": "Restricted stock refers to securities acquired through private offerings or employee stock benefit plans. These shares cannot be sold in the public market until they have been held for at least six months and certain disclosure and filing requirements are met under Rule 144. The issuer is permitted to sell them to qualified instiutional buyers (QIBs)."
       },
       {
         "id": 77,
@@ -378,9 +398,15 @@ export const financialTopics = [
         "id": 86,
         "question": "An established customer for penny stocks is someone who:",
         "answer": "1. Has had an account with the broker-dealer for at least one year with deposits, or\n2. Has completed at least three penny stock transactions involving different issuers on separate days.\nEstablished customers are exempt from certain suitability and disclosure requirements under SEC regulations."
+      },
+      {
+        "id": 205,
+        "question": "What are the advantages of index funds?",
+        "answer": "Index funds offer broad market diversification by tracking major indexes like the S&P 500, reducing the risk associated with individual securities. They have lower expense ratios compared to actively managed funds due to passive management strategies. Index funds also provide consistent performance that typically mirrors the market, are highly tax-efficient because of low portfolio turnover, and are simple and transparent investment options ideal for long-term investors."
       }
+
     ]
-  },  
+  },
   {
     "id": "estate-trusts",
     "title": "Estates & Trusts",
@@ -396,7 +422,7 @@ export const financialTopics = [
         "answer": "An irrevocable trust is a legal arrangement where the grantor permanently transfers assets into the trust and relinquishes all control and ownership rights. Once established, the terms generally cannot be changed or revoked without the consent of the beneficiaries. The trust is managed by a trustee for the benefit of the beneficiaries.\n\n**Common Uses:**\n- Removing assets from the grantor’s taxable estate to reduce estate taxes.\n- Protecting assets from creditors and legal claims.\n- Providing for heirs and beneficiaries in a controlled manner.\n\n**Key Points:**\n- Assets are excluded from the grantor’s estate, potentially reducing estate tax liability.\n- Provides strong asset protection.\n- Often used in Medicaid planning, charitable giving, life insurance trusts (ILITs), and legacy wealth planning."
       }
     ]
-  },   
+  },
   {
     "id": "business-structures",
     "title": "Business Structures & Actions",
@@ -453,13 +479,13 @@ export const financialTopics = [
       },
       {
         "id": 99,
-        "question": "How do DPPs pass through losses?",
-        "answer": "Direct Participation Programs (DPPs) pass through losses directly to investors, who can use these losses to offset passive income on their tax returns. Common deductions include depreciation and depletion. This allows investors to reduce their taxable income even if they do not receive actual cash distributions from the investment."
+        "question": "What are the benefits of a DPP (Direct Participation Program)?",
+        "answer": "DPPs provide investors with the opportunity to participate directly in businesses such as real estate, oil and gas ventures, and equipment leasing without active management responsibilities. Key benefits include: \n\n1. **Tax Advantages**: DPPs often pass through income, losses, deductions, and credits directly to investors, which can be used to offset other taxable income. \n2. **Diversification**: They offer access to alternative investments that can diversify a traditional stock and bond portfolio. \n3. **Passive Income**: Investors may receive regular distributions from program revenues without active involvement. \n4. **Depreciation and Depletion Deductions**: Especially in real estate and natural resources programs, these deductions can reduce taxable income. \n\nHowever, DPPs are illiquid, carry higher risk, and are generally suitable for accredited or sophisticated investors."
       },
       {
         "id": 100,
-        "question": "Why are losses from early DPP years useful?",
-        "answer": "Losses from early years of Direct Participation Programs (DPPs) provide valuable tax benefits by allowing investors to offset passive income and defer taxes. These early losses, often created through accelerated depreciation and startup costs, reduce current taxable income and can create significant tax savings while the investment matures."
+        "question": "How do DPPs pass through losses and why are losses from early DPP years useful?",
+        "answer": "Direct Participation Programs (DPPs) pass through losses directly to investors, who can use these losses to offset passive income on their tax returns. Common deductions include depreciation and depletion. This allows investors to reduce their taxable income even if they do not receive actual cash distributions from the investment."
       },
       {
         "id": 101,
@@ -467,7 +493,7 @@ export const financialTopics = [
         "answer": "The conduit theory is a tax principle that applies to investment vehicles like mutual funds, Real Estate Investment Trusts (REITs), and ETFs. Under this theory, income earned by the fund is passed directly to investors, who then report and pay taxes on it. This avoids taxation at the corporate level, preventing double taxation and allowing for more efficient tax treatment for investors."
       }
     ]
-  },  
+  },
   {
     "id": "market-operations",
     "title": "Market Operations & Regulations",
@@ -534,8 +560,8 @@ export const financialTopics = [
       },
       {
         "id": 114,
-        "question": "What is the difference between regular way and cash settlement?",
-        "answer": "Regular way settlement is T+2 (trade date plus 2 business days). Cash settlement occurs on the same day as the trade."
+        "question": "What is the difference between regular way and cash settlement and how does regular way apply for regular securities vs treasury securities?",
+        "answer": "Regular way settlement is T+2 (trade date plus 2 business days). Cash settlement occurs on the same day as the trade. Treasury securities are highly liquid and have a faster settlement cycle, so they settlement the next day (T+1). Regular securities settle T+2."
       },
       {
         "id": 115,
@@ -566,9 +592,14 @@ export const financialTopics = [
         "id": 120,
         "question": "Explain how fully disclosed firms, carrying firms, and prime brokers work in the secondary market.",
         "answer": "Fully disclosed firms introduce customers to a carrying firm but do not hold client assets. Carrying firms hold customer securities and funds and handle clearing and settlement. Prime brokers provide specialized services to large institutional clients, including lending and settlement across multiple executing brokers."
-      }
+      },
+      {
+        "id": 210,
+        "question": "If a market maker posts a quote of 10.00 - 10.10 [25x10], which of the following actions is the market maker willing to take?",
+        "answer": "The market maker is willing to buy up to 2,500 shares at $10.00 (bid price) and sell up to 1,000 shares at $10.10 (ask price). The numbers [25x10] represent round lots, where 25 means 25 lots of 100 shares for the bid and 10 means 10 lots of 100 shares for the ask. The market maker is not obligated to buy above $10.00 or sell below $10.10."
+      }      
     ]
-  },  
+  },
   {
     "id": "investment-companies",
     "title": "Investment Companies",
@@ -625,6 +656,16 @@ export const financialTopics = [
     "title": "Government Securities",
     "flashcardQuestions": [
       {
+        "id": 139,
+        "question": "What are the types of treasury securities?",
+        "answer": "T-Bills, T-Notes, T-Bonds, TIPS"
+      },
+      {
+        "id": 204,
+        "question": "Explain how often interest on Treasury bills, notes, and bonds are paid.",
+        "answer": "Treasury bills (T-bills) do not pay periodic interest; instead, they are issued at a discount and mature at face value, with the difference representing the interest earned. Treasury notes (T-notes) and Treasury bonds (T-bonds) pay interest semiannually, meaning investors receive interest payments twice a year."
+      },
+      {
         "id": 130,
         "question": "What are Treasury Receipts?",
         "answer": "A type of zero-coupon bond created by broker-dealers by stripping interest and principal from US treasury bonds. They're sold at a discount and pay a single lump sum at maturity."
@@ -670,12 +711,12 @@ export const financialTopics = [
         "answer": "Tax anticipation notes - finance current operations in anticipation of future tax receipts. Revenue anticipation notes - offered periodically to finance current operations in anticipation of future revenue. Bond anticipation notes - interim finnacing that will eventually be converted to long-term funding through a sale of bonds. Also called tax-exempt commercial paper. Grant anticipation notes - issued with the anticipation of receiving grant money. Construction loan notes - issued to provide interim financing for construction or housing projects."
       },
       {
-        "id": 139,
-        "question": "What are the types of treasury securities?",
-        "answer": "T-Bills, T-Notes, T-Bonds, TIPS"
+        "id": 207,
+        "question": "The computation of dollar prices and accured interest on municipal bonds is normally on what calendar basis?",
+        "answer": "30/360."
       }
     ]
-  },  
+  },
   {
     "id": "money-market",
     "title": "Money Markets",
@@ -696,7 +737,7 @@ export const financialTopics = [
         "answer": "T-bills, Commercial paper, Negotiable CDs, BA, Repo, Fed Funds, Muni Notes"
       }
     ]
-  },  
+  },
   {
     "id": "economics",
     "title": "Economics & Analysis",
@@ -716,7 +757,7 @@ export const financialTopics = [
       { "id": 155, "question": "Describe the three measures of the money supply.", "answer": "The three primary measures of the money supply are M1, M2, and M3. M1 includes the most liquid forms of money, such as physical currency, demand deposits, and checking accounts. M2 includes all of M1 plus less liquid forms like savings accounts, money market accounts, and small time deposits under $100,000. M3 includes all of M2 plus large time deposits, institutional money market funds, and other large liquid assets. These measures help policymakers and economists track the availability of money in the economy and guide monetary policy decisions." },
       { "id": 156, "question": "Define the four major interest rates.", "answer": "The four major interest rates are: (1) The Federal Funds Rate, which is the interest rate banks charge each other for overnight loans of reserves and is influenced by the Federal Reserve; (2) The Discount Rate, which is the interest rate the Federal Reserve charges banks for borrowing directly from it; (3) The Prime Rate, which is the rate commercial banks charge their most creditworthy corporate customers and often serves as a benchmark for consumer loans; and (4) The Broker Loan Rate (or Call Loan Rate), which is the interest rate banks charge brokerage firms for loans used to finance margin accounts. These rates affect borrowing costs, investment decisions, and overall economic activity." }
     ]
-  },  
+  },
   {
     "id": "returns-and-taxes",
     "title": "Investment Returns & Investment Taxes",
@@ -730,7 +771,7 @@ export const financialTopics = [
       { "id": 163, "question": "Explain the uniqueness of passive income for taxation and write-offs.", "answer": "Passive income typically comes from activities in which the taxpayer does not materially participate, such as rental properties or limited partnerships. For tax purposes, passive income is taxed at ordinary income rates, but passive losses can generally only be used to offset passive income, not earned or portfolio income. Unused passive losses can be carried forward indefinitely to offset future passive income." },
       { "id": 164, "question": "Define a wash sale.", "answer": "A wash sale occurs when an investor sells a security at a loss and then repurchases the same or a substantially identical security within 30 days before or after the sale date. The IRS disallows the loss for tax purposes in these cases, meaning the investor cannot claim the loss on their taxes. Instead, the disallowed loss is added to the cost basis of the repurchased security, deferring the tax benefit until a future sale." }
     ]
-  },  
+  },
   {
     "id": "risk",
     "title": "Risk",
@@ -743,7 +784,7 @@ export const financialTopics = [
       { "id": 170, "question": "What is the KYC (Know Your Customer) rule?", "answer": "The Know Your Customer (KYC) rule is a regulatory requirement that mandates financial firms to verify a customer’s identity, understand their financial profile, and assess the suitability of investment recommendations. It involves collecting information such as the customer’s age, income, net worth, risk tolerance, investment objectives, and tax status. KYC is critical for preventing fraud, money laundering, and ensuring that financial products align with the client’s best interests." },
       { "id": 171, "question": "What are the four component obligations that member firms must follow under the KYC rule?", "answer": "The four component obligations are: (1) Disclosure Obligation – requiring firms to provide full and fair disclosure of material facts related to recommendations; (2) Care Obligation – requiring firms to exercise reasonable diligence, care, and skill when making recommendations; (3) Conflict of Interest Obligation – requiring firms to identify, disclose, and mitigate or eliminate conflicts of interest; and (4) Compliance Obligation – requiring firms to establish, maintain, and enforce written policies and procedures to ensure compliance with Reg BI." }
     ]
-  },  
+  },
   {
     "id": "compliance",
     "title": "Compliance & Regulations",
@@ -756,7 +797,7 @@ export const financialTopics = [
       {
         "id": 173,
         "question": "Describe the branches of the US Treasury and their roles for FinCEN, IRS, and Office of the Comptroller of the Currency.",
-        "answer": "FinCEN (Financial Crimes Enforcement Network) collects and analyzes financial transactions to combat money laundering, terrorist financing, and financial crimes. The IRS (Internal Revenue Service) is responsible for collecting federal taxes and enforcing tax laws. The Office of the Comptroller of the Currency (OCC) charters, regulates, and supervises all national banks and federal savings associations to ensure a safe and sound banking system."
+        "answer": "FinCEN (Financial Crimes Enforcement Network) collects and analyzes financial transactions to combat money laundering, terrorist financing, and financial crimes by enforcing the Bank Secrecy Act. The IRS (Internal Revenue Service) is responsible for collecting federal taxes and enforcing tax laws. The Office of the Comptroller of the Currency (OCC) charters, regulates, and supervises all national banks and federal savings associations to ensure a safe and sound banking system."
       },
       {
         "id": 174,
@@ -899,10 +940,20 @@ export const financialTopics = [
         "answer": "FINRA Rule 3220 limits gifts or gratuities paid to associated persons of other firms to $100 per person per year if the gift is in connection with the business of the recipient’s employer. This limit excludes entertainment (like meals or sporting events) if the giver is present. Firms must keep records of all such gifts. Anything exceeding the limit must have prior approval and may be deemed excessive or improper."
       },
       {
+        "id": 211,
+        "question": "How much more can an MFP contribute to a local mayor’s re-election campaign without affecting the firm’s municipal business if they already gave $200?",
+        "answer": "An additional $50. MFPs can contribute up to $250 per election to candidates they can vote for under MSRB Rule G-37. Since $200 was already contributed, only $50 more is allowed."
+      },      
+      {
         "id": 202,
         "question": "Explain the MSRB Rule G-37 and the rules for Municipal Finance Professionals (MFPs).",
         "answer": "MSRB Rule G-37 is designed to prevent 'pay-to-play' practices by prohibiting municipal securities dealers from engaging in negotiated municipal securities business with an issuer for two years after certain political contributions are made to officials of that issuer. Municipal Finance Professionals (MFPs) are subject to strict contribution limits. An MFP may contribute up to $250 per election to a candidate for whom they are entitled to vote. Any political contribution beyond this limit, or to a candidate the MFP cannot vote for, can trigger a two-year ban on negotiated business with that issuer. Firms must disclose political contributions and municipal securities business quarterly on Form G-37 and maintain records of MFPs and their contributions."
-      }                                                                                                                      
+      },
+      {
+        "id": 209,
+        "question": "What is FINRA's selling away rule?",
+        "answer": "FINRA's selling away rule prohibits registered representatives from soliciting or selling securities or investment products that have not been approved by their employing broker-dealer. This applies even if the representative does so outside of their normal employment. Before engaging in such activities, the representative must provide prior written notice to their firm, and the firm must approve and supervise the activity. This rule is designed to protect investors and ensure that all securities transactions are properly supervised and compliant with regulations."
+      }
     ]
   },
 ]
