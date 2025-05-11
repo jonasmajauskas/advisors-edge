@@ -10,13 +10,13 @@ export const financialTopics = [
       },
       {
         "id": 2,
-        "question": "How are annuities taxed?",
+        "question": "How are annuities taxed and how do the penalties work?",
         "answer": "Annuities grow tax-deferred, meaning earnings within the annuity are not taxed until they are withdrawn. When distributions occur, they are taxed on a Last-In, First-Out (LIFO) basis—meaning earnings are considered withdrawn first and are taxed as ordinary income. If withdrawals are made before age 59½, they may also be subject to a 10% early withdrawal penalty."
       },
       {
         "id": 3,
         "question": "What is the exclusion ratio for annuities?",
-        "answer": "The exclusion ratio is used to determine the portion of each annuity payment that is considered a tax-free return of the original investment (cost basis) and the portion that is taxable earnings. It applies to non-qualified annuities and spreads the tax liability over the expected payout period. Once the entire investment has been recovered, future payments are fully taxable as ordinary income."
+        "answer": "The exclusion ratio determines how much of each annuity payment is tax-free and how much is taxable. The tax-free part returns your original investment, and the taxable part is earnings. After you recover your full investment, all future payments are fully taxable."
       },
       {
         "id": 4,

@@ -137,7 +137,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <p className="text-muted-foreground">Loading authentication...</p>
+        <p className="text-muted-foreground">Logging in...</p>
       </div>
     );
   }

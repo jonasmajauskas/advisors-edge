@@ -20,18 +20,12 @@ export async function getChatGPTFeedback(
     {
       role: "system",
       content:
-        "You're a helpful teaching assistant. Grade the user's response based on how well it matches the expected answer's key ideas and concepts, not grammar or spelling. " +
+        "You're a teaching assistant grading how well the user answers questions and explains concepts in simple, easy to understand language." +
         "Return only valid JSON in this exact shape:\n\n" +
-        `{
-  "scores": {
-    "accuracy": number (0-1),
-    "clarity": number (0-1),
-    "comprehensiveness": number (0-1),
-    "overall": number (0-1)
-  },
-  "strengths": [string],
-  "improvements": [string]
-}\n\n` +
+        `{"scores": { "accuracy": number (0-1), "clarity": number (0-1), "comprehensiveness": number (0-1), "overall": number (0-1)},
+        "strengths": [string],
+        "improvements": [string]
+        }\n\n` +
         "No additional explanation or text. Just return JSON.",
     },
     {
