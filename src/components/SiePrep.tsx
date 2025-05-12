@@ -328,7 +328,7 @@ const SiePrep: React.FC = () => {
             <p>{currentAnswer}</p>
           </div>
 
-          {!isLoading ? (
+          {isLoading ? (
             <div className="flex items-center justify-center py-10 text-muted-foreground text-lg font-medium mb-4">
               Analyzing your answer
               <Loader className="animate-spin w-5 h-5 text-primary ml-1" />
