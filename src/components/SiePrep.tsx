@@ -5,8 +5,9 @@ import SpeechInput from './SpeechInput';
 import FeedbackDisplay from './FeedbackDisplay';
 import { getChatGPTFeedback } from '../api/feedback';
 import { useAuth } from '../contexts/AuthContext';
-import { CircleCheck } from 'lucide-react';
+import { CircleCheck, Loader, RotateCw } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
+import ReactMarkdown from 'react-markdown';
 
 interface FeedbackData {
   scores: {
@@ -27,7 +28,7 @@ const SiePrep: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
-
+  const [aiLevel, setAiLevel] = useState<'easy' | 'intermediate' | 'advanced'>('easy');
 
   const { user } = useAuth();
 
@@ -35,6 +36,19 @@ const SiePrep: React.FC = () => {
     .split(',')
     .map((id: string) => id.trim())
     .filter(Boolean);
+
+  // Load saved question index on component mount
+  useEffect(() => {
+    const savedIndex = localStorage.getItem('sie-prep-current-question');
+    if (savedIndex !== null) {
+      setCurrentQuestionIndex(Number(savedIndex));
+    }
+  }, []);
+
+  // Save current question index on change
+  useEffect(() => {
+    localStorage.setItem('sie-prep-current-question', String(currentQuestionIndex));
+  }, [currentQuestionIndex]);
 
   // Auto-navigate to first uncompleted question on initial load or topic change
   useEffect(() => {
@@ -87,7 +101,8 @@ const SiePrep: React.FC = () => {
       const feedbackData = await getChatGPTFeedback(
         currentQuestion.question,
         currentAnswer,
-        currentQuestion.correctAnswer
+        currentQuestion.correctAnswer,
+        aiLevel
       );
       setFeedback(feedbackData || {
         scores: { clarity: 0.5, overall: 0.5 },
@@ -145,6 +160,7 @@ const SiePrep: React.FC = () => {
 
   const handleReset = () => {
     setCurrentQuestionIndex(0);
+    localStorage.removeItem('sie-prep-current-question');
     resetState();
   };
 
@@ -202,11 +218,36 @@ const SiePrep: React.FC = () => {
 
       <div className="mb-6">
         <div className="mb-4 flex items-center justify-between">
-        <h3 className="text-lg font-medium">Select Topic</h3>
-        <span className="text-sm text-muted-foreground">
-          {completedIds.length} / {allQuestions.length} Completed
-        </span>
+          <h3 className="text-lg font-medium">Select Topic</h3>
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-muted-foreground">
+              {completedIds.length} / {allQuestions.length} Completed
+            </span>
+            <button
+              onClick={async () => {
+                if (!user) return;
+                const userId = user.userId || user.id;
+
+                const { error } = await supabase
+                  .from('users')
+                  .update({ 'sie-prep-questions-completed': '' })
+                  .eq('userId', userId);
+
+                if (error) {
+                  console.error('Error resetting progress:', error.message);
+                } else {
+                  // Update local state or trigger a re-fetch if needed
+                  user['sie-prep-questions-completed'] = '';
+                  handleReset(); // Reset local progress
+                }
+              }}
+              className="text-primary hover:underline text-sm flex items-center gap-1"
+            >
+              <RotateCw className="w-4 h-4 text-muted-foreground" />
+            </button>
+          </div>
         </div>
+
         <select
           value={selectedTopic}
           onChange={(e) => {
@@ -224,6 +265,20 @@ const SiePrep: React.FC = () => {
         </select>
       </div>
 
+      <div className="mb-6">
+        <h3 className="text-lg font-medium mb-2">Select AI Feedback Level</h3>
+        <select
+          value={aiLevel}
+          onChange={(e) => setAiLevel(e.target.value as 'easy' | 'intermediate' | 'advanced')}
+          className="w-full border rounded-md p-2 text-sm"
+        >
+          <option value="novice">Easy</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+
+
       {questions.length > 0 ? !isSubmitted ? (
         <div className="bg-card border rounded-lg p-6 mb-6">
           <p className="text-sm text-muted-foreground mb-2 flex items-center gap-2">
@@ -236,11 +291,18 @@ const SiePrep: React.FC = () => {
           <p className="text-sm text-muted-foreground mb-4">
             Topic: {currentQuestion.topicTitle}
           </p>
-          <div className="mb-6">
+          <div className="mb-6 w-full">
             {showCorrectAnswer ? (
-              <div className="border rounded-md bg-muted p-4 text-sm text-muted-foreground">
-                <strong>Correct Answer:</strong> <br />
-                {currentQuestion.correctAnswer || 'No answer provided.'}
+              <div className="border rounded-md bg-muted p-4 text-sm text-muted-foreground space-y-2">
+                <strong className="underline">Correct Answer:</strong>
+                <ReactMarkdown
+                  components={{
+                    p: ({ children }) => <p className="leading-relaxed mb-2">{children}</p>,
+                    strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+                  }}
+                >
+                  {currentQuestion.correctAnswer || 'No answer provided.'}
+                </ReactMarkdown>
               </div>
             ) : (
               <SpeechInput
@@ -251,6 +313,7 @@ const SiePrep: React.FC = () => {
               />
             )}
           </div>
+
           {renderNavigationButtons()}
         </div>
       ) : (
@@ -265,14 +328,13 @@ const SiePrep: React.FC = () => {
             <p>{currentAnswer}</p>
           </div>
 
-          {isLoading ? (
+          {!isLoading ? (
             <div className="flex items-center justify-center py-10 text-muted-foreground text-lg font-medium mb-4">
-              Analyzing your answer<span className="animate-bounce mx-1">.</span>
-              <span className="animate-bounce mx-1 delay-200">.</span>
-              <span className="animate-bounce mx-1 delay-400">.</span>
+              Analyzing your answer
+              <Loader className="animate-spin w-5 h-5 text-primary ml-1" />
             </div>
           ) : (
-            <FeedbackDisplay feedback={feedback} topic={currentQuestion.topicTitle} />
+            <FeedbackDisplay feedback={feedback} topic={currentQuestion.topicTitle}/>
           )}
 
           <h3 className="text-lg font-medium mb-2">Correct Answer</h3>

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { supabase } from '../lib/supabaseClient';
+import { Loader } from 'lucide-react';
 
 interface UserType {
   name: string;
@@ -138,6 +139,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return (
       <div className="flex justify-center items-center h-screen">
         <p className="text-muted-foreground">Logging in...</p>
+        <Loader className="animate-spin w-5 h-5 text-primary ml-1" />
       </div>
     );
   }
