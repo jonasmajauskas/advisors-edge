@@ -165,7 +165,7 @@ const SiePrep: React.FC = () => {
   };
 
   const renderNavigationButtons = () => (
-    <div className="flex flex-wrap gap-4 mt-6">
+    <div className="flex flex-wrap gap-4 mt-4">
       <button
         onClick={() => setShowCorrectAnswer(prev => !prev)}
         className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md flex-1"
@@ -291,7 +291,7 @@ const SiePrep: React.FC = () => {
           <p className="text-sm text-muted-foreground mb-4">
             Topic: {currentQuestion.topicTitle}
           </p>
-          <div className="mb-6 w-full">
+          <div className="w-full">
             {showCorrectAnswer ? (
               <div className="border rounded-md bg-muted p-4 text-sm text-muted-foreground space-y-2">
                 <strong className="underline">Correct Answer:</strong>

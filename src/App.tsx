@@ -87,7 +87,7 @@ function AppRoutes({ isMobile }: { isMobile: boolean }) {
 
   return (
     <div className="min-h-screen bg-background w-full">
-      <div className="container py-6 px-4 max-w-6xl mx-auto">
+      <div className="container py-4 px-4 max-w-6xl mx-auto">
         <AppHeader isMobile={isMobile} />
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
@@ -98,8 +98,6 @@ function AppRoutes({ isMobile }: { isMobile: boolean }) {
     </div>
   );
 }
-
-
 
 export function App() {
   return (
