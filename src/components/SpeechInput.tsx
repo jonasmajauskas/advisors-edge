@@ -49,9 +49,13 @@ const SpeechInput: React.FC<SpeechInputProps> = ({
   };
   const InputComponent = isTextArea ? 'textarea' : 'input';
   return <div className="relative w-full">
-      <InputComponent className={`w-full border rounded-lg bg-background p-4 pr-12 ${isTextArea ? 'h-64' : 'h-12'}`} placeholder={placeholder} value={value} onChange={e => onTranscriptChange(e.target.value)} {...isTextArea ? {
-      rows: 8
-    } : {}} />
+<InputComponent 
+  className={`w-full border rounded-lg bg-background p-4 pr-12 ${isTextArea ? 'h-64 md:h-48' : 'h-12'}`} 
+  placeholder={placeholder} 
+  value={value} 
+  onChange={e => onTranscriptChange(e.target.value)} 
+  {...isTextArea ? { rows: 8 } : {}} 
+/>
       <button onClick={toggleListening} className={`absolute right-3 top-3 p-2 rounded-full transition-colors ${isListening ? 'bg-primary text-primary-foreground' : 'bg-secondary text-secondary-foreground'}`} title={isListening ? 'Stop recording' : 'Start recording'}>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />

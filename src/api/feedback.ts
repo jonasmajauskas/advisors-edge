@@ -14,13 +14,21 @@ export interface FeedbackData {
 export async function getChatGPTFeedback(
   question: string,
   userAnswer: string,
-  correctAnswer: string
+  correctAnswer: string,
+  aiLevel: 'easy' | 'intermediate' | 'advanced' = 'easy' // Default to 'easy'
 ): Promise<FeedbackData | null> {
+  const gradingStyles = {
+    easy: "Grade for simplicity and clarity, assume no prior knowledge.",
+    intermediate: "Grade for balanced clarity and accuracy, assume some knowledge.",
+    advanced: "Grade for technical accuracy and depth, assume expert knowledge.",
+  };  
+
   const messages = [
     {
       role: "system",
       content:
-        "You're a teaching assistant grading how well the user answers questions and explains concepts in simple, easy to understand language." +
+        `You're a teaching assistant grading how well the user answers questions and explains concepts.\n` +
+        `${gradingStyles[aiLevel]}\n\n` +
         "Return only valid JSON in this exact shape:\n\n" +
         `{"scores": { "accuracy": number (0-1), "clarity": number (0-1), "comprehensiveness": number (0-1), "overall": number (0-1)},
         "strengths": [string],
@@ -47,7 +55,7 @@ export async function getChatGPTFeedback(
     }),
   });
 
-  const data = await res.json(); // <-- this is necessary
+  const data = await res.json();
   const content = data.choices?.[0]?.message?.content || "{}";
 
   try {

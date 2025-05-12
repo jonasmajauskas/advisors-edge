@@ -460,8 +460,8 @@ export const financialTopics = [
       {
         "id": 95,
         "question": "What are the 5 primary actions a company can take?",
-        "answer": "1. **Mergers:** Combining two companies into one.\n2. **Acquisitions:** One company purchases another.\n3. **Spinoff:** A company creates a new independent company by distributing shares of the new entity to its shareholders.\n4. **Buyback:** The company repurchases its own shares from the market, reducing outstanding shares.\n5. **Tender Offer:** A company offers to purchase shares directly from shareholders at a premium price to gain control or reduce shares outstanding."
-      },
+        "answer": "1. **Mergers:** Combining two companies into one.\n\n2. **Acquisitions:** One company purchases another.\n\n3. **Spinoff:** A company creates a new independent company by distributing shares of the new entity to its shareholders.\n\n4. **Buyback:** The company repurchases its own shares from the market, reducing outstanding shares.\n\n5. **Tender Offer:** A company offers to purchase shares directly from shareholders at a premium price to gain control or reduce shares outstanding."
+      },      
       {
         "id": 96,
         "question": "What are stock splits?",
@@ -479,8 +479,8 @@ export const financialTopics = [
       },
       {
         "id": 99,
-        "question": "What are the benefits of a DPP (Direct Participation Program)?",
-        "answer": "DPPs provide investors with the opportunity to participate directly in businesses such as real estate, oil and gas ventures, and equipment leasing without active management responsibilities. Key benefits include: \n\n1. **Tax Advantages**: DPPs often pass through income, losses, deductions, and credits directly to investors, which can be used to offset other taxable income. \n2. **Diversification**: They offer access to alternative investments that can diversify a traditional stock and bond portfolio. \n3. **Passive Income**: Investors may receive regular distributions from program revenues without active involvement. \n4. **Depreciation and Depletion Deductions**: Especially in real estate and natural resources programs, these deductions can reduce taxable income. \n\nHowever, DPPs are illiquid, carry higher risk, and are generally suitable for accredited or sophisticated investors."
+        "question": "What is a Direct Participation Program (DPP) and what are the advantages and disadvantages of a DPP?",
+        "answer": "A DPP is an investment vehicle that allows investors to directly participate in the cash flow and tax benefits of a business venture, often structured as a limited partnership or limited liability company (LLC). DPPs are commonly used for real estate, energy, and equipment leasing ventures. The primary benefits of a DPP include pass-through of income and losses directly to investors, allowing them to offset other income for tax purposes. Additionally, DPPs provide potential tax deductions for depreciation and depletion, limited liability for investors, and the opportunity to participate in specialized industries without direct management responsibilities. However, DPPs are illiquid and typically suitable for long-term, risk-tolerant investors."
       },
       {
         "id": 100,
