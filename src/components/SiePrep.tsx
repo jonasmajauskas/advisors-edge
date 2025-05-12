@@ -165,7 +165,7 @@ const SiePrep: React.FC = () => {
   };
 
   const renderNavigationButtons = () => (
-    <div className="flex flex-wrap gap-4 mt-4">
+    <div className="flex flex-wrap gap-4 mt-2">
       <button
         onClick={() => setShowCorrectAnswer(prev => !prev)}
         className="border border-muted-foreground text-muted-foreground py-2 px-6 rounded-md flex-1"
