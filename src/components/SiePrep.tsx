@@ -293,12 +293,14 @@ const SiePrep: React.FC = () => {
           </p>
           <div className="w-full">
             {showCorrectAnswer ? (
-              <div className="border rounded-md bg-muted p-4 text-sm text-muted-foreground space-y-2">
+              <div className="border rounded-md bg-muted p-4 text-sm text-muted-foreground space-y-2 mb-4">
                 <strong className="underline">Correct Answer:</strong>
                 <ReactMarkdown
                   components={{
                     p: ({ children }) => <p className="leading-relaxed mb-2">{children}</p>,
-                    strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+                    strong: ({ children }) => (
+                      <p className="font-semibold mb-2">{children}</p> // ⬅️ This puts bold text on its own line
+                    ),
                   }}
                 >
                   {currentQuestion.correctAnswer || 'No answer provided.'}
@@ -334,7 +336,7 @@ const SiePrep: React.FC = () => {
               <Loader className="animate-spin w-5 h-5 text-primary ml-1" />
             </div>
           ) : (
-            <FeedbackDisplay feedback={feedback} topic={currentQuestion.topicTitle}/>
+            <FeedbackDisplay feedback={feedback} topic={currentQuestion.topicTitle} />
           )}
 
           <h3 className="text-lg font-medium mb-2">Correct Answer</h3>

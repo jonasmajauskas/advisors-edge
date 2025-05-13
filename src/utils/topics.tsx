@@ -429,13 +429,13 @@ export const financialTopics = [
     "flashcardQuestions": [
       {
         "id": 89,
-        "question": "What is a partnership?",
+        "question": "What is a partnership and how are partnerships governed?",
         "answer": "A partnership is a business structure where two or more individuals co-own and operate a business, agreeing to share profits, losses, and management responsibilities. Partnerships are typically governed by a partnership agreement outlining each partner’s roles, capital contributions, and profit-sharing arrangements."
       },
       {
         "id": 90,
-        "question": "What are the types of partnerships?",
-        "answer": "1. **General Partnership (GP):** All partners share equally in profits and management responsibilities but also have unlimited personal liability for debts and obligations.\n2. **Limited Partnership (LP):** Consists of at least one general partner with unlimited liability and one or more limited partners whose liability is limited to their investment. Limited partners have no management control.\n3. **Limited Liability Partnership (LLP):** All partners have limited liability, protecting them from personal responsibility for the malpractice or negligence of other partners. Commonly used by professional firms like law and accounting practices."
+        "question": "What are the three types of partnerships?",
+        "answer": "1. **General Partnership (GP):** All partners share equally responsibility for managing the business. Each partner has unlimited personal liability for debts and obligations. This structure is best suited for small businesses where all partners are actively involved.\n2. **Limited Partnership (LP):** Consists of at least one general partner who manages the business with unlimited liability and one or more limited partners whose liability is limited to their investment and does not play a management role. This structure is best suited for real estate projects, invesment funds, and ventures where some only want to invest, not manage.\n3. **Limited Liability Partnership (LLP):** All partners participate have management roles with limited liability, protecting them from personal responsibility for the malpractice or negligence of other partners. This structure is best suited for professional firms like law, accounting, and consulting practices."
       },
       {
         "id": 91,
@@ -445,18 +445,18 @@ export const financialTopics = [
       {
         "id": 92,
         "question": "Why do professional practices use partnerships?",
-        "answer": "Professional practices such as law firms, accounting firms, and medical practices often use partnerships because:\n- **Pass-through Taxation:** Income flows directly to partners without corporate-level taxation.\n- **Profit Sharing Flexibility:** Partners can customize profit allocations based on seniority, contribution, or management roles.\n- **Regulatory Restrictions:** Many states restrict licensed professionals from forming traditional corporations or LLCs, making partnerships or LLPs the preferred structure."
+        "answer": "Professional practices (law firms, accounting firms, & medical practices) often use partnerships because:\n- **Pass-through Taxation:** Income flows directly to partners without corporate-level taxation.\n- **Profit Sharing & Buyout Flexibility:** Partners can customize profit allocations based on seniority, contribution, or management roles. Unlike corporations, which distribute profit based on ownership, partnerships can control the distribution to be 70/30 even if partners are 50/50 owners. For buyouts, they are much more straightforward in partnerships, with the agreement defining the terms of valuation and payment without the need for formal shareholder votes. \n- **Regulatory Restrictions:** Many states restrict licensed professionals from forming traditional corporations or LLCs, making partnerships or LLPs the preferred structure."
       },
       {
         "id": 93,
-        "question": "Why do investment funds use partnerships?",
-        "answer": "Investment funds use partnerships, typically structured as Limited Partnerships (LPs), because:\n- **Pass-through Taxation:** Avoids double taxation by passing income directly to investors.\n- **Flexible Capital and Profit Allocation:** Allows complex profit-sharing arrangements, including preferred returns, catch-up provisions, and carried interest for general partners.\n- **Limited Liability for Investors:** Limited partners have liability protection limited to their investment.\n- **Sophisticated Investor Base:** Funds often target accredited and qualified investors through private placements.\n- **Custom Waterfall Distributions:** Funds can create complex distribution structures to prioritize the return of capital, preferred returns to investors, and profit-sharing for general partners."
+        "question": "Why do PE, VC and hedge fund firms structure as Limited Partnerships?",
+        "answer": "These firms almost universally structure as Limited Partnerships (LPs), because:\n- **Pass-through Taxation:** Avoids double taxation by passing income directly to investors.\n- **Flexible Capital and Profit Allocation:** Allows complex profit-sharing arrangements, including preferred returns, catch-up provisions, and carried interest for general partners.\n- **Limited Liability for Investors:** Limited partners have liability protection limited to their investment.\n- **Sophisticated Investor Base:** Funds often target accredited and qualified investors through private placements.\n- **Custom Waterfall Distributions:** Funds can create complex distribution structures to prioritize the return of capital, preferred returns to investors, and profit-sharing for general partners."
       },
       {
         "id": 94,
-        "question": "Why choose a C-corp vs an S-corp?",
-        "answer": "A C-corporation offers unlimited shareholder capacity, multiple classes of stock, and easier access to venture capital and public markets. C-corps can qualify for Section 1202 (Qualified Small Business Stock or QSBS), allowing investors to exclude up to 100% of capital gains if shares are held for at least five years, making them ideal for startups and growth companies. S-corporations are limited to 100 shareholders, must be U.S. individuals or certain trusts, and can only issue one class of stock, limiting their appeal for large capital raises or public offerings. However, S-corps avoid double taxation by passing income directly to shareholders."
-      },
+        "question": "Compare the advantages and disadvantages of choosing a C-corp vs an S-corp business structure.",
+        "answer": "A C-corporation allows unlimited shareholders, including foreign investors, and can issue multiple classes of stock, making it highly attractive for venture capital and institutional investors. C-corps also qualify for the QSBS tax exclusion under Section 1202, allowing up to 100% of capital gains to be excluded if shares are held for at least five years. Additionally, C-corps are better suited for retaining earnings within the business without forcing taxable income onto shareholders. In contrast, S-corporations are limited to 100 U.S. shareholders, can only issue one class of stock, and must pass profits directly to shareholders, often resulting in immediate tax liabilities."
+      },      
       {
         "id": 95,
         "question": "What are the 5 primary actions a company can take?",
@@ -485,12 +485,12 @@ export const financialTopics = [
       {
         "id": 100,
         "question": "How do DPPs pass through losses and why are losses from early DPP years useful?",
-        "answer": "Direct Participation Programs (DPPs) pass through losses directly to investors, who can use these losses to offset passive income on their tax returns. Common deductions include depreciation and depletion. This allows investors to reduce their taxable income even if they do not receive actual cash distributions from the investment."
+        "answer": "Direct Participation Programs (DPPs) pass through losses directly to investors, who can use these losses to offset passive income on their tax returns. Common deductions include depreciation and depletion. This allows investors to reduce their taxable passive income even if they do not receive actual cash distributions from the investment."
       },
       {
-        "id": 101,
-        "question": "What is the conduit theory?",
-        "answer": "The conduit theory is a tax principle that applies to investment vehicles like mutual funds, Real Estate Investment Trusts (REITs), and ETFs. Under this theory, income earned by the fund is passed directly to investors, who then report and pay taxes on it. This avoids taxation at the corporate level, preventing double taxation and allowing for more efficient tax treatment for investors."
+        "id": 212,
+        "question": "Explain what a real estate investment trust (REIT) is and the advantages of REITs.",
+        "answer": "A Real Estate Investment Trust (REIT) is a closed-end fund (company) that owns, operates, or finances income-producing real estate. They are not investment companies since they do not hold securities. REITs allow investors to gain exposure to real estate assets without directly owning property. They are required to distribute at least 90% of their taxable income as dividends to shareholders, making them attractive for income-focused investors. Advantages include regular dividend income, portfolio diversification, liquidity (publicly traded REITs can be bought and sold like stocks), and potential tax benefits as REITs avoid corporate income tax if they meet distribution requirements."
       }
     ]
   },
@@ -762,6 +762,11 @@ export const financialTopics = [
     "id": "returns-and-taxes",
     "title": "Investment Returns & Investment Taxes",
     "flashcardQuestions": [
+      {
+        "id": 101,
+        "question": "What is the conduit theory?",
+        "answer": "The conduit theory is a tax principle that applies to investment vehicles like mutual funds, Real Estate Investment Trusts (REITs), and ETFs. Under this theory, income earned by the fund is passed directly to investors, who then report and pay taxes on it. This avoids taxation at the corporate level, preventing double taxation and allowing for more efficient tax treatment for investors."
+      },
       { "id": 157, "question": "How can an investor calculate his/her capital gains/losses?", "answer": "An investor calculates capital gains or losses by subtracting the cost basis (what was originally paid for the investment, including commissions or fees) from the sale price. The formula is: Capital Gain/Loss = Sale Price − Cost Basis. If the result is positive, it’s a capital gain; if negative, it’s a capital loss." },
       { "id": 158, "question": "Describe current yield.", "answer": "Current yield is a measure of the income provided by a bond relative to its current market price. It is calculated using the formula: Current Yield = Annual Interest Payment ÷ Current Market Price. It helps investors understand the return they can expect based on the bond’s current price, rather than its face value. Unlike yield to maturity, current yield does not account for any capital gains or losses if the bond is held to maturity." },
       { "id": 159, "question": "Describe total return.", "answer": "Total return measures the overall performance and profitability of an investment over a period of time, including both income and capital appreciation. It is calculated by adding any dividends or interest received to any capital gains (or subtracting capital losses) and then dividing by the initial investment amount (cost basis)." },
