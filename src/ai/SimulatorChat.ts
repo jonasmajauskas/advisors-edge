@@ -15,21 +15,12 @@ export interface AIClientResponse {
     concerns,
     conversation,
   }: FetchAIResponseParams): Promise<AIClientResponse | null> {
-    const clientName = 'Charles'; // Hardcoded client name
-  
-    const difficultyPrompts = {
-      novice: 'Respond simply, avoiding technical jargon. Assume Charles is new to financial concepts.',
-      moderate: 'Respond with balanced detail and clarity. Assume Charles has some understanding of financial concepts.',
-      advanced: 'Respond with advanced financial terminology and deeper insights. Assume Charles has strong financial knowledge.',
-    };
   
     const systemMessage = {
       role: 'system',
       content: 
-        `You are simulating a financial client named ${clientName}.\n` +
-        `${difficultyPrompts[difficulty]}\n\n` +
-        `You should only express financial concerns, ask questions, and react to the advisor's suggestions. Do not provide any financial advice or recommendations.\n` +
-        `Introduce related financial concerns naturally if appropriate, but stay in the character of a client.\n\n` +
+        `You are simulating a financial client who has an ${difficulty} understanding of investing and has concerns about ${concerns}.\n` +
+        `Ask a question related to the concerns and within your investment understanding.\n` +
         `Respond strictly in this JSON format:\n` +
         `{"response": "client's message"}\n\n`,
     };

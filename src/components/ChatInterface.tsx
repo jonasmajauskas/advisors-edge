@@ -11,7 +11,9 @@ const ChatInterface: React.FC = () => {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
 
-  const { clientProfileId, difficulty, customConcerns } = location.state || {};
+  const { clientProfileId, difficulty, concerns, customConcerns } = location.state || {};
+
+  console.log('chatinterface', clientProfileId, concerns, customConcerns);
 
   const [response, setResponse] = useState('');
   const [conversation, setConversation] = useState<{ role: string; content: string }[]>([]);
@@ -31,11 +33,11 @@ const ChatInterface: React.FC = () => {
         const aiResponse = await fetchAIResponse({
           profileName: currentProfile?.name || 'Unknown',
           difficulty,
-          concerns: currentProfile?.id === 'custom' 
-            ? customConcerns 
-            : currentProfile?.concerns || [],
-          conversation: [], // Correctly pass an empty array for the initial message
-        });
+          concerns: currentProfile?.concerns?.length 
+            ? currentProfile.concerns 
+            : customConcerns,
+          conversation: [], // Initial empty conversation for first message
+        });        
   
         if (aiResponse?.response) {
           setConversation([{ role: 'client', content: aiResponse.response }]);
@@ -64,7 +66,9 @@ const ChatInterface: React.FC = () => {
     const aiResponse = await fetchAIResponse({
       profileName: currentProfile?.name || 'Unknown',
       difficulty,
-      concerns: currentProfile?.id === 'custom' ? customConcerns : currentProfile?.concerns || [],
+      concerns: currentProfile?.concerns?.length 
+      ? currentProfile.concerns 
+      : customConcerns,
       conversation: updatedConversation, // Pass the full conversation thread
     });
     
@@ -97,9 +101,7 @@ const ChatInterface: React.FC = () => {
   return (
     <div className="fixed inset-0 bg-background flex flex-col">
       <div className="bg-card border-b p-4 flex items-center justify-between shrink-0">
-        <Link to="/client-simulator" className="text-muted-foreground hover:text-foreground">
-          ← Exit
-        </Link>
+        <Link to="/client-simulator" className="text-muted-foreground hover:text-foreground">← Exit</Link>
         <div className="text-right">
           <h2 className="font-medium text-lg">{currentProfile.name}</h2>
           <p className="text-sm text-muted-foreground">
