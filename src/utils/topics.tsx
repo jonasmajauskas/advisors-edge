@@ -291,13 +291,13 @@ export const financialTopics = [
     "flashcardQuestions": [
       {
         "id": 66,
-        "question": "Define 'security'.",
-        "answer": "A security is a non-tangible, transferable, and tradable financial asset that represents ownership (stocks), a creditor relationship (bonds), or rights to ownership (options and warrants). Securities are typically regulated and traded in financial markets."
+        "question": "Define 'security.'",
+        "answer": "A security is a non-tangible financial asset that represents ownership (stocks), a creditor relationship (bonds), or rights to ownership (options and warrants). Securities are transferable and tradable."
       },
       {
         "id": 67,
         "question": "What are the 4 classifications of common stock?",
-        "answer": "1. **Authorized Stock**: The maximum number of shares a company is legally permitted to issue, as specified in its corporate charter.\n2. **Issued Stock**: The portion of authorized shares that have been distributed to investors.\n3. **Outstanding Stock**: Issued shares currently held by investors, excluding treasury stock.\n4. **Treasury Stock**: Shares that were issued but later repurchased by the company; these shares do not receive dividends or voting rights."
+        "answer": "1. **Authorized Stock:** The maximum number of shares a company is legally permitted to issue, as specified in its corporate charter.\n2. **Issued Stock:** The portion of authorized shares that have been created and sold to investors. It includes shares held by the public and shares held by the company (outstanding + treasury).\n3. **Outstanding Stock:** Issued shares currently held by investors, excluding treasury stock.\n4. **Treasury Stock:** Shares that were issued but later repurchased by the company; these shares do not receive dividends or voting rights."
       },
       {
         "id": 68,
@@ -445,12 +445,12 @@ export const financialTopics = [
       {
         "id": 92,
         "question": "Why do professional practices use partnerships?",
-        "answer": "Professional practices (law firms, accounting firms, & medical practices) often use partnerships because:\n- **Pass-through Taxation:** Income flows directly to partners without corporate-level taxation.\n- **Profit Sharing & Buyout Flexibility:** Partners can customize profit allocations based on seniority, contribution, or management roles. Unlike corporations, which distribute profit based on ownership, partnerships can control the distribution to be 70/30 even if partners are 50/50 owners. For buyouts, they are much more straightforward in partnerships, with the agreement defining the terms of valuation and payment without the need for formal shareholder votes. \n- **Regulatory Restrictions:** Many states restrict licensed professionals from forming traditional corporations or LLCs, making partnerships or LLPs the preferred structure."
+        "answer": "Professional practices (law firms, accounting firms, & medical practices) often use partnerships because of:\n- **1. Pass-through Taxation:** Income flows directly to partners without corporate-level taxation.\n- **2. Profit Sharing & Buyout Flexibility:** Partners can customize profit allocations based on seniority, contribution, or management roles. Unlike corporations, which distribute profit based on ownership, partnerships can control the distribution to be 70/30 even if partners are 50/50 owners. For buyouts, they are much more straightforward in partnerships, with the agreement defining the terms of valuation and payment without the need for formal shareholder votes. \n- **3. Regulatory Restrictions:** Many states restrict licensed professionals from forming traditional corporations or LLCs, making partnerships or LLPs the preferred structure."
       },
       {
         "id": 93,
         "question": "Why do PE, VC and hedge fund firms structure as Limited Partnerships?",
-        "answer": "These firms almost universally structure as Limited Partnerships (LPs), because:\n- **Pass-through Taxation:** Avoids double taxation by passing income directly to investors.\n- **Flexible Capital and Profit Allocation:** Allows complex profit-sharing arrangements, including preferred returns, catch-up provisions, and carried interest for general partners.\n- **Limited Liability for Investors:** Limited partners have liability protection limited to their investment.\n- **Sophisticated Investor Base:** Funds often target accredited and qualified investors through private placements.\n- **Custom Waterfall Distributions:** Funds can create complex distribution structures to prioritize the return of capital, preferred returns to investors, and profit-sharing for general partners."
+        "answer": "These firms almost universally structure as Limited Partnerships (LPs), because of:\n- **1. Pass-through Taxation:** Avoids double taxation by passing income directly to investors.\n- **2. Flexible Capital and Profit Allocation:** Allows complex profit-sharing arrangements, including preferred returns, catch-up provisions, and carried interest for general partners.\n- **3. Limited Liability for Investors:** Limited partners have liability protection limited to their investment.\n- **4. Sophisticated Investor Base:** Funds often target accredited and qualified investors through private placements.\n- **5. Custom Waterfall Distributions:** Funds can create complex distribution structures to prioritize the return of capital, preferred returns to investors, and profit-sharing for general partners."
       },
       {
         "id": 94,

@@ -28,7 +28,7 @@ const SiePrep: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
-  const [aiLevel, setAiLevel] = useState<'easy' | 'intermediate' | 'advanced'>('easy');
+  // const [aiLevel, setAiLevel] = useState<'easy' | 'intermediate' | 'advanced'>('easy');
 
   const { user } = useAuth();
 
@@ -102,7 +102,6 @@ const SiePrep: React.FC = () => {
         currentQuestion.question,
         currentAnswer,
         currentQuestion.correctAnswer,
-        aiLevel
       );
       setFeedback(feedbackData || {
         scores: { clarity: 0.5, overall: 0.5 },
@@ -265,7 +264,7 @@ const SiePrep: React.FC = () => {
         </select>
       </div>
 
-      <div className="mb-6">
+      {/* <div className="mb-6">
         <h3 className="text-lg font-medium mb-2">Select AI Feedback Level</h3>
         <select
           value={aiLevel}
@@ -276,7 +275,7 @@ const SiePrep: React.FC = () => {
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
-      </div>
+      </div> */}
 
 
       {questions.length > 0 ? !isSubmitted ? (
@@ -299,7 +298,7 @@ const SiePrep: React.FC = () => {
                   components={{
                     p: ({ children }) => <p className="leading-relaxed mb-2">{children}</p>,
                     strong: ({ children }) => (
-                      <p className="font-semibold mb-2">{children}</p> // ⬅️ This puts bold text on its own line
+                      <p className="font-semibold mt-2">{children}</p> // ⬅️ This puts bold text on its own line
                     ),
                   }}
                 >
