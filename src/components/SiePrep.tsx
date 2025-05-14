@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { financialTopics } from '../utils/topics';
 import SpeechInput from './SpeechInput';
 import FeedbackDisplay from './FeedbackDisplay';
-import { getChatGPTFeedback } from '../api/feedback';
+import { getChatGPTFeedback } from '../ai/SieFeedback';
 import { useAuth } from '../contexts/AuthContext';
 import { CircleCheck, Loader, RotateCw } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
