@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import Home from './components/Home';
 import SiePrep from './components/SiePrep';
 import LoginModal from './components/LoginModal';
+import ClientSimulator from './components/ClientSimulator';
 import { UserRoundCheck, User } from 'lucide-react';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { Navigate } from 'react-router-dom';
@@ -93,6 +94,7 @@ function AppRoutes({ isMobile }: { isMobile: boolean }) {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/sie-prep" element={<SiePrep />} />
+          <Route path="/client-simulator" element={<ClientSimulator />} />
         </Routes>
       </div>
     </div>
