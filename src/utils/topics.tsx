@@ -982,7 +982,64 @@ export const clientProfiles = [{
   name: 'Family Planner',
   description: 'Focus on providing for family and future generations',
   concerns: ['College planning', 'Life insurance', 'Estate planning']
+}, {
+  id: 'executive',
+  name: 'Corporate Executive',
+  description: 'High-earning executive with complex compensation plans',
+  concerns: ['Stock options and RSUs', 'Tax-efficient investing', 'Retirement planning']
+}, {
+  id: 'high_net_worth',
+  name: 'High Net Worth Individual',
+  description: 'Wealthy individual with advanced financial needs',
+  concerns: ['Tax-efficient wealth transfer', 'Estate planning', 'Philanthropy strategies']
+}, {
+  id: 'single_income',
+  name: 'Single Income Household',
+  description: 'Managing financial security on a single income',
+  concerns: ['Budgeting and saving', 'Emergency fund planning', 'Insurance coverage']
+}, {
+  id: 'divorced',
+  name: 'Divorced Individual',
+  description: 'Navigating financial life after divorce',
+  concerns: ['Asset division', 'Retirement account adjustments', 'Estate plan updates']
+}, {
+  id: 'tech_professional',
+  name: 'Tech Industry Professional',
+  description: 'Focused on maximizing tech compensation packages',
+  concerns: ['Equity compensation', 'Early retirement options', 'Diversification of concentrated stock']
+}, {
+  id: 'medical_professional',
+  name: 'Medical Professional',
+  description: 'Physicians and healthcare workers with unique financial planning needs',
+  concerns: ['High student loan debt', 'Malpractice insurance', 'Retirement and disability planning']
+}, {
+  id: 'freelancer',
+  name: 'Freelancer/Contractor',
+  description: 'Independent worker managing irregular income streams',
+  concerns: ['Tax planning for 1099 income', 'Retirement savings without employer plans', 'Income stability']
+}, {
+  id: 'new_parent',
+  name: 'New Parent',
+  description: 'Recently expanded family, focusing on future planning',
+  concerns: ['College savings plans', 'Life insurance needs', 'Adjusting household budget']
+}, {
+  id: 'expat',
+  name: 'Expatriate',
+  description: 'Living abroad and managing cross-border financial matters',
+  concerns: ['Foreign tax compliance', 'Currency risk', 'International estate planning']
+}, {
+  id: 'widowed',
+  name: 'Widowed Individual',
+  description: 'Adjusting financial life after the loss of a spouse',
+  concerns: ['Income replacement', 'Estate adjustments', 'Emotional readiness for financial decisions']
+}, {
+  id: 'custom',
+  name: 'Custom Profile',
+  description: 'Create your own client profile with personalized concerns',
+  concerns: []
 }];
+
+
 export const difficultyLevels = {
   beginner: {
     clientKnowledge: 'Very limited financial knowledge, needs basic concepts explained',

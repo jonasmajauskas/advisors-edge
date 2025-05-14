@@ -4,6 +4,7 @@ import Home from './components/Home';
 import SiePrep from './components/SiePrep';
 import LoginModal from './components/LoginModal';
 import ClientSimulator from './components/ClientSimulator';
+import ChatInterface from './components/ChatInterface';
 import { UserRoundCheck, User } from 'lucide-react';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { Navigate } from 'react-router-dom';
@@ -95,6 +96,7 @@ function AppRoutes({ isMobile }: { isMobile: boolean }) {
           <Route path="/home" element={<Home />} />
           <Route path="/sie-prep" element={<SiePrep />} />
           <Route path="/client-simulator" element={<ClientSimulator />} />
+          <Route path="/client-simulator-chat" element={<ChatInterface />} />
         </Routes>
       </div>
     </div>
