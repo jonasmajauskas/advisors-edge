@@ -28,7 +28,6 @@ const ClientSimulator: React.FC = () => {
     });
   };
   
-
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
