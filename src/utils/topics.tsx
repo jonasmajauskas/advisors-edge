@@ -73,22 +73,22 @@ export const financialTopics = [
       {
         "id": 12,
         "question": "Explain the Reg T initial margin requirement.",
-        "answer": "The Reg T initial margin requirement is a Federal Reserve rule that mandates that an investor must deposit at least 50% of the purchase price of securities when buying on margin. The remaining 50% can be borrowed from the broker. This requirement is designed to limit excessive leverage and protect the financial system."
+        "answer": "The Reg T initial margin requirement is a Federal Reserve rule that mandates that an investor must deposit at least 50% of the purchase price of securities when buying on margin at the time of purchase. The remaining 50% can be borrowed from the broker. This requirement is designed to limit excessive leverage and protect the financial system."
       },
       {
         "id": 13,
         "question": "Explain the FINRA maintenance margin requirement.",
-        "answer": "The FINRA maintenance margin requirement is the minimum amount of equity an investor must maintain in a margin account after purchasing securities. FINRA rules typically require investors to maintain at least 25% of the total market value of the securities in the account. If the account equity falls below this threshold due to market declines, a margin call may be issued, requiring the investor to deposit additional funds or sell securities to restore the required level."
+        "answer": "The FINRA maintenance margin requirement is the minimum amount of equity an investor must maintain in a margin account. It ensures that you have enough equity after the purchase to protect the broker from losses. The rules require investors to maintain at least 25% (for calls) and 30% (for puts) of the total market value of the securities in the account. If the account equity falls below this threshold due to market declines, a margin call may be issued, requiring the investor to deposit additional funds or sell securities to restore the required level."
       },
       {
         "id": 14,
         "question": "For joint accounts, what are the two types of joint ownership structures? Explain each one.",
-        "answer": "The two main types are **Joint Tenants with Right of Survivorship (JTWROS)** and **Tenants in Common (TIC)**. In a JTWROS account, if one owner dies, their share passes automatically to the surviving owner(s). All parties have equal ownership and rights to the account. In a TIC account, each owner has a defined percentage of ownership, and their share passes to their estate upon death—not to the other account holders."
+        "answer": "The two main types are Tenants in Common (TIC) and Joint Tenants with Right of Survivorship (JTWROS).\n\nIn a TIC account, each owner has a defined percentage of ownership, and their share passes to their estate upon death—not to the other account holders.\n\nIn a JTWROS account, if one owner dies, their share passes automatically to the surviving owner(s). All parties have equal ownership and rights to the account."
       },
       {
         "id": 15,
         "question": "Explain the two types of custodian minor accounts.",
-        "answer": "The two types of minor accounts are **Uniform Gifts to Minors Act (UGMA)** and **Uniform Transfers to Minors Act (UTMA)** accounts. Both are custodial accounts established for the benefit of a minor, where an adult acts as custodian. UGMA accounts allow only financial assets like cash, stocks, and bonds, while UTMA accounts can include a wider range of assets, such as real estate and patents. Assets in both types of accounts are irrevocably gifted to the minor and are transferred to them when they reach the age of majority as defined by state law."
+        "answer": "The two types of minor accounts are Uniform Gifts to Minors Act (UGMA) and Uniform Transfers to Minors Act (UTMA) accounts. Both are custodial accounts established for the benefit of a minor, where an adult acts as custodian.\n\nUGMA accounts allow only financial assets like cash, stocks, and bonds, while UTMA accounts can include a wider range of assets, such as real estate and patents. Assets in both types of accounts are irrevocably gifted to the minor and are transferred to them when they reach the age of majority as defined by state law."
       },
       {
         "id": 16,
@@ -98,13 +98,18 @@ export const financialTopics = [
       {
         "id": 17,
         "question": "What are the two types of 529 plans?",
-        "answer": "The two types of 529 plans are prepaid tuition plans and education savings plans. Prepaid tuition plans allow individuals to purchase future tuition at today's rates, typically limited to in-state public colleges. Education savings plans, on the other hand, allow funds to be invested in various portfolios and used for a broader range of qualified education expenses, including tuition, fees, books, and room and board at most accredited colleges and universities nationwide."
+        "answer": "The two types of 529 plans are prepaid tuition plans and education savings plans.\n\nPrepaid tuition plans allow individuals to purchase future tuition at today's rates, typically limited to in-state public colleges.\n\nEducation savings plans, on the other hand, allow funds to be invested in various portfolios and used for a broader range of qualified education expenses, including tuition, fees, books, and room and board at most accredited colleges and universities nationwide."
       },
       {
         "id": 18,
         "question": "When should you choose a college savings plan and when should you choose a prepaid tuition plan?",
-        "answer": "You should choose a college savings plan when you want flexibility in how and where the funds can be used, including for out-of-state and private institutions, and the potential for investment growth. A prepaid tuition plan is best when you want to lock in today's tuition rates at in-state public colleges and prefer a lower-risk option that focuses specifically on covering tuition and mandatory fees."
+        "answer": "You should choose a college savings plan when you want flexibility in how and where the funds can be used, including for out-of-state and private institutions, and the potential for investment growth.\n\nA prepaid tuition plan is best when you want to lock in today's tuition rates at in-state public colleges and prefer a lower-risk option that focuses specifically on covering tuition and mandatory fees."
       },
+      {
+        "id": 213,
+        "question": "What is a Coverdell Education Savings Account (ESA) and how does it work?",
+        "answer": "A Coverdell Education Savings Account (ESA) is a tax-advantaged investment account designed to help families save for a child's education expenses. Contributions are limited to $2,000 per year per beneficiary and are not tax-deductible, but earnings grow tax-free. Withdrawals are also tax-free if used for qualified education expenses, including K-12 and higher education costs such as tuition, books, supplies, room and board, and technology. Contributors must meet income limits, and the funds must be used by the beneficiary before age 30 or transferred to another eligible family member."
+      },      
       {
         "id": 19,
         "question": "What is ABLE?",
@@ -114,7 +119,7 @@ export const financialTopics = [
         "id": 20,
         "question": "How does ABLE help with Supplemental Security Income (SSI) and Medicaid?",
         "answer": "ABLE accounts help individuals with disabilities maintain eligibility for Supplemental Security Income (SSI) and Medicaid by allowing them to save up to $100,000 without the funds counting toward the SSI asset limit. If the account balance exceeds $100,000, SSI benefits are suspended but not terminated, and Medicaid eligibility remains unaffected regardless of the account balance. This allows disabled individuals to save for disability-related expenses while preserving vital government assistance."
-      }
+      },
     ]
   },
   {
