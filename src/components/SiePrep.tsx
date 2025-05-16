@@ -8,6 +8,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { CircleCheck, Loader, RotateCw } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
 import ReactMarkdown from 'react-markdown';
+import remarkBreaks from 'remark-breaks';
 
 interface FeedbackData {
   scores: {
@@ -298,12 +299,14 @@ const SiePrep: React.FC = () => {
                   components={{
                     p: ({ children }) => <p className="leading-relaxed mb-2">{children}</p>,
                     strong: ({ children }) => (
-                      <p className="font-semibold mt-2">{children}</p> // ⬅️ This puts bold text on its own line
+                      <span className="font-semibold">{children}</span> // ⬅️ Use span if you want bold inline instead of new line
                     ),
                   }}
+                  remarkPlugins={[remarkBreaks]}
                 >
                   {currentQuestion.correctAnswer || 'No answer provided.'}
                 </ReactMarkdown>
+
               </div>
             ) : (
               <SpeechInput
