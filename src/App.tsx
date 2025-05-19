@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import Home from './components/Home';
 import SiePrep from './components/SiePrep';
 import LoginModal from './components/LoginModal';
+import Series66Prep from './components/66Prep';
 import ClientSimulator from './components/ClientSimulator';
 import ChatInterface from './components/ChatInterface';
 import { UserRoundCheck, User } from 'lucide-react';
@@ -95,6 +96,7 @@ function AppRoutes({ isMobile }: { isMobile: boolean }) {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/sie-prep" element={<SiePrep />} />
+          <Route path="/66-prep" element={<Series66Prep />} />
           <Route path="/client-simulator" element={<ClientSimulator />} />
           <Route path="/client-simulator-chat" element={<ChatInterface />} />
         </Routes>
