@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { SIEtopics } from '../utils/topics';
+import { Series66Topics } from '../utils/topics';
 import SpeechInput from './SpeechInput';
 import FeedbackDisplay from './FeedbackDisplay';
 import { getChatGPTFeedback } from '../ai/PrepFeedback';
@@ -21,7 +21,7 @@ interface FeedbackData {
   improvements: string[];
 }
 
-const SiePrep: React.FC = () => {
+const Series66Prep: React.FC = () => {
   const [selectedTopic, setSelectedTopic] = useState('all');
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [feedback, setFeedback] = useState<FeedbackData | null>(null);
@@ -33,14 +33,14 @@ const SiePrep: React.FC = () => {
 
   const { user } = useAuth();
 
-  const completedIds = (user?.['sie-prep-questions-completed'] || '')
+  const completedIds = (user?.['66-prep-questions-completed'] || '')
     .split(',')
     .map((id: string) => id.trim())
     .filter(Boolean);
 
   // Load saved question index on component mount
   useEffect(() => {
-    const savedIndex = localStorage.getItem('sie-prep-current-question');
+    const savedIndex = localStorage.getItem('66-prep-current-question');
     if (savedIndex !== null) {
       setCurrentQuestionIndex(Number(savedIndex));
     }
@@ -48,7 +48,7 @@ const SiePrep: React.FC = () => {
 
   // Save current question index on change
   useEffect(() => {
-    localStorage.setItem('sie-prep-current-question', String(currentQuestionIndex));
+    localStorage.setItem('66-prep-current-question', String(currentQuestionIndex));
   }, [currentQuestionIndex]);
 
   // Auto-navigate to first uncompleted question on initial load or topic change
@@ -72,7 +72,7 @@ const SiePrep: React.FC = () => {
     setShowCorrectAnswer(false);
   };
 
-  const allQuestions = SIEtopics.flatMap(topic =>
+  const allQuestions = Series66Topics.flatMap(topic =>
     topic.flashcardQuestions?.map(q => ({
       ...q,
       topicId: topic.id,
@@ -113,21 +113,21 @@ const SiePrep: React.FC = () => {
       // ✅ Append Question ID to Completed List in Supabase
       if (user) {
         const userId = user.userId || user.id; // Adjust based on your schema
-        const existingCompleted = (user['sie-prep-questions-completed'] || '').split(',').map((id: string) => id.trim()).filter(Boolean);
+        const existingCompleted = (user['66-prep-questions-completed'] || '').split(',').map((id: string) => id.trim()).filter(Boolean);
 
         if (!existingCompleted.includes(String(currentQuestion.id))) {
           const updatedCompleted = [...existingCompleted, currentQuestion.id].join(',');
 
           const { error } = await supabase
             .from('users')
-            .update({ 'sie-prep-questions-completed': updatedCompleted })
+            .update({ '66-prep-questions-completed': updatedCompleted })
             .eq('userId', userId);
 
           if (error) {
             console.error('Error updating completed questions:', error.message);
           } else {
             // ✅ Update local user object directly to trigger re-render
-            user['sie-prep-questions-completed'] = updatedCompleted;
+            user['66-prep-questions-completed'] = updatedCompleted;
           }
         }
       }
@@ -160,7 +160,7 @@ const SiePrep: React.FC = () => {
 
   const handleReset = () => {
     setCurrentQuestionIndex(0);
-    localStorage.removeItem('sie-prep-current-question');
+    localStorage.removeItem('66-prep-current-question');
     resetState();
   };
 
@@ -213,7 +213,7 @@ const SiePrep: React.FC = () => {
         <Link to="/home" className="text-muted-foreground hover:text-foreground">
           ← Home
         </Link>
-        <h2 className="text-2xl font-bold">SIE® Prep</h2>
+        <h2 className="text-2xl font-bold">Series 66 Prep</h2>
       </div>
 
       <div className="mb-6">
@@ -230,14 +230,14 @@ const SiePrep: React.FC = () => {
 
                 const { error } = await supabase
                   .from('users')
-                  .update({ 'sie-prep-questions-completed': '' })
+                  .update({ '66-prep-questions-completed': '' })
                   .eq('userId', userId);
 
                 if (error) {
                   console.error('Error resetting progress:', error.message);
                 } else {
                   // Update local state or trigger a re-fetch if needed
-                  user['sie-prep-questions-completed'] = '';
+                  user['66-prep-questions-completed'] = '';
                   handleReset(); // Reset local progress
                 }
               }}
@@ -257,7 +257,7 @@ const SiePrep: React.FC = () => {
           className="w-full border rounded-md p-2 text-sm"
         >
           <option value="all">All Topics ({allQuestions.length})</option>
-          {SIEtopics.map(topic => (
+          {Series66Topics.map(topic => (
             <option key={topic.id} value={topic.id}>
               {topic.title} ({topic.flashcardQuestions?.length || 0})
             </option>
@@ -389,4 +389,4 @@ const SiePrep: React.FC = () => {
   );
 };
 
-export default SiePrep;
+export default Series66Prep;

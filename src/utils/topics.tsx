@@ -1,4 +1,309 @@
-export const financialTopics = [
+export const Series66Topics = [
+  {
+    "id": "equity",
+    "title": "Equity Securities",
+    "flashcardQuestions": [
+      {
+        "id": 1,
+        "question": "Explain the difference between common stock and preferred stock.",
+        "answer": "Common stock represents ownership in a company with voting rights and the potential for capital appreciation and dividends, though dividends are not guaranteed. Preferred stock does not usually provide voting rights but offers fixed dividends and has priority over common stock for dividend payments and during liquidation. Preferred stock behaves similarly to bonds, making it more sensitive to interest rate changes—its price tends to fall when interest rates rise and increase when rates fall."
+      },
+      {
+        "id": 2,
+        "question": "Explain what dividends are and the three types of dividends.",
+        "answer": "Dividends are payments made by a corporation to its shareholders, typically from profits or retained earnings. They are a way for companies to share earnings with investors but are not obligatory and are declared at the discretion of the company's Board of Directors. The three types of dividends are: 1) Cash dividends, which provide shareholders with direct cash payments; 2) Stock dividends, which distribute additional shares instead of cash; and 3) Property dividends, which involve distributing non-cash assets, though these are rare."
+      },
+      {
+        "id": 3,
+        "question": "If an investor holds 100 shares of stock at $48 per share and the company declares a 20% stock dividend, how much stock would the investor now own and what would be the current market price?",
+        "answer": "With a 20% stock dividend, the investor would receive 20 additional shares (100 shares x 20%), bringing their total holdings to 120 shares. The market price would adjust to reflect the increased number of shares: $48 ÷ 1.20 = $40 per share. The total investment value remains the same at $4,800 (120 shares x $40)."
+      },
+      {
+        "id": 4,
+        "question": "What are the rights of stockholders?",
+        "answer": "With a 20% stock dividend, the investor would receive 20 additional shares (100 shares x 20%), bringing their total holdings to 120 shares. The market price would adjust to reflect the increased number of shares: $48 ÷ 1.20 = $40 per share. The total investment value remains the same at $4,800 (120 shares x $40)."
+      },
+      {
+        "id": 5,
+        "question": "What are the rights of stockholders?",
+        "answer": "Stockholders have four primary rights: 1) The right to vote on important corporate matters, such as electing the board of directors and approving major corporate policies; 2) The right to transfer ownership of their shares freely; 3) The right to access important company information, including financial reports and annual meetings; and 4) Preemptive rights, which allow shareholders to maintain their proportional ownership by purchasing additional shares before the company offers them to the public."
+      },
+      {
+        "id": 6,
+        "question": "Why would you include common stock in a client's portfolio?",
+        "answer": "Potential capital appreciation, income from dividends, and hedge against inflation."
+      },
+      {
+        "id": 7,
+        "question": "What are the primary risks with owning common stock?",
+        "answer": "The primary risks of owning common stock include market risk, where stock prices can fluctuate due to overall market conditions; business risk, which relates to the specific company's performance and profitability; and low priority at dissolution, meaning common shareholders are the last to receive assets if the company goes bankrupt, after creditors and preferred shareholders."
+      },
+      {
+        "id": 8,
+        "question": "What are the 6 types of preferred stock?",
+        "answer": "1. **Straight/Noncumulative**: Pays fixed dividends but does not accumulate unpaid dividends.\n2. **Cumulative**: Accumulates unpaid dividends; all must be paid before common dividends.\n3. **Callable**: The issuer can repurchase shares at a set price after a specified date.\n4. **Convertible**: Allows shareholders to convert preferred shares into common stock at a predetermined ratio.\n5. **Adjustable-Rate**: Dividend rates adjust based on a benchmark interest rate.\n6. **Participating**: Provides additional dividends beyond the fixed rate if company profits exceed expectations."
+      },
+      {
+        "id": 9,
+        "question": "Why would you include preferred stock in a client's portfolio?",
+        "answer": "Fixed income from dividends, prior claim ahead of common stock, and convertible preferred sacrifices income in exchange for potential appreciation."
+      },
+      {
+        "id": 10,
+        "question": "What are the primary risks with owning preferred stock?",
+        "answer": "The primary risks of owning preferred stock include interest rate risk, as preferred stock prices are highly sensitive to changes in interest rates; lack of voting rights, meaning investors have limited influence over company decisions; and inflation risk, since fixed dividend payments may lose purchasing power over time. Additionally, while preferred shareholders have a higher claim than common shareholders during liquidation, they still rank below bondholders and other creditors."
+      },
+      {
+        "id": 11,
+        "question": "How do preferred stock dividends rank from highest paying to lowest paying types?",
+        "answer": "Preferred stock dividends generally rank from highest to lowest as follows:\n\n1) Adjustable-Rate Preferred Stock, which can offer higher payouts when interest rates rise;\n\n2) Participating Preferred Stock, which provides fixed dividends plus additional dividends if the company performs well;\n\n3) Cumulative Preferred Stock, which ensures unpaid dividends accumulate and must be paid before common dividends;\n\n4) Non-Cumulative Preferred Stock, which pays fixed dividends but forfeits any missed payments;\n\n5) Convertible Preferred Stock, which typically offers lower dividends because of the added benefit of conversion into common stock."
+      }
+    ]
+  },
+  {
+    "id": "debt",
+    "title": "Debt Securities",
+    "flashcardQuestions": [
+      {
+        "id": 12,
+        "question": "What are the options for long-term and short-term financing?",
+        "answer": "Short-term financing options focus on immediate liquidity and typically include cash equivalents such as Treasury Bills (T-Bills), commercial paper, and money market instruments. These are used to meet day-to-day operational expenses. Long-term financing options, usually borrowed for a minimum of 5 years, are used for significant investments and business growth, including issuing corporate bonds and debentures. These provide funding over multiple years and are typically used for capital expenditures and expansion projects."
+      },
+      {
+        "id": 13,
+        "question": "Explain what a bond's indenture is.",
+        "answer": "A bond's indenture, or deed of trust, is a formal, legally binding contract between the bond issuer and bondholders. It outlines the key terms and conditions of the bond, including the interest rate (coupon), maturity date, repayment schedule, covenants (restrictions on the issuer), and any collateral backing the bond. The indenture protects the rights of bondholders and ensures that the issuer meets its obligations."
+      },
+      {
+        "id": 14,
+        "question": "How do S&P and Moody’s ratings differ?",
+        "answer": "S&P uses all capital letters (AAA, AA, A, etc.), while Moody’s uses a combination of capital and lowercase letters (Aaa, Aa, A, etc.)."
+      },
+      { "id": 15, "question": "What bonds are considered investment grade from a rating perspective?", "answer": "Bonds rated BBB or Baa and higher by credit rating agencies are considered investment grade, indicating lower credit risk." },
+      {
+        "id": 16,
+        "question": "How are corporate and municipal bonds quoted as? What does each bond point and fraction represent? What is the price of this bond quote '99 1/8?'",
+        "answer": "Corporate and municipal bonds are quoted as a percentage of their par value, typically using a three-digit number. One bond point represents 1% of the bond's $1,000 par value, or $10. Quotes often include fractions such as 1/8 or 1/32. For corporate and municipal bonds, fractions are quoted in eighths (1/8), where each 1/8 equals $1.25. So, a bond quoted at 99 1/8 is priced at $991.25."
+      },
+      {
+        "id": 17,
+        "question": "How are Treasury securities quoted? What does each bond point and fraction represent?",
+        "answer": "Treasury securities are quoted as a percentage of par value, with fractions expressed in 1/32nds. One bond point equals 1% of the $1,000 par value, or $10. For example, a quote of 90-08 means 90 and 8/32, which is 90.25% of par, equating to a price of $902.50. This quoting method provides more precise pricing in the Treasury market."
+      },
+      {
+        "id": 18,
+        "question": "Explain the price of a corporate and Treasury bond quote at 103 1/2 and 103.16, respectively.",
+        "answer": "A corporate bond quoted at 103 1/2 means it is priced at 103.50% of par, or $1,035 per bond ($1,000 x 1.035). A Treasury bond quoted at 103.16 means it is priced at 103 and 16/32, or 103.50% of par, which also equals $1,035 per bond. Though the quoting conventions differ (corporate bonds use decimals, Treasuries use 32nds), both represent the same dollar price."
+      },
+      {
+        "id": 19,
+        "question": "Interpret the following bond quote: DEF 5s35 @106.",
+        "answer": "This quote refers to a bond issued by DEF Corporation with a 5% nominal (coupon) interest rate, maturing in 2035, and currently trading at 106% of its par value. This means the bond is priced at $1,060 per bond ($1,000 x 1.06). The bond is trading at a premium because its coupon rate is likely higher than current market interest rates."
+      },
+      {
+        "id": 20,
+        "question": "What is the concept of parity in convertible securities?",
+        "answer": "Parity refers to the point at which a convertible security, such as a bond or preferred stock, is equal in value to the common stock it can be converted into. It is used to evaluate whether conversion is financially beneficial. To calculate parity, divide the market price of the common stock by the conversion ratio. If the result is equal to or higher than the market price of the convertible, the security is said to be at or above parity."
+      },
+      {
+        "id": 21,
+        "question": "A convertible bond has a par value of $1,000 and a conversion price of $25. The current stock price is $30. How do you calculate the bond’s conversion value, and should the investor consider converting?",
+        "answer": "First, calculate the conversion ratio using the formula: Conversion Ratio = Par Value ÷ Conversion Price. \n\nConversion Ratio = $1,000 ÷ $25 = 40 shares.\n\nNext, calculate the conversion value: Conversion Value = Conversion Ratio × Current Stock Price.\n\nConversion Value = 40 shares × $30 = $1,200.\n\nSince the conversion value of $1,200 is higher than the bond’s par value of $1,000, the investor may consider converting to realize a higher value."
+      },
+      { "id": 22, "question": "What is the difference between the nominal and current yield?", "answer": "The nominal yield is the bond's stated coupon rate, while the current yield measures the bond's annual coupon payments relative to its current market price, providing a more real-time income return perspective." },
+      { "id": 23, "question": "Explain 'Yield to Maturity'.", "answer": "Yield to Maturity (YTM) is the total return an investor can expect if the bond is held until it matures, accounting for all future coupon payments and the difference between purchase price and par value." },
+      {
+        "id": 24,
+        "question": "What is the formula for Yield to Maturity (YTM)?",
+        "answer": "The formula for Yield to Maturity (YTM) is:\n\nYTM ≈ [Annual Interest Payment + (Par Value - Current Price) ÷ Years to Maturity] ÷ [(Par Value + Current Price) ÷ 2]\n\nThis formula approximates the YTM, which represents the total return expected if the bond is held to maturity. It accounts for the bond’s annual coupon payments, any capital gain or loss if purchased at a discount or premium, and the time remaining until maturity."
+      },
+      {
+        "id": 25,
+        "question": "YTM is also called what?",
+        "answer": "Market-driven yield because it reflects the internal rate of return from the bond investment."
+      },
+      {
+        "id": 26,
+        "question": "What is Yield to Call (YTC)?",
+        "answer": "Yield to Call (YTC) is the total return an investor can expect to earn if a callable bond is purchased and held until the earliest possible call date, rather than until maturity. YTC assumes the bond will be called at the first call date and the investor will receive the call price (usually par or slightly above par). This yield is important for bonds likely to be called when interest rates decline."
+      },
+      {
+        "id": 27,
+        "question": "For bonds trading at a premium, which yield ranks highest to lowest among Current Yield (CY), Yield to Maturity (YTM), and Yield to Call (YTC)?",
+        "answer": "For bonds trading at a premium, the yields from highest to lowest are: Current Yield (CY), then Yield to Maturity (YTM), and finally Yield to Call (YTC). This is because premium bonds are more likely to be called early, limiting their long-term return potential. YTC assumes the bond is called at the earliest opportunity, leading to the lowest yield."
+      },
+      {
+        "id": 28,
+        "question": "For bonds trading at a discount, which yield ranks highest to lowest among Current Yield (CY), Yield to Maturity (YTM), and Yield to Call (YTC)?",
+        "answer": "For bonds trading at a discount, the yields from highest to lowest are: Yield to Call (YTC), then Yield to Maturity (YTM), and finally Current Yield (CY). This is because discounted bonds offer the greatest return if called early, resulting in a higher YTC, and the lowest return based on just the current income, resulting in the lowest CY."
+      },
+    ]
+  },
+  {
+    "id": "pooled-investments",
+    "title": "Pooled Investments",
+    "flashcardQuestions": [
+      {
+        "id": 29,
+        "question": "What are the three types of investment companies defined in the Investment Companies Act of 1940?",
+        "answer": "The three types of investment companies defined in the Investment Companies Act of 1940 are: 1) Face-Amount Certificate Companies, which issue debt securities backed by fixed payments; 2) Unit Investment Trusts (UITs), which offer fixed portfolios of securities and have no active management; and 3) Management Companies, which include both Open-End (Mutual Funds) and Closed-End Funds that are actively managed by investment advisers."
+      },
+      {
+        "id": 30,
+        "question": "For management investment companies, what is the restriction for the Board of Directors?",
+        "answer": "At least 40% of the Board of Directors must be independent or non-interested persons who are not affiliated with the fund’s investment adviser, underwriter, or any other affiliated entities. This ensures unbiased oversight and protection of shareholder interests."
+      },
+      {
+        "id": 31,
+        "question": "For management investment companies, what activities are prohibited?",
+        "answer": "Management investment companies are prohibited from engaging in several activities to protect shareholders, including: 1) Purchasing securities on margin; 2) Participating in joint trading accounts; 3) Selling securities short (unless it’s part of a hedging strategy in certain funds); and 4) Acquiring more than 3% of another investment company’s voting securities. These restrictions are in place to prevent excessive risk-taking and conflicts of interest."
+      },
+      {
+        "id": 32,
+        "question": "What is the minimum net worth an investment company must have to make a public offering of securities?",
+        "answer": "An investment company must have a minimum net worth of $100,000 before making a public offering of its securities, as required by the Investment Company Act of 1940."
+      },
+      {
+        "id": 33,
+        "question": "Explain the relationship between investment advisory and underwriter contracts for investment companies.",
+        "answer": "The investment advisory contract governs the relationship between the investment company and the adviser, outlining management fees and investment responsibilities. The underwriter contract involves the distribution of the investment company's shares to the public. While the adviser manages the fund's assets, the underwriter markets and sells the fund's shares. Both contracts must be approved by a majority of the board of directors, including independent directors, and shareholders. The contracts must be reviewed annually and can be terminated with 60 days' notice by the board or shareholders."
+      },
+      {
+        "id": 34,
+        "question": "Explain what an affiliated person and control person is.",
+        "answer": "An affiliated person is someone who has a significant relationship with an investment company, such as an officer, director, employee, or owner of 5% or more of the company’s voting securities. A control person is someone who directly or indirectly controls more than 25% of the voting power of a company. Control persons have the ability to influence or direct the management and policies of the company. These designations are important under the Investment Company Act of 1940, as they impose certain restrictions and disclosure requirements to prevent conflicts of interest."
+      },
+      {
+        "id": 35,
+        "question": "Explain the role of a custodian for investment companies.",
+        "answer": "A custodian is a financial institution, typically a bank, responsible for holding and safeguarding the securities and cash assets of an investment company. The custodian does not need to be FDIC-insured. The custodian ensures the physical security of the fund’s assets, handles the settlement of trades, collects dividends and interest payments, and processes corporate actions. Importantly, the custodian does not manage or advise on the fund’s investments—it strictly performs safekeeping and administrative functions to protect investors’ assets from mismanagement or fraud."
+      },
+      {
+        "id": 36,
+        "question": "Explain the forward pricing principle.",
+        "answer": "Forward pricing is the practice where mutual fund purchases and redemptions are executed at the next computed NAV, rather than at the current price. Since NAV is typically calculated at the close of each trading day, all buy and sell orders received during the day are processed using that end-of-day NAV."
+      },
+      {
+        "id": 36,
+        "question": "Explain the initial capitalization process for an open-end investment company.",
+        "answer": "An open-end investment company, such as a mutual fund, does not specify the number of shares it intends to issue. Instead, it offers an unlimited amount of investment capital by continuously issuing new shares based on investor demand. New shares are issued whenever investors make purchases, and shares are redeemed directly by the fund. These companies issue only common stock, and all proceeds from the primary offering go directly to the fund itself to be invested according to its objectives. A prospectus is required for all sales to provide investors with full disclosure about the fund's objectives, fees, and risks."
+      },
+      {
+        "id": 37,
+        "question": "Explain the initial capitalization process for a closed-end investment company.",
+        "answer": "A closed-end investment company raises a fixed amount of capital through a one-time public offering of a set number of shares. After the initial offering, no new shares are issued by the fund, and investors who wish to buy or sell must do so in the secondary market, typically through an exchange. Closed-end funds can issue common stock, preferred stock, and bonds. The proceeds from the initial offering go directly to the fund to be invested according to its investment objectives. A prospectus is required during the initial offering, but not for secondary market transactions."
+      },
+      {
+        "id": 38,
+        "question": "Explain the pricing of open-end investment company shares.",
+        "answer": "Open-end investment company shares are priced based on their Net Asset Value (NAV) per share, calculated at the close of each trading day. New shares are issued and redeemed directly by the fund at the NAV plus any applicable sales charges (also known as the public offering price or POP). The NAV is determined by taking the total value of the fund's assets, subtracting liabilities, and dividing by the number of outstanding shares. Open-end funds follow forward pricing, meaning all buy and sell orders are executed at the next calculated NAV after the order is received."
+      },
+      {
+        "id": 39,
+        "question": "Explain the pricing of closed-end investment company shares.",
+        "answer": "Closed-end investment company shares are priced based on supply and demand in the secondary market, not directly by the fund. After the initial public offering, shares trade on stock exchanges or over-the-counter markets like common stocks. Their market price may be at a premium or discount to the Net Asset Value (NAV) depending on investor sentiment and market conditions. Unlike open-end funds, closed-end funds do not issue or redeem shares continuously, and investors must buy or sell shares through a broker."
+      },
+      {
+        "id": 40,
+        "question": "Explain the differences between open-end and closed-end investment companies, including capitalization, what they can issue, shares, offering & trading, and pricing.",
+        "answer": "Open-end investment companies (mutual funds) have unlimited capitalization and continuously issue new shares. They only issue common stock, and shares are purchased and redeemed directly through the fund at the Net Asset Value (NAV) plus any sales charges. Shares can be purchased in full or fractional amounts. Pricing is based on forward pricing using the NAV calculated at the end of each business day.\n\nClosed-end investment companies have a fixed capitalization established through an initial public offering (IPO). They can issue common stock, preferred stock, and bonds. After the IPO, shares trade in the secondary market on exchanges or over-the-counter. Pricing is determined by market supply and demand and can be at a premium or discount to NAV. Closed-end shares can also be purchased in full or fractional shares through the secondary market."
+      },
+      {
+        "id": 41,
+        "question": "Explain how ETFs operate like both open-end and closed-end investment companies.",
+        "answer": "ETFs (Exchange-Traded Funds) have characteristics of both open-end and closed-end investment companies. Like open-end funds, ETFs continuously issue and redeem shares, but they do this through large institutional transactions called 'creation units,' rather than directly with retail investors. This helps maintain their liquidity and keeps the market price close to the Net Asset Value (NAV).\n\nLike closed-end funds, ETFs are traded on exchanges throughout the day, and their prices fluctuate based on market supply and demand. Investors can buy and sell ETF shares in the secondary market at any time during market hours, just like stocks. This intraday trading feature distinguishes ETFs from traditional open-end mutual funds, which are only priced at the end of the trading day."
+      },
+      { "id": 42, "question": "Describe the different mutual fund classes including their sales charges, expense ratios, what they're best for and any notes.", "answer": "Class A: Front-end sales load, lower expense ratios, best for long-term investors using breakpoint discounts.\nClass B: Back-end sales load with contingent deferred sales charge/load, higher expense ratios, convert to Class A over time, suitable for long-term investors without large upfront investments.\nClass C: No front-end load, small back-end load if sold early, higher expense ratios, good for short- to medium-term investors.\nClass I: No sales loads, lowest expense ratios, available to institutions and high-net-worth individuals.\nClass R: Offered through retirement plans, no sales charges, varying expense ratios.\nNo-Load: No sales charges, lower expense ratios, ideal for self-directed, cost-conscious investors." },
+      { "id": 43, "question": "What is calculated as part of the expense ratio?", "answer": "The expense ratio includes the manager’s fee, administrative fees, and 12b-1 marketing/distribution fees. It does not include front-end or back-end sales charges." },
+      {
+        "id": 43,
+        "question": "Explain the rules for 12b-1 asset-based fees.",
+        "answer": "12b-1 fees are annual marketing or distribution fees charged by mutual funds, deducted from fund assets to cover expenses like advertising, sales commissions, and promoting the fund. These fees are expressed as a percentage of the fund’s average net assets and are part of the fund's expense ratio.\n\nAccording to SEC rules:\n- The maximum total 12b-1 fee is 1% annually.\n- Of that, up to 0.75% can be used for distribution and marketing expenses.\n- An additional 0.25% can be charged as a 'service fee' for ongoing shareholder services.\n\nTo charge 12b-1 fees, the fund’s Board of Directors must approve a written 12b-1 plan, and a majority of the independent directors must review and approve the plan annually. Shareholders must also approve the initial implementation of the plan.\n\nFunds that charge the full 1% 12b-1 fee are often classified as Class C shares, known as level-load shares, and are typically more expensive for long-term investors."
+      },
+      {
+        "id": 44,
+        "question": "What are the two ways to achieve a reduction in Class A sales charges?",
+        "answer": "Class A sales charges can be reduced through breakpoints and rights of accumulation. Breakpoints provide immediate sales charge discounts based on the size of a single investment. Rights of accumulation allow investors to qualify for reduced sales charges by combining the value of existing holdings with new purchases, helping them reach breakpoint levels over time."
+      },
+      {
+        "id": 45,
+        "question": "What are the breakpoint qualification requirements?",
+        "answer": "Breakpoint qualifications apply to direct family members, including married couples, parents and their minor children, and corporations. Investment clubs and associations formed specifically for investing do not qualify."
+      },
+      {
+        "id": 46,
+        "question": "Explain how letters of intent, right of accumulation, combination privilege, and exchange privilege can reduce the sales charge.",
+        "answer": "A Letter of Intent (LOI) allows an investor to qualify for reduced sales charges by committing to invest a specified amount over a 13-month period. LOIs can also be back dated by 90 days. Shares equivalent to the discount are held in escrow until the LOI is fulfilled. \n\nRight of Accumulation (ROA) lets investors qualify for breakpoint discounts based on the total value of their existing investments within the same fund family, including reinvested dividends and appreciation. They do not require making speciifc commitment for future investment and do not have a time limit. \n\nCombination Privilege allows investors to combine investments in multiple funds within the same fund family to reach breakpoint discounts. \n\nExchange Privilege enables investors to transfer investments between different funds within the same family without incurring additional sales charges, allowing for portfolio reallocation without extra costs."
+      },
+      {
+        "id": 47,
+        "question": "What is a breakpoint sales violation?",
+        "answer": "A breakpoint sales violation occurs when a registered representative fails to inform or advise a client about available sales charge discounts (breakpoints) on Class A mutual fund purchases. This often results in the client unnecessarily purchasing mutual fund shares just below the amount required for a discount, leading to higher sales charges. Such practices are prohibited because they are not in the best interest of the client."
+      },
+      {
+        "id": 48,
+        "question": "Explain what private equity funds are, including their structure, investors, strategies, and risks.",
+        "answer": "Private equity funds are pooled investment vehicles that invest directly in private companies or engage in buyouts of public companies to take them private. They are typically structured as limited partnerships with no more than 100 investors, where the fund managers act as general partners (GPs) and the investors are limited partners (LPs). These funds are generally open only to accredited investors and qualified purchasers due to their high risk and illiquidity. Private equity strategies include leveraged buyouts, venture capital, growth capital, distressed investments, and mezzanine financing. Risks include lack of liquidity, long investment horizons, high minimum investment requirements, and significant business and market risks. Returns are often realized through an eventual sale or IPO of portfolio companies."
+      },
+      {
+        "id": 49,
+        "question": "What is a qualified purchaser?",
+        "answer": "A qualified purchaser is an individual or entity that meets certain wealth thresholds under the Investment Company Act of 1940, allowing them to invest in specific private investment funds without the same regulatory protections as smaller investors. Individuals generally qualify if they own at least $5 million in investments. Entities, such as trusts and institutional investors, typically qualify if they manage at least $25 million in investments. Qualified purchasers have greater access to exclusive private offerings but assume higher investment risks and less regulatory oversight."
+      },
+      {
+        "id": 50,
+        "question": "What are the two categories of private funds?",
+        "answer": "The two categories of private funds are direct funds and portfolio funds. Direct funds invest directly into operating companies, acquiring ownership stakes or control positions. Portfolio funds, also known as fund-of-funds, invest in a portfolio of other private funds, providing diversified exposure to multiple private investments rather than direct ownership in individual companies."
+      },
+      {
+        "id": 51,
+        "question": "Explain the compensation structure for private funds, venture capital funds, and hedge funds.",
+        "answer": "All three typically use a performance-based compensation model known as '2 and 20.' This includes a 2% annual management fee based on assets under management and a 20% performance fee on profits earned for investors. Hedge funds often apply this model with a high-water mark to ensure performance fees are only earned after recovering prior losses. Venture capital funds also use '2 and 20' but typically receive profits through carried interest after achieving a preferred return for investors. Private equity funds follow a similar structure, with carried interest and management fees, often including hurdle rates, which are return thresholds that must be reached, before performance fees are paid."
+      },
+      {
+        "id": 52,
+        "question": "Explain what fund of funds are and how they work.",
+        "answer": "A fund of funds (FOF) is an investment vehicle that invests in a portfolio of other investment funds rather than directly in stocks, bonds, or other securities. This structure provides investors with diversified exposure across multiple fund managers and strategies. FOFs can invest in mutual funds, hedge funds, private equity funds, or venture capital funds. While they offer diversification and professional management, they often come with higher fees because investors pay both the FOF management fee and the underlying fund fees. FOFs are typically used by investors seeking diversified exposure to alternative investments without having to directly select and manage multiple funds themselves."
+      },
+      {
+        "id": 53,
+        "question": "What are unit investment trusts (UITs)? What is their typical duration and how do they differ from open/closed-end funds?",
+        "answer": "UITs are investment companies that issue a fixed-number of redeemable securities representing a proportionate interest in a fixed portfolio of securities. They do not have a board of directors, do not employ an investment advisor, and are not actively managed. UITs have a predetermined termination date, typically ranging from 1 to 5 years. Unlike open-end funds (mutual funds) and closed-end funds, UITs do not continuously issue shares or actively trade the underlying portfolio. However, UITs offer a redemption feature—investors can usually redeem their units directly back to the sponsor at NAV, even after the initial offering."
+      },
+      {
+        "id": 54,
+        "question": "Explain what Exchange-Traded Funds (ETFs) are.",
+        "answer": "Exchange-Traded Funds (ETFs) are investment funds that trade on stock exchanges like individual stocks. They can be structured as Unit Investment Trusts (UITs) or open-end investment companies. ETFs typically aim to track the performance of a specific index, sector, commodity, or asset class. Like mutual funds, they offer diversification, but unlike mutual funds, ETFs can be bought and sold throughout the trading day at market prices, similar to closed-end funds. ETFs usually have lower expense ratios, offer greater tax efficiency, and provide intraday liquidity. Unlike mutual funds, ETFs generally do not sell shares directly to investors but create and redeem shares through large institutional investors using in-kind transfers. Most ETFs are passively managed to mirror an index, though actively managed ETFs also exist. They can be purchased on margin and sold short, offering investors additional trading flexibility."
+      },
+      {
+        "id": 55,
+        "question": "Explain what Real Estate Investment Trusts (REITs) are and how they differ from investment companies and Direct Participation Programs (DPPs).",
+        "answer": "Real Estate Investment Trusts (REITs) are companies that own, operate, or finance income-producing real estate and provide investors with a way to access real estate investments without directly owning property. They must distribute at least 90% of their taxable income to shareholders as dividends to qualify for tax advantages and avoid corporate income taxes. REITs are **not investment companies** and are not regulated under the Investment Company Act of 1940. They are also **not Direct Participation Programs (DPPs)** because, unlike DPPs, REITs do not allow losses to flow through to investors for tax purposes. Investors in REITs receive income through dividends but cannot claim operating losses or depreciation deductions on their personal tax returns. This makes REITs primarily income-generating investments rather than tax-advantaged structures for offsetting other income."
+      },
+      {
+        "id": 56,
+        "question": "What are the benefits and risks of investing in mutual funds?",
+        "answer": "Mutual funds offer several benefits, including professional management, diversification, and liquidity. Professional portfolio managers make investment decisions on behalf of investors, helping manage risk and seek returns. Diversification reduces individual security risk by spreading investments across various assets. Mutual funds are also highly liquid, allowing investors to buy or redeem shares at the next calculated NAV. However, mutual funds also carry risks. These include market risk, where the value of investments may decline with market fluctuations, and management risk, where poor decisions by fund managers can negatively impact performance. Mutual funds also typically have fees and expenses, such as management fees and 12b-1 fees, which can erode returns. Additionally, some mutual funds charge sales loads that increase the cost of investing. Finally, mutual funds may generate taxable capital gains distributions, even if the investor does not sell their shares, potentially leading to unexpected tax liabilities."
+      },
+      {
+        "id": 57,
+        "question": "What are the benefits and risks of investing in private funds?",
+        "answer": "Private funds, including private equity and venture capital funds, offer the potential for high returns and access to unique investment opportunities not available in public markets. These funds typically invest in start-ups, private companies, and specialized industries, which can deliver significant growth if successful. However, private funds also carry substantial risks. They are highly illiquid, often requiring investors to lock up their capital for several years. They are limited to accredited or qualified investors, have high minimum investment requirements, and typically use complex strategies that may involve leverage and speculative investments. In addition, fees are high, often using a '2 and 20' compensation structure (2% management fee and 20% performance fee). The lack of transparency and regulatory oversight increases overall investment risk."
+      },
+      {
+        "id": 58,
+        "question": "What are the benefits and risks of investing in hedge funds?",
+        "answer": "Hedge funds offer the potential for high returns and portfolio diversification through the use of advanced investment strategies, including leverage, derivatives, and short selling. They are designed to seek absolute returns regardless of market conditions and may reduce correlation with traditional investments. The risks of hedge funds include high volatility, significant leverage risk, and complex strategies that may not be well understood by all investors. Hedge funds typically have high fees, often using a '2 and 20' structure (2% management fee and 20% performance fee). They also have limited liquidity, with lock-up periods restricting when investors can withdraw funds. Hedge funds are generally only available to accredited investors and are less regulated, resulting in less transparency and higher risk."
+      },
+      {
+        "id": 59,
+        "question": "What are the benefits and risks of investing in REITs?",
+        "answer": "Real Estate Investment Trusts (REITs) offer investors exposure to real estate markets without directly owning property. They provide regular income through dividends, typically pay high yields, and offer liquidity when publicly traded. REITs also help diversify an investment portfolio with exposure to real estate assets. However, REITs also have risks. They are sensitive to interest rate changes; when rates rise, REIT prices often fall. REITs may also face property market risks such as vacancy rates, declining property values, and economic downturns. Non-traded REITs carry additional risks of illiquidity and high fees. It’s important to note that REITs are not considered investment companies and are not Direct Participation Programs (DPPs) because losses do not flow through to investors; only income is passed through under the tax code."
+      },
+    ]
+  }
+];
+export const SIEtopics = [
   {
     "id": "annuities",
     "title": "Annuities",
@@ -78,7 +383,7 @@ export const financialTopics = [
       {
         "id": 13,
         "question": "Explain the FINRA maintenance margin requirement.",
-        "answer": "The FINRA maintenance margin requirement is the minimum amount of equity an investor must maintain in a margin account. It ensures that you have enough equity after the purchase to protect the broker from losses. The rules require investors to maintain at least 25% (for calls) and 30% (for puts) of the total market value of the securities in the account. If the account equity falls below this threshold due to market declines, a margin call may be issued, requiring the investor to deposit additional funds or sell securities to restore the required level."
+        "answer": "The FINRA maintenance margin requirement is the minimum amount of equity an investor must maintain in a margin account. It ensures that you have enough equity after the purchase to protect the broker from losses.\n\nThe rule requires investors to maintain at least 25% (for long positions) and 30% (for short positions) of the total market value of the securities in the account. If the account equity falls below this threshold due to market declines, a margin call may be issued, requiring the investor to deposit additional funds or sell securities to restore the required level."
       },
       {
         "id": 14,
@@ -109,7 +414,7 @@ export const financialTopics = [
         "id": 213,
         "question": "What is a Coverdell Education Savings Account (ESA) and how does it work?",
         "answer": "A Coverdell Education Savings Account (ESA) is a tax-advantaged investment account designed to help families save for a child's education expenses. Contributions are limited to $2,000 per year per beneficiary and are not tax-deductible, but earnings grow tax-free. Withdrawals are also tax-free if used for qualified education expenses, including K-12 and higher education costs such as tuition, books, supplies, room and board, and technology. Contributors must meet income limits, and the funds must be used by the beneficiary before age 30 or transferred to another eligible family member."
-      },      
+      },
       {
         "id": 19,
         "question": "What is ABLE?",
@@ -209,8 +514,6 @@ export const financialTopics = [
       { "id": 46, "question": "What are the three key factors in calculating a bond's duration?", "answer": "Maturity, Coupon rate, and Yield to Maturity (YTM)." },
       { "id": 47, "question": "What is the difference between a bond's duration and convexity?", "answer": "Duration measures a bond’s price sensitivity to interest rate changes assuming a linear relationship. Convexity adjusts for the curvature in the price-yield relationship, providing more accurate estimates for larger rate changes." },
       { "id": 48, "question": "Explain how bonds with higher convexity are affected by rate increases and decreases.", "answer": "Bonds with higher convexity lose less value when rates rise and gain more value when rates fall compared to bonds with lower convexity. This makes them more attractive in volatile rate environments." },
-      { "id": 49, "question": "Describe the different mutual fund classes including their sales charges, expense ratios, what they're best for and any notes.", "answer": "Class A: Front-end sales load, lower expense ratios, best for long-term investors using breakpoint discounts.\nClass B: Back-end sales load, higher expense ratios, convert to Class A over time, suitable for long-term investors without large upfront investments.\nClass C: No front-end load, small back-end load if sold early, higher expense ratios, good for short- to medium-term investors.\nClass I: No sales loads, lowest expense ratios, available to institutions and high-net-worth individuals.\nClass R: Offered through retirement plans, no sales charges, varying expense ratios.\nNo-Load: No sales charges, lower expense ratios, ideal for self-directed, cost-conscious investors." },
-      { "id": 50, "question": "What is calculated as part of the expense ratio?", "answer": "The expense ratio includes the manager’s fee, administrative fees, and 12b-1 marketing/distribution fees. It does not include front-end or back-end sales charges." },
       { "id": 51, "question": "Define 'zero-coupon bonds'.", "answer": "Zero-coupon bonds are issued at a deep discount and mature at face value. They do not pay periodic interest—the difference between the purchase price and par value represents the investor’s return. They have the highest exposure to interest rate risk because they have the longest duration, with all of their value tied up in a single future payment. They also face significant inflation risk, particularly if long-term, since their lump-sum payment may lose purchasing power over time." },
       { "id": 52, "question": "Explain the tax payments for zero-coupon bonds.", "answer": "Even though zero-coupon bonds don’t pay periodic interest, investors must pay income tax each year on the imputed interest (phantom income) as it accrues. This income is taxed as ordinary income, not capital gains." },
       { "id": 53, "question": "What are the types of corporate bonds (7)?", "answer": "Debenture, Subordinated, Income, Convertible, High-Yield (Junk), Zero-Coupon, Collateralized bonds." },
@@ -461,12 +764,12 @@ export const financialTopics = [
         "id": 94,
         "question": "Compare the advantages and disadvantages of choosing a C-corp vs an S-corp business structure.",
         "answer": "A C-corporation allows unlimited shareholders, including foreign investors, and can issue multiple classes of stock, making it highly attractive for venture capital and institutional investors. C-corps also qualify for the QSBS tax exclusion under Section 1202, allowing up to 100% of capital gains to be excluded if shares are held for at least five years. Additionally, C-corps are better suited for retaining earnings within the business without forcing taxable income onto shareholders. In contrast, S-corporations are limited to 100 U.S. shareholders, can only issue one class of stock, and must pass profits directly to shareholders, often resulting in immediate tax liabilities."
-      },      
+      },
       {
         "id": 95,
         "question": "What are the 5 primary actions a company can take?",
         "answer": "1. **Mergers:** Combining two companies into one.\n\n2. **Acquisitions:** One company purchases another.\n\n3. **Spinoff:** A company creates a new independent company by distributing shares of the new entity to its shareholders.\n\n4. **Buyback:** The company repurchases its own shares from the market, reducing outstanding shares.\n\n5. **Tender Offer:** A company offers to purchase shares directly from shareholders at a premium price to gain control or reduce shares outstanding."
-      },      
+      },
       {
         "id": 96,
         "question": "What are stock splits?",
@@ -602,7 +905,7 @@ export const financialTopics = [
         "id": 210,
         "question": "If a market maker posts a quote of 10.00 - 10.10 [25x10], which of the following actions is the market maker willing to take?",
         "answer": "The market maker is willing to buy up to 2,500 shares at $10.00 (bid price) and sell up to 1,000 shares at $10.10 (ask price). The numbers [25x10] represent round lots, where 25 means 25 lots of 100 shares for the bid and 10 means 10 lots of 100 shares for the ask. The market maker is not obligated to buy above $10.00 or sell below $10.10."
-      }      
+      }
     ]
   },
   {
@@ -639,9 +942,10 @@ export const financialTopics = [
         "question": "What is calculated as part of the expense ratio?",
         "answer": "The expense ratio includes the management fee, 12b-1 marketing and distribution fees, administrative fees, and other operating expenses of the fund. It does not include transaction costs or sales loads. The expense ratio directly impacts the fund's net returns to investors."
       },
+      { "id": 49, "question": "Describe the different mutual fund classes including their sales charges, expense ratios, what they're best for and any notes.", "answer": "Class A: Front-end sales load, lower expense ratios, best for long-term investors using breakpoint discounts.\nClass B: Back-end sales load, higher expense ratios, convert to Class A over time, suitable for long-term investors without large upfront investments.\nClass C: No front-end load, small back-end load if sold early, higher expense ratios, good for short- to medium-term investors.\nClass I: No sales loads, lowest expense ratios, available to institutions and high-net-worth individuals.\nClass R: Offered through retirement plans, no sales charges, varying expense ratios.\nNo-Load: No sales charges, lower expense ratios, ideal for self-directed, cost-conscious investors." },
       {
         "id": 127,
-        "question": "Explain what forward pricing is.",
+        "question": "Explain the forward pricing principle.",
         "answer": "Forward pricing is the practice where mutual fund purchases and redemptions are executed at the next computed NAV, rather than at the current price. Since NAV is typically calculated at the close of each trading day, all buy and sell orders received during the day are processed using that end-of-day NAV."
       },
       {
@@ -652,7 +956,7 @@ export const financialTopics = [
       {
         "id": 129,
         "question": "Explain how letters of intent, right of accumulation, combination privilege, and exchange privilege can reduce the sales charge.",
-        "answer": "A Letter of Intent (LOI) allows an investor to qualify for reduced sales charges by committing to invest a specified amount over a 13-month period. Shares equivalent to the discount are held in escrow until the LOI is fulfilled. \n\nRight of Accumulation (ROA) lets investors qualify for breakpoint discounts based on the total value of their existing investments within the same fund family, including reinvested dividends. \n\nCombination Privilege allows investors to combine investments in multiple funds within the same fund family to reach breakpoint discounts. \n\nExchange Privilege enables investors to transfer investments between different funds within the same family without incurring additional sales charges, allowing for portfolio reallocation without extra costs."
+        "answer": "A Letter of Intent (LOI) allows an investor to qualify for reduced sales charges by committing to invest a specified amount over a 13-month period. LOIs can also be back dated by 90 days. Shares equivalent to the discount are held in escrow until the LOI is fulfilled. \n\nRight of Accumulation (ROA) lets investors qualify for breakpoint discounts based on the total value of their existing investments within the same fund family, including reinvested dividends and appreciation. \n\nCombination Privilege allows investors to combine investments in multiple funds within the same fund family to reach breakpoint discounts. \n\nExchange Privilege enables investors to transfer investments between different funds within the same family without incurring additional sales charges, allowing for portfolio reallocation without extra costs."
       }
     ]
   },
@@ -953,7 +1257,7 @@ export const financialTopics = [
         "id": 211,
         "question": "How much more can an MFP contribute to a local mayor’s re-election campaign without affecting the firm’s municipal business if they already gave $200?",
         "answer": "An additional $50. MFPs can contribute up to $250 per election to candidates they can vote for under MSRB Rule G-37. Since $200 was already contributed, only $50 more is allowed."
-      },      
+      },
       {
         "id": 202,
         "question": "Explain the MSRB Rule G-37 and the rules for Municipal Finance Professionals (MFPs).",
@@ -966,7 +1270,7 @@ export const financialTopics = [
       }
     ]
   },
-]
+];
 export const clientProfiles = [{
   id: 'retiree',
   name: 'Retirement-Focused Client',
@@ -1043,8 +1347,6 @@ export const clientProfiles = [{
   description: 'Create your own client profile with personalized concerns',
   concerns: []
 }];
-
-
 export const difficultyLevels = {
   beginner: {
     clientKnowledge: 'Very limited financial knowledge, needs basic concepts explained',
