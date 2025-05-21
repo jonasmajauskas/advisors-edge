@@ -30,6 +30,8 @@ const Series66Prep: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   // const [aiLevel, setAiLevel] = useState<'easy' | 'intermediate' | 'advanced'>('easy');
+  const [stopListening, setStopListening] = useState(false);
+  const [validationError, setValidationError] = useState('');
 
   const { user } = useAuth();
 
@@ -70,6 +72,7 @@ const Series66Prep: React.FC = () => {
     setFeedback(null);
     setIsSubmitted(false);
     setShowCorrectAnswer(false);
+    setStopListening(false);
   };
 
   const allQuestions = Series66Topics.flatMap(topic =>
@@ -91,12 +94,14 @@ const Series66Prep: React.FC = () => {
 
   const handleSubmit = async () => {
     if (currentAnswer.trim().length < 10) {
-      alert('Please provide a more detailed answer (at least 10 characters).');
-      return;
-    }
+        setValidationError('Please provide a more detailed answer (at least 10 characters).');
+        setTimeout(() => setValidationError(''), 5000); // clears message after 5 seconds
+        return;
+      }
 
     setIsLoading(true);
     setIsSubmitted(true);
+    setStopListening(true);
 
     try {
       const feedbackData = await getChatGPTFeedback(
@@ -291,6 +296,9 @@ const Series66Prep: React.FC = () => {
           <p className="text-sm text-muted-foreground mb-4">
             Topic: {currentQuestion.topicTitle}
           </p>
+          {validationError && (
+            <p className="text-sm text-red-500 mb-4">{validationError}</p>
+          )}
           <div className="w-full">
             {showCorrectAnswer ? (
               <div className="border rounded-md bg-muted p-4 text-sm text-muted-foreground space-y-2 mb-4">
@@ -309,11 +317,12 @@ const Series66Prep: React.FC = () => {
 
               </div>
             ) : (
-              <SpeechInput
+                <SpeechInput
                 value={currentAnswer}
                 onTranscriptChange={setCurrentAnswer}
                 isTextArea
                 placeholder="Speak or type your answer here..."
+                stopListening={stopListening}
               />
             )}
           </div>

@@ -30,6 +30,8 @@ const SiePrep: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   // const [aiLevel, setAiLevel] = useState<'easy' | 'intermediate' | 'advanced'>('easy');
+  const [stopListening, setStopListening] = useState(false);
+  const [validationError, setValidationError] = useState('');
 
   const { user } = useAuth();
 
@@ -70,6 +72,7 @@ const SiePrep: React.FC = () => {
     setFeedback(null);
     setIsSubmitted(false);
     setShowCorrectAnswer(false);
+    setStopListening(false);
   };
 
   const allQuestions = SIEtopics.flatMap(topic =>
@@ -91,12 +94,14 @@ const SiePrep: React.FC = () => {
 
   const handleSubmit = async () => {
     if (currentAnswer.trim().length < 10) {
-      alert('Please provide a more detailed answer (at least 10 characters).');
+      setValidationError('Please provide a more detailed answer (at least 10 characters).');
+      setTimeout(() => setValidationError(''), 5000); // clears message after 5 seconds
       return;
     }
 
     setIsLoading(true);
     setIsSubmitted(true);
+    setStopListening(true);
 
     try {
       const feedbackData = await getChatGPTFeedback(
@@ -291,6 +296,9 @@ const SiePrep: React.FC = () => {
           <p className="text-sm text-muted-foreground mb-4">
             Topic: {currentQuestion.topicTitle}
           </p>
+          {validationError && (
+            <p className="text-sm text-red-500 mb-4">{validationError}</p>
+          )}
           <div className="w-full">
             {showCorrectAnswer ? (
               <div className="border rounded-md bg-muted p-4 text-sm text-muted-foreground space-y-2 mb-4">
@@ -314,6 +322,7 @@ const SiePrep: React.FC = () => {
                 onTranscriptChange={setCurrentAnswer}
                 isTextArea
                 placeholder="Speak or type your answer here..."
+                stopListening={stopListening}
               />
             )}
           </div>
@@ -344,16 +353,16 @@ const SiePrep: React.FC = () => {
           <h3 className="text-lg font-medium mb-2">Correct Answer</h3>
           <div className="border rounded-lg p-4 bg-muted text-muted-foreground mb-6">
             <ReactMarkdown
-                  components={{
-                    p: ({ children }) => <p className="leading-relaxed mb-2">{children}</p>,
-                    strong: ({ children }) => (
-                      <span className="font-semibold">{children}</span> // ⬅️ Use span if you want bold inline instead of new line
-                    ),
-                  }}
-                  remarkPlugins={[remarkBreaks]}
-                >
-                  {currentQuestion.correctAnswer || 'No answer provided.'}
-                </ReactMarkdown>
+              components={{
+                p: ({ children }) => <p className="leading-relaxed mb-2">{children}</p>,
+                strong: ({ children }) => (
+                  <span className="font-semibold">{children}</span> // ⬅️ Use span if you want bold inline instead of new line
+                ),
+              }}
+              remarkPlugins={[remarkBreaks]}
+            >
+              {currentQuestion.correctAnswer || 'No answer provided.'}
+            </ReactMarkdown>
           </div>
 
           <div className="flex justify-end gap-4 mt-6">
