@@ -10,13 +10,13 @@ const Home: React.FC = () => {
     <div className="flex flex-col items-center justify-center">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
 
-      <Link to="/client-simulator" className="bg-card border rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
-          <h3 className="text-xl font-semibold mb-2">Client Simulator</h3>
+        <Link to="/66-prep" className="bg-card border rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
+          <h3 className="text-xl font-semibold mb-2">Series 66 Prep</h3>
           <p className="text-muted-foreground mb-4 flex-grow">
-            Practice handling client scenarios and refine your communication strategies to respond confidently and professionally.
+            Master state securities regulations, investment adviser laws, and ethical business practices to pass the Series 66.
           </p>
           <button className="bg-primary text-primary-foreground py-2 px-4 rounded-md mt-auto">
-            Run Simulator
+            Start Assessment
           </button>
         </Link>
 
@@ -30,17 +30,15 @@ const Home: React.FC = () => {
           </button>
         </Link>
 
-        <Link to="/66-prep" className="bg-card border rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
-          <h3 className="text-xl font-semibold mb-2">Series 66 Prep</h3>
+        <Link to="/client-simulator" className="bg-card border rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
+          <h3 className="text-xl font-semibold mb-2">Client Simulator</h3>
           <p className="text-muted-foreground mb-4 flex-grow">
-            Master state securities regulations, investment adviser laws, and ethical business practices to confidently pass the Series 66 Exam.
+            Practice handling client scenarios and refine your communication strategies to respond confidently and professionally.
           </p>
           <button className="bg-primary text-primary-foreground py-2 px-4 rounded-md mt-auto">
-            Start Assessment
+            Run Simulator
           </button>
         </Link>
-
-
 
         <div className="bg-muted border border-border rounded-lg p-6 cursor-not-allowed flex flex-col opacity-60">
           <h3 className="text-xl font-semibold mb-2">Series 7 Prep</h3>

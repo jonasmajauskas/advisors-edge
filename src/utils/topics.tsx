@@ -6,58 +6,53 @@ export const Series66Topics = [
       {
         "id": 1,
         "question": "Explain the difference between common stock and preferred stock.",
-        "answer": "Common stock represents ownership in a company with voting rights and the potential for capital appreciation and dividends, though dividends are not guaranteed. Preferred stock does not usually provide voting rights but offers fixed dividends and has priority over common stock for dividend payments and during liquidation. Preferred stock behaves similarly to bonds, making it more sensitive to interest rate changes—its price tends to fall when interest rates rise and increase when rates fall."
+        "answer": "Common stock represents ownership in a company with voting rights and the potential for capital appreciation and dividends, though dividends are not guaranteed.\n\nPreferred stock does not usually provide voting rights but offers fixed dividends and has priority over common stock for dividend payments and during liquidation. Preferred stock behaves similarly to bonds, making it more sensitive to interest rate changes—its price tends to fall when interest rates rise and increase when rates fall."
       },
       {
         "id": 2,
         "question": "Explain what dividends are and the three types of dividends.",
-        "answer": "Dividends are payments made by a corporation to its shareholders, typically from profits or retained earnings. They are a way for companies to share earnings with investors but are not obligatory and are declared at the discretion of the company's Board of Directors. The three types of dividends are: 1) Cash dividends, which provide shareholders with direct cash payments; 2) Stock dividends, which distribute additional shares instead of cash; and 3) Property dividends, which involve distributing non-cash assets, though these are rare."
+        "answer": "Dividends are payments made by a corporation to its shareholders, typically from profits or retained earnings. They are a way for companies to share earnings with investors but are not obligatory and are declared at the discretion of the company's Board of Directors.\n\nThe three types of dividends are:\n\n ***1. Cash dividends*** which provide shareholders with direct cash payments;\n\n ***2. Stock dividends*** which distribute additional shares instead of cash; and\n\n ***3. Property dividends*** which involve distributing non-cash assets, though these are rare."
       },
       {
         "id": 3,
-        "question": "If an investor holds 100 shares of stock at $48 per share and the company declares a 20% stock dividend, how much stock would the investor now own and what would be the current market price?",
-        "answer": "With a 20% stock dividend, the investor would receive 20 additional shares (100 shares x 20%), bringing their total holdings to 120 shares. The market price would adjust to reflect the increased number of shares: $48 ÷ 1.20 = $40 per share. The total investment value remains the same at $4,800 (120 shares x $40)."
-      },
-      {
-        "id": 4,
-        "question": "What are the rights of stockholders?",
-        "answer": "With a 20% stock dividend, the investor would receive 20 additional shares (100 shares x 20%), bringing their total holdings to 120 shares. The market price would adjust to reflect the increased number of shares: $48 ÷ 1.20 = $40 per share. The total investment value remains the same at $4,800 (120 shares x $40)."
+        "question": "If an investor holds 100 shares of stock at $48 per share and the company declares a 20% stock dividend, how much stock would the investor now own and what would be the current market value of these shares?",
+        "answer": "With a 20% stock dividend, the investor would receive 20 additional shares (100 shares x 20%), bringing their total holdings to 120 shares.\n\n The market price would adjust to reflect the increased number of shares: $48 ÷ 1.20 = $40 per share.\n\nThe total investment value remains the same at $4,800 (120 shares x $40)."
       },
       {
         "id": 5,
         "question": "What are the rights of stockholders?",
-        "answer": "Stockholders have four primary rights: 1) The right to vote on important corporate matters, such as electing the board of directors and approving major corporate policies; 2) The right to transfer ownership of their shares freely; 3) The right to access important company information, including financial reports and annual meetings; and 4) Preemptive rights, which allow shareholders to maintain their proportional ownership by purchasing additional shares before the company offers them to the public."
+        "answer": "Stockholders have four primary rights:\n\n ***1. The right to vote*** on important corporate matters, such as electing the board of directors and approving major corporate policies;\n\n ***2. The right to transfer ownership*** of their shares freely;\n\n ***3. The right to access important company information*** including financial reports and annual meetings; and\n\n ***4. Preemptive rights*** which allow shareholders to maintain their proportional ownership by purchasing additional shares before the company offers them to the public."
       },
       {
         "id": 6,
         "question": "Why would you include common stock in a client's portfolio?",
-        "answer": "Potential capital appreciation, income from dividends, and hedge against inflation."
+        "answer": "Potential capital appreciation,\n\n income from dividends,\n\n and hedge against inflation."
       },
       {
         "id": 7,
         "question": "What are the primary risks with owning common stock?",
-        "answer": "The primary risks of owning common stock include market risk, where stock prices can fluctuate due to overall market conditions; business risk, which relates to the specific company's performance and profitability; and low priority at dissolution, meaning common shareholders are the last to receive assets if the company goes bankrupt, after creditors and preferred shareholders."
+        "answer": "The primary risks of owning common stock include:\n\n ***Market risk*** where stock prices can fluctuate due to overall market conditions;\n\n ***Business risk*** which relates to the specific company's performance and profitability; and\n\n ***Low priority at dissolution*** meaning common shareholders are the last to receive assets if the company goes bankrupt, after creditors and preferred shareholders."
       },
       {
         "id": 8,
         "question": "What are the 6 types of preferred stock?",
-        "answer": "1. **Straight/Noncumulative**: Pays fixed dividends but does not accumulate unpaid dividends.\n2. **Cumulative**: Accumulates unpaid dividends; all must be paid before common dividends.\n3. **Callable**: The issuer can repurchase shares at a set price after a specified date.\n4. **Convertible**: Allows shareholders to convert preferred shares into common stock at a predetermined ratio.\n5. **Adjustable-Rate**: Dividend rates adjust based on a benchmark interest rate.\n6. **Participating**: Provides additional dividends beyond the fixed rate if company profits exceed expectations."
+        "answer": "***1. Straight/Noncumulative***: Pays fixed dividends but does not accumulate unpaid dividends.\n\n ***2. Cumulative***: Accumulates unpaid dividends; all must be paid before common dividends.\n\n ***3. Callable***: The issuer can repurchase shares at a set price after a specified date.\n\n ***4. Convertible***: Allows shareholders to convert preferred shares into common stock at a predetermined ratio.\n\n ***5. Adjustable-Rate***: Dividend rates adjust based on a benchmark interest rate.\n\n ***6. Participating***: Provides additional dividends beyond the fixed rate if company profits exceed expectations."
       },
       {
         "id": 9,
         "question": "Why would you include preferred stock in a client's portfolio?",
-        "answer": "Fixed income from dividends, prior claim ahead of common stock, and convertible preferred sacrifices income in exchange for potential appreciation."
+        "answer": "Fixed income from dividends,\n\n prior claim ahead of common stock,\n\n and convertible preferred sacrifices income in exchange for potential appreciation."
       },
       {
         "id": 10,
         "question": "What are the primary risks with owning preferred stock?",
-        "answer": "The primary risks of owning preferred stock include interest rate risk, as preferred stock prices are highly sensitive to changes in interest rates; lack of voting rights, meaning investors have limited influence over company decisions; and inflation risk, since fixed dividend payments may lose purchasing power over time. Additionally, while preferred shareholders have a higher claim than common shareholders during liquidation, they still rank below bondholders and other creditors."
+        "answer": "The primary risks of owning preferred stock include\n\n ***Interest rate risk*** as preferred stock prices are highly sensitive to changes in interest rates;\n\n ***Lack of voting rights*** meaning investors have limited influence over company decisions; an\n\n ***Inflation risk*** since fixed dividend payments may lose purchasing power over time.\n\n Additionally, while preferred shareholders have a higher claim than common shareholders during liquidation, they still rank below bondholders and other creditors."
       },
       {
         "id": 11,
         "question": "How do preferred stock dividends rank from highest paying to lowest paying types?",
-        "answer": "Preferred stock dividends generally rank from highest to lowest as follows:\n\n1) Adjustable-Rate Preferred Stock, which can offer higher payouts when interest rates rise;\n\n2) Participating Preferred Stock, which provides fixed dividends plus additional dividends if the company performs well;\n\n3) Cumulative Preferred Stock, which ensures unpaid dividends accumulate and must be paid before common dividends;\n\n4) Non-Cumulative Preferred Stock, which pays fixed dividends but forfeits any missed payments;\n\n5) Convertible Preferred Stock, which typically offers lower dividends because of the added benefit of conversion into common stock."
-      }
+        "answer": "Preferred stock dividends generally rank from highest to lowest as follows:\n\n ***1. Adjustable-Rate Preferred Stock*** which can offer higher payouts when interest rates rise;\n\n ***2. Participating Preferred Stock***, which provides fixed dividends plus additional dividends if the company performs well;\n\n ***3. Cumulative Preferred Stock*** which ensures unpaid dividends accumulate and must be paid before common dividends;\n\n ***4.Callable Preferred Stock*** which typically offers a higher yield to compensate for the call risk;\n\n ***5. Non-Cumulative Preferred Stock*** which pays fixed dividends but forfeits any missed payments;\n\n ***6. Convertible Preferred Stock*** which typically offers lower dividends because of the added benefit of conversion into common stock."
+      }      
     ]
   },
   {
@@ -291,15 +286,181 @@ export const Series66Topics = [
         "answer": "Private funds, including private equity and venture capital funds, offer the potential for high returns and access to unique investment opportunities not available in public markets. These funds typically invest in start-ups, private companies, and specialized industries, which can deliver significant growth if successful. However, private funds also carry substantial risks. They are highly illiquid, often requiring investors to lock up their capital for several years. They are limited to accredited or qualified investors, have high minimum investment requirements, and typically use complex strategies that may involve leverage and speculative investments. In addition, fees are high, often using a '2 and 20' compensation structure (2% management fee and 20% performance fee). The lack of transparency and regulatory oversight increases overall investment risk."
       },
       {
-        "id": 58,
+        "id": 4,
         "question": "What are the benefits and risks of investing in hedge funds?",
         "answer": "Hedge funds offer the potential for high returns and portfolio diversification through the use of advanced investment strategies, including leverage, derivatives, and short selling. They are designed to seek absolute returns regardless of market conditions and may reduce correlation with traditional investments. The risks of hedge funds include high volatility, significant leverage risk, and complex strategies that may not be well understood by all investors. Hedge funds typically have high fees, often using a '2 and 20' structure (2% management fee and 20% performance fee). They also have limited liquidity, with lock-up periods restricting when investors can withdraw funds. Hedge funds are generally only available to accredited investors and are less regulated, resulting in less transparency and higher risk."
       },
       {
-        "id": 59,
+        "id": 58,
         "question": "What are the benefits and risks of investing in REITs?",
         "answer": "Real Estate Investment Trusts (REITs) offer investors exposure to real estate markets without directly owning property. They provide regular income through dividends, typically pay high yields, and offer liquidity when publicly traded. REITs also help diversify an investment portfolio with exposure to real estate assets. However, REITs also have risks. They are sensitive to interest rate changes; when rates rise, REIT prices often fall. REITs may also face property market risks such as vacancy rates, declining property values, and economic downturns. Non-traded REITs carry additional risks of illiquidity and high fees. It’s important to note that REITs are not considered investment companies and are not Direct Participation Programs (DPPs) because losses do not flow through to investors; only income is passed through under the tax code."
       },
+    ]
+  },
+  {
+    "id": "derivatives",
+    "title": "Derivatives",
+    "flashcardQuestions": [
+      {
+        "id": 59,
+        "question": "What is an option contract?",
+        "answer": "An option is a financial derivative contract that gives the holder the right, but not the obligation, to buy (call) or sell (put) an underlying asset—such as a stock—at a specified price (strike price) before or on a specific expiration date. Buyers of options pay a premium for this right, while sellers have the obligation to fulfill the contract if exercised. Options are used for speculation, hedging, and income strategies."
+      },
+      {
+        "id": 60,
+        "question": "What two factors influence the price of a derivative?",
+        "answer": "The price of the underlying asset and the length of the time until the contract expires."
+      },
+      {
+        "id": 61,
+        "question": "What is a call and put option?",
+        "answer": "A call option gives the holder the right, but not the obligation, to buy an underlying asset at a specified price (strike price) before or at expiration.\n\nA put option gives the holder the right, but not the obligation, to sell an underlying asset at a specified price before or at expiration. Both require payment of a premium to the seller of the option."
+      },
+      {
+        "id": 62,
+        "question": "What are the three ways an owner of a put or call option can close their position?",
+        "answer": "An owner of a call or put option can close their position in the following three ways:\n\n1. Exercise the option — The owner uses the right to buy (call) or sell (put) the underlying security.\n\n2. Sell the option — The owner can sell the contract in the secondary market to realize any profit or loss.\n\n3. Let the option expire — If the option is out of the money, the owner may choose not to exercise or sell, and it expires worthless."
+      },
+      {
+        "id": 63,
+        "question": "What is the difference between European and American options?",
+        "answer": "The key difference between European and American options lies in when they can be exercised:\n\nAmerican options can be exercised at any time before or on the expiration date.\n\nEuropean options can only be exercised on the expiration date.\n\nThis flexibility makes American options generally more valuable than European options, all else being equal."
+      },
+      {
+        "id": 64,
+        "question": "What does exercising an option contract mean for calls and puts?",
+        "answer": "Exercising an option means the holder chooses to enact the right specified in the contract:\n\nFor a call option, exercising means the holder buys the underlying asset at the strike price.\n\nFor a put option, exercising means the holder sells the underlying asset at the strike price."
+      },
+      {
+        "id": 65,
+        "question": "What is the primary reason to purchase options?",
+        "answer": "The primary reason to purchase options is to hedge or speculate:\n\n1. Hedging allows investors to protect against potential losses in an existing position (e.g., buying puts to protect long stock positions).\n\n2. Speculation enables investors to profit from expected movements in the price of the underlying asset with limited upfront investment and defined risk."
+      },      
+      {
+        "id": 66,
+        "question": "What do long and short positions mean for options investors?",
+        "answer": "A long position means the investor is the buyer, holder, or owner of the contract. They pay the premium and have the right to exercise the option.\n\nA short position means the investor is the seller, writer, or grantor of the contract. They receive the premium and have the obligation if the option is exercised."
+      },
+      {
+        "id": 67,
+        "question": "If an investor is bullish or bearish, which options would they purchase and what are the strategies?",
+        "answer": "Bullish investors can buy call options. This strategy allows them to benefit from a rising stock price with limited risk (the premium paid).\n\nBullish investors can sell put options. This strategy generates income if the stock stays the same or rises, but carries risk if the stock falls and the put is exercised.\n\nBearish investors can buy put options. This strategy profits if the stock price falls below the strike price, again with limited risk.\n\nBearish investors can sell call options. This strategy generates income if the stock stays the same or falls, but has unlimited risk if the stock rises significantly."
+      },
+      {
+        "id": 68,
+        "question": "What is a straddle in options trading?",
+        "answer": "A straddle is an options strategy where an investor buys both a call and a put option on the same underlying asset, with the same strike price and expiration date. This strategy profits from significant price movement in either direction, regardless of whether the price goes up or down. It is commonly used when an investor expects high volatility but is uncertain about the direction of the move."
+      },      
+      {
+        "id": 69,
+        "question": "What are stock rights and how are they similar or different from options?",
+        "answer": "Stock rights are short-term privileges granted to existing shareholders that allow them to purchase additional shares—typically at a discount—before they are offered to the public. They are exercisable for a limited period (usually 45–60 days) and help shareholders maintain their proportional ownership.\n\nStock rights and options are similar in that both give the holder the right to buy stock at a set price and can be sold in the secondary market.\n\nHowever, they differ in several ways: rights are issued directly by the company to shareholders, while options originate on an exchange and can be bought or sold by any investor.\n\nRights are given for free to shareholders, while options are purchased.\n\nRights have a much shorter lifespan and are typically issued during new offerings to raise capital, whereas options are often used for trading strategies and risk management."
+      },
+      {
+        "id": 70,
+        "question": "What are stock warrants and how are they similar or different from options?",
+        "answer": "Stock warrants are long-term instruments issued by a company that give the holder the right to purchase shares at a specific price (known as the exercise or strike price), which is typically above the current market price. They often have expiration periods lasting several years and are commonly attached to new bond or stock offerings as a 'sweetener' to attract investors. If exercised, warrants result in the issuance of new shares by the company, which can dilute existing shareholder ownership.\n\nWarrants and options are similar in that both provide the right to buy stock at a predetermined price and can trade on secondary markets. However, warrants are issued directly by the company, lead to new shares being created upon exercise, and typically have much longer expiration periods. Options, by contrast, are standardized contracts traded on exchanges and do not involve the issuance of new shares."
+      },
+      {
+        "id": 71,
+        "question": "What are forward contracts and what are their key characteristics?",
+        "answer": "Forward contracts are private agreements between two parties to buy or sell an asset at a specific price on a future date. They are non-standardized and custom-built, meaning the terms—including quantity, price, and settlement date—are negotiated directly between the buyer and seller. Because of this customization, forwards are illiquid and not actively traded on public exchanges.\n\nForward contracts are typically used by producers or large institutions as a hedging strategy to lock in prices for commodities or financial assets. However, they carry counterparty risk—meaning there's a risk that the other party may default on the contract—since they are not cleared through a centralized exchange. Forwards are also not regulated like exchange-traded derivatives, which adds to their risk profile and limits transparency."
+      },
+      {
+        "id": 72,
+        "question": "What are futures contracts and what are their key characteristics?",
+        "answer": "Futures contracts are standardized agreements traded on regulated exchanges to buy or sell a specific asset at a predetermined price on a set future date. Unlike forward contracts, futures are uniform in terms (quantity, quality, and delivery) and are actively traded, making them highly liquid.\n\nFutures are marked to market daily, which means gains and losses are settled at the end of each trading day. This daily settlement and the use of a clearinghouse significantly reduce counterparty risk.\n\nFutures are commonly used by both hedgers and speculators. Their standardization, transparency, and risk mitigation features make them a widely used tool in financial and commodity markets."
+      },
+      {
+        "id": 73,
+        "question": "What self-regulatory organization is responsible for regulating futures and forward contracts?",
+        "answer": "The National Futures Association (NFA) is the self-regulatory organization responsible for regulating futures and forward contracts in the United States. It operates under the jurisdiction of the Commodity Futures Trading Commission (CFTC), which is the primary federal regulatory agency. The NFA enforces rules, conducts audits, and oversees professionals and firms involved in the derivatives markets."
+      },
+      {
+        "id": 74,
+        "question": "What are the benefits and risks of derivative securities?",
+        "answer": "Derivative securities offer several benefits, including:\n\n1. ***Hedging***: Investors and companies use derivatives to protect against price fluctuations in underlying assets (e.g., commodities, interest rates, or stocks).\n\n2. ***Leverage***: Derivatives allow investors to control large positions with a relatively small amount of capital, potentially amplifying returns.\n\n3. ***Price Discovery***: Futures and options markets help determine fair market value for assets.\n\n4. ***Flexibility***: Derivatives can be customized to suit specific financial strategies or risk exposures.\n\nHowever, derivatives also carry significant risks:\n\n1. ***Leverage Risk***: While leverage can increase gains, it also magnifies losses.\n\n2. ***Complexity***: Many derivatives are complex and may be misunderstood by less experienced investors.\n\n3. ***Counterparty Risk***: For non-exchange-traded derivatives like forwards or swaps, the other party may default.\n\n4. ***Market Risk***: Adverse price movements in the underlying asset can lead to significant losses.\n\n5. ***Liquidity Risk***: Some derivatives may be thinly traded, making it difficult to exit positions quickly."
+      },
+      {
+        "id": 80,
+        "question": "What are LEAPS (Long-Term Equity Anticipation Securities)?",
+        "answer": "LEAPS (Long-Term Equity Anticipation Securities) are long-term options contracts that function like standard options but have expiration dates that can be up to three years in the future. LEAPS can be either calls or puts and are available on both stocks and indexes.\n\n1. Call LEAPS give the holder the right to buy the underlying security at a specified price before expiration.\n\n2. Put LEAPS give the holder the right to sell the security at a specified price.\n\nBecause of their longer time horizon, LEAPS provide greater flexibility for long-term investors to hedge or speculate, and they tend to be less sensitive to short-term volatility compared to short-dated options. However, they are still subject to risks such as time decay, and they typically carry higher premiums due to their extended duration."
+      }                          
+    ]
+  },
+  {
+    "id": "alt-investments",
+    "title": "Alternative Investments",
+    "flashcardQuestions": [
+      {
+        "id": 75,
+        "question": "What is a Direct Participation Program (DPP) and what are the advantages and disadvantages of a DPP?",
+        "answer": "A DPP is an investment vehicle that allows investors to directly participate in the cash flow and tax benefits of a business venture, often structured as a limited partnership or limited liability company (LLC). DPPs are commonly used for real estate, energy, and equipment leasing ventures.\n\nThe primary benefits of a DPP include pass-through of income and losses directly to investors, allowing them to offset other income for tax purposes. Additionally, DPPs provide potential tax deductions for depreciation and depletion, limited liability for investors, and the opportunity to participate in specialized industries without direct management responsibilities.\n\nHowever, DPPs are illiquid and typically suitable for long-term, risk-tolerant investors."
+      },
+      {
+        "id": 81,
+        "question": "How are Direct Participation Programs (DPPs) structured with General Partners (GPs) and Limited Partners (LPs)?",
+        "answer": "Direct Participation Programs (DPPs) are structured as limited partnerships with two key parties: the General Partner (GP) and the Limited Partners (LPs).\n\n1. The GP manages the day-to-day operations of the business and has unlimited liability. They make decisions on behalf of the partnership and are responsible for executing the investment strategy.\n\n2. The LPs are passive investors who contribute capital but do not participate in management. Their liability is limited to the amount of their investment.\n\nTo formalize this relationship, investors must sign a subscription agreement and a limited power of attorney (POA), which authorizes the GP to act on their behalf. This setup allows the DPP to function with centralized management (via the GP) while still offering investors limited liability and flow-through tax benefits."
+      },      
+      {
+        "id": 76,
+        "question": "How do DPPs pass through losses and why are losses from early DPP years useful?",
+        "answer": "Direct Participation Programs (DPPs) pass through losses directly to investors, who can use these losses to offset passive income on their tax returns. Common deductions include depreciation and depletion. This allows investors to reduce their taxable passive income even if they do not receive actual cash distributions from the investment."
+      }, 
+      {
+        "id": 77,
+        "question": "What documents are required for an investor to join a limited partnership and what do they authorize?",
+        "answer": "To invest in a limited partnership, an investor must sign a subscription agreement and a power of attorney (POA). The subscription agreement outlines the investor’s suitability, commitment of capital, and acceptance into the partnership by the general partner. The POA designates the general partner (GP) as the agent of the partnership, giving them authority to act on behalf of the investor for partnership-related matters, such as signing tax documents or engaging in transactions."
+      },
+      {
+        "id": 78,
+        "question": "What are Exchange-Traded Notes (ETNs), how do they work, and what are their benefits?",
+        "answer": "Exchange-Traded Notes (ETNs) are unsecured debt instruments issued by financial institutions. Unlike ETFs, ETNs do not give investors ownership of an underlying asset. Instead, they are a promise from the issuer to pay a return based on the performance of a specific index or strategy, minus fees. ETNs have a set maturity date and are subject to the credit risk of the issuer since they are not backed by collateral.\n\nBenefits of ETNs include:\n\n1. **Tax efficiency**, as they typically do not distribute interest or capital gains during the holding period.\n2. **Access to complex or hard-to-replicate strategies**, such as commodities, volatility indexes, or emerging markets.\n3. **No tracking error**, since they are designed to exactly mirror the performance of the underlying index."
+      },
+      {
+        "id": 79,
+        "question": "What are leveraged and inverse ETFs, and how do they work?",
+        "answer": "Leveraged and inverse ETFs are specialized exchange-traded funds that aim to deliver multiples of the daily performance (or the opposite) of a specific index.\n\n1. **Leveraged ETFs** seek to provide **2x or 3x** the daily return of an underlying index using derivatives like swaps, futures, and options. For example, if the index rises 1% in a day, a 2x leveraged ETF would aim to rise 2%.\n\n2. **Inverse ETFs** aim to deliver the **opposite** of the daily return of the index, and **leveraged inverse ETFs** seek to return **-2x or -3x** the daily return. These are often used for hedging or speculation during market declines.\n\nThese ETFs are typically designed for **short-term trading**, not long-term investing, because compounding over multiple days can lead to returns that differ significantly from the intended multiple of the index. They also carry **higher risks and costs**, including increased volatility and erosion due to daily rebalancing."
+      },
+      {
+        "id": 82,
+        "question": "What are structured products with principal protection and how do they work?",
+        "answer": "Structured products with principal protection are investment instruments that combine a zero-coupon bond with a derivative, typically linked to the performance of an underlying asset like a stock index or commodity.\n\n1. ***Zero-coupon bond*** component ensures the return of the investor's principal at maturity. It grows to the initial investment value over time without making periodic interest payments.\n\n2. ***Derivative*** component (like an option) provides exposure to market gains from the underlying asset. However, potential gains are usually capped or subject to a participation rate (e.g., 80% of the asset’s return).\n\nThese products are generally suitable for ***conservative investors*** who want some market exposure but do not want to risk losing their initial investment. They are held to maturity, and while they offer downside protection, the capped upside may underperform traditional investments in strong markets."
+      },
+      {
+        "id": 83,
+        "question": "What is the difference between active and passive real estate investing, and how are they treated for tax purposes?",
+        "answer": "Active real estate investing involves directly managing properties—such as collecting rent, handling maintenance, and making strategic decisions. Passive real estate investing typically involves limited participation, such as owning shares in a real estate partnership, REIT, or syndicated deal, without day-to-day involvement.\n\n1. ***Active investors*** may qualify for certain tax benefits, such as deducting up to $25,000 of passive losses against ordinary income (subject to income limits), and can write off property depreciation, mortgage interest, and other expenses.\n\n2. ***Passive investors*** can use losses only to offset other passive income. Losses not used in the current year may be carried forward.\n\nThe IRS categorizes real estate income and losses under the passive activity rules, unless the taxpayer qualifies as a real estate professional, which may allow full deduction of losses."
+      },
+      {
+        "id": 84,
+        "question": "What are the benefits and risks of Direct Participation Programs (DPPs)?",
+        "answer": "Direct Participation Programs (DPPs) allow investors to participate in the cash flow and tax benefits of a business venture without active management.\n\n**Benefits:**\n1. ***Tax advantages*** – DPPs often pass through depreciation and other deductions to investors.\n2. ***Limited liability*** – Investors are only liable for their investment amount.\n3. ***Diversification*** – DPPs offer exposure to assets like real estate, oil and gas, and equipment leasing.\n\n**Risks:**\n1. ***Illiquidity*** – DPPs are not traded on public markets and can be difficult to sell.\n2. ***High fees and commissions*** – Upfront costs may reduce the net investment.\n3. ***Business risk*** – The underlying venture may underperform, leading to loss of capital.\n4. ***Tax complexity*** – Investors may receive complex K-1 forms and be subject to passive activity loss rules."
+      }                    
+    ]
+  },
+  {
+    "id": "economics",
+    "title": "Economics",
+    "flashcardQuestions": [
+      { "id": 85, "question": "Explain the four stages of the business cycle and what they're impacted by.", "answer": "The business cycle consists of four main stages: expansion, peak, contraction, and trough. During the expansion phase, the economy grows as measured by increasing GDP, rising employment, and consumer demand. The peak represents very low unemployment, slowdown in inflation and slowing of GDP growth. Contraction (or recession) follows, characterized by declining GDP, rising unemployment, and reduced consumer spending. Finally, the trough marks the lowest point in the cycle, after which the economy begins to recover and re-enter expansion. These cycles are natural in market economies and influenced by factors such as monetary policy, consumer behavior, and global events." },
+      { "id": 86, "question": "Explain the differnce between a recession and a depression.", "answer": "A recession is a temporary economic decline typically identified by two consecutive quarters of negative GDP growth, rising unemployment, and decreased consumer spending. It is considered a normal part of the business cycle and can last from a few months to over a year. A depression, on the other hand, is a much more severe and prolonged downturn characterized by a sustained drop in economic activity, extremely high unemployment, widespread business failures, and significant deflation." },
+      { "id": 87, "question": "Explain what GDP, GNP and CPI is and how they're related.", "answer": "GDP (Gross Domestic Product) measures the total value of all goods and services produced within a country’s borders in a given time period, reflecting domestic economic activity. GNP (Gross National Product) includes GDP plus income earned by citizens and businesses abroad, minus income earned by foreigners domestically—giving a broader picture of a nation's economic performance. CPI (Consumer Price Index) tracks changes in the average price of a basket of consumer goods and services over time, serving as a key indicator of inflation and cost of living. Together, these metrics provide insight into economic growth, national income, and inflation trends." },
+      {
+        "id": 88,
+        "question": "Describe cyclical, countercyclical, growth, and defensive industries.",
+        "answer": "1. ***Cyclical industries*** – These industries are highly sensitive to economic cycles. They perform well during expansions and poorly during contractions. Examples include automobiles, housing, and luxury goods.\n\n2. ***Countercyclical industries*** – These industries tend to perform well during economic downturns because demand for their products or services remains stable or increases. Examples include discount retailers and collection agencies.\n\n3. ***Growth industries*** – These are sectors that expand consistently regardless of the business cycle due to innovation or long-term demand trends. Examples include technology and biotech.\n\n4. ***Defensive industries*** – These industries provide essential goods and services that people need regardless of economic conditions. They tend to remain stable during recessions. Examples include utilities, healthcare, and consumer staples."
+      },
+      {
+        "id": 89,
+        "question": "Explain the yield curve and what it indicates.",
+        "answer": "The yield curve is a graphical representation that shows the relationship between interest rates (yields) and the time to maturity of debt securities, typically U.S. Treasury securities.\n\n1. ***Normal Yield Curve*** – Upward sloping; indicates longer-term bonds have higher yields than short-term bonds. This suggests economic growth and potential inflation.\n\n2. ***Inverted Yield Curve*** – Downward sloping; short-term yields are higher than long-term yields. This is often viewed as a predictor of an economic recession.\n\n3. ***Flat Yield Curve*** – Yields are similar across all maturities. This suggests uncertainty in the economy and often occurs during a transition between economic expansion and contraction."
+      },
+      {
+        "id": 90,
+        "question": "Explain the yield spread and what it indicates if it's widening or tightening.",
+        "answer": "The yield spread is the difference between the yields of two different types of bonds, typically comparing corporate bonds to Treasury bonds of similar maturities.\n\n1. ***Widening Spread*** – Indicates increasing credit risk or economic uncertainty. Investors demand a higher yield on corporate bonds relative to Treasuries, often signaling a potential economic slowdown or recession.\n\n2. ***Tightening Spread*** – Suggests improving economic conditions or lower perceived credit risk. Investors are more confident, so the yield difference between corporate and Treasury bonds decreases."
+      }       
     ]
   }
 ];
