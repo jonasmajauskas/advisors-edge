@@ -2278,7 +2278,7 @@ export const Series66Topics = [
         "id": 422,
         "question": "What is earnings per share after dilution (diluted EPS)?",
         "answer": "Diluted earnings per share (EPS) accounts for all potential shares that could be created through the conversion of convertible securities, options, warrants, or other instruments. It shows the 'worst-case' EPS if all these potential shares were issued, giving investors a more conservative view of profitability.\n\nIt is important for assessing how existing shareholders could be impacted by dilution from additional shares.\n\n**Formula:**\nDiluted EPS = (Net Income − Preferred Dividends) ÷ (Weighted Average Shares Outstanding + Potential Dilutive Shares)"
-      },
+      }, 
       {
         "id": 423,
         "question": "What is current yield (or dividend yield) and how is it calculated?",
