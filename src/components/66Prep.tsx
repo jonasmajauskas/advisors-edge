@@ -94,7 +94,7 @@ const Series66Prep: React.FC = () => {
 
   const handleSubmit = async () => {
     if (currentAnswer.trim().length < 10) {
-        setValidationError('Please provide a more detailed answer (at least 10 characters).');
+        setValidationError('Please provide a more detailed answer.');
         setTimeout(() => setValidationError(''), 5000); // clears message after 5 seconds
         return;
       }
